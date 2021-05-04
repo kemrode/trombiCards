@@ -1,0 +1,121 @@
+//mixin about header
+@mixin headerTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+@mixin headerColor {
+  color: white;
+  font-weight: bold;
+  background: rgb(5,0,87);
+  background: linear-gradient(180deg, rgba(5,0,87,0.83) 0%, rgba(5,0,87,0.83) 0%, rgba(255,255,255,0) 100%);
+}
+
+//mixin about itemBox
+@mixin itemBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #40C4FF;
+  color: white;
+}
+@mixin itemFieldToComplete {
+  border: 1px solid black;
+  width: auto;
+  height: 50vh;
+  justify-content: space-evenly;
+}
+@mixin rowFlex {
+  display: flex;
+  flex-direction: row;
+}
+@mixin flexboxAlignCentering {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+@mixin flexboxjustifyCentering {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@mixin flexBoxRowJustifyCenter {
+  @include rowFlex;
+  justify-content: center;
+}
+@mixin fieldsForAnswer {
+  @include flexboxAlignCentering;
+  border: 1px solid black;
+  width: auto;
+  height: 50vh;
+  padding-left: 35px;
+}
+
+//mixin about differents fields to complete
+@mixin inputField {
+  width: 250px;
+  height: 60px;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 45px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@mixin boxSize {
+  width: 250px;
+  height: 60px;
+}
+
+
+//mixin about listItems
+@mixin listItemsAlign {
+  @include flexboxAlignCentering;
+}
+@mixin boxDisplay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #40C4FF;
+  color: white;
+}
+@mixin boxItemContruct {
+  border: 1px solid black;
+  border-radius: 45px;
+}
+@mixin marginFifteen{
+  margin-right: 15px;
+  margin-left: 15px;
+}
+@mixin spaceBetween {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+@mixin spaceBetweenHight {
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+@mixin smallWidth {
+  width: 250px;
+  height: 20vh;
+}
+@mixin mediumWidth {
+  width: 350px;
+  height: 25vh;
+}
+@mixin highWidth {
+  width: 400px;
+  height: 25vh;
+}
+
+//scrolling mixin
+@mixin scrollDisplayNone{
+  -webkit-overflow-scrolling: auto;
+  display: none;
+}
+@mixin scrollPrimary{
+  overflow-x: hidden;
+  overflow-y: auto;
+  @include scrollDisplayNone;
+}

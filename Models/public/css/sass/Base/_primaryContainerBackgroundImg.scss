@@ -1,0 +1,13 @@
+  .primaryContainer{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100vh;
+  }
+
+  .primaryContainer--backgroundImage {
+    background-image: url("/../../trombiCards/Ressources/images/cogs.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }

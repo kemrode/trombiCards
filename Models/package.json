@@ -1,0 +1,14 @@
+{
+  "name": "sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./public/css/sass/connectionStylus.scss:./public/css/sass/main.css && sass --watch ./public/css/sass/adminMainStylus.scss:./public/css/sass/adminMainStylus.css && sass --watch ./public/css/sass/articleslistStylus.scss:./public/css/sass/articleslistStylus.css && sass --watch ./node_modules/@material/fab/mdc-fab.import.scss: ./node_modules/@material/fab/mdc-fab.import.css"
+  },
+  "author": "kemrode",
+  "license": "ISC",
+  "dependencies": {
+    "@material/fab": "^11.0.0"
+  }
+}
