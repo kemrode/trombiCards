@@ -8,9 +8,7 @@ abstract class AbstractController {
     public function getTwig(){
         return $this->twig;
     }
-
     public function __construct(){
-
         $this->loader = new \Twig\Loader\FilesystemLoader($_SERVER["DOCUMENT_ROOT"]."/../templates");
         $this->twig = new \Twig\Environment($this->loader,[
             "debug" => true,
