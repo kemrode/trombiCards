@@ -1,13 +1,13 @@
 @import '../Utils/mixin';
 @import '../Utils/variables';
-@import 'ay';
 
 .containerFlexBox {
   @include flexBoxRowJustifyCenter;
   width: auto;
   height: auto;
 }
-@include scrollbarDisplayNone;
+
+//@include scrollbarDisplayNone;
 
 .itemsBox{
   @include boxDisplay;

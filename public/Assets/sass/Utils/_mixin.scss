@@ -110,7 +110,7 @@
 }
 
 //scrolling mixin
-@mixin scrollDisplayNone{
+@mixin scrollDisplayNone {
   -webkit-overflow-scrolling: auto;
   display: none;
 }

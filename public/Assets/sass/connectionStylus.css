@@ -1,17 +1,185 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 1 | @import 'Utilsariables';
- *   |         ^^^^^^^^^^^^^^^
- *   '
- *   connectionStylus.scss 1:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @import 'Utilsariables';\d\a   \2502          ^^^^^^^^^^^^^^^\a   \2575 \a   connectionStylus.scss 1:9  root stylesheet";
+*,
+* before::after {
+  box-sizing: border-box;
 }
+
+body {
+  margin: 0;
+}
+
+.primaryContainer {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: 100vh;
+}
+
+.primaryContainer--backgroundImage {
+  background-image: url("/Ressources/images/cogs.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.itemsField {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.primaryContainer__connectionBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.connectionBox__itemsBox {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 500px;
+  height: 50vh;
+}
+
+.itemsBox__itemsField {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  border: 1px solid black;
+  width: auto;
+  height: 50vh;
+  justify-content: space-evenly;
+}
+
+.itemsBox__itemsField--backgroundColor {
+  background-color: #80D8FF;
+  border-radius: 45px;
+}
+
+.itemsBox__nameField--input {
+  display: flex;
+  flex-direction: row;
+}
+
+.field {
+  width: 250px;
+  height: 60px;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 45px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.okButton--color {
+  background-color: #40C4FF;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+  .connectionBox__itemsBox {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .itemsField__okButton {
+    margin-top: 50px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .connectionBox__itemsBox {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .itemsField__okButton {
+    margin-top: 75px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .connectionBox__itemsBox {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .itemsField__okButton {
+    margin-top: 85px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .itemsField__okButton {
+    margin-top: 100px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .itemsField__okButton {
+    margin-top: 125px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .primaryContainer {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100vh;
+  }
+
+  .primaryContainer--backgroundImage {
+    background-image: url("/Ressources/images/cogs.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+}
+.header__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.header--color {
+  color: white;
+  font-weight: bold;
+  background: #050057;
+  background: linear-gradient(180deg, rgba(5, 0, 87, 0.83) 0%, rgba(5, 0, 87, 0.83) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+@media only screen and (max-width: 600px) {
+  .header-sizeTitle {
+    font-size: 1.3em;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .header-sizeTitle {
+    font-size: 1.4em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .header-sizeTitle {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .header-sizeTitle {
+    font-size: 1.6em;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .header-sizeTitle {
+    font-size: 1.8em;
+  }
+}
+.itemsField {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=connectionStylus.css.map */

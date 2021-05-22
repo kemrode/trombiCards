@@ -18,7 +18,7 @@ function chargerClasse($classe){
 }
 spl_autoload_register("chargerClasse");
 
-\src\Model\BDD::initInstance();
+\src\Controller\BDDconfig::initInstance();
 
 // Router
 $controller = (isset($_GET["controller"])) ? $_GET["controller"] : "";
@@ -34,11 +34,11 @@ if($controller != ''){
         else
             echo $controller->index();
     }else{
-        $controller = new src\Controller\mapController();
-        echo $controller->index();
+        $controller = new src\Controller\userController();
+        echo $controller->connectionView();
     }
 }
 else{
-    $controller = new src\Controller\mapController();
-    echo $controller->index();
+    $controller = new src\Controller\userController();
+    echo $controller->connectionView();
 }

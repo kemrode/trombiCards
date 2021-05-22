@@ -1,5 +1,5 @@
 <?php
-require '../Controllers/configBDD.php';
+require '../oldContr/configBDD.php';
 ?>
 
 <?php

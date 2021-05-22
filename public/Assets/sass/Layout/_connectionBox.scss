@@ -1,8 +1,8 @@
 @import '../Utils/mixin';
 @import '../Utils/variables';
 @import '../Composants/buttonField';
-@import '../Composants/_okButton';
-@import '../Composants/_itemField';
+@import '../Composants/okButton';
+@import '../Composants/itemField';
 
   .primaryContainer__connectionBox {
     display: flex;

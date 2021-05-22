@@ -1,17 +1,148 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 2 | @import 'BaseoxSizing';
- *   |         ^^^^^^^^^^^^^^
- *   '
- *   articleslistStylus.scss 2:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 2 \2502  @import 'BaseoxSizing';\d\a   \2502          ^^^^^^^^^^^^^^\a   \2575 \a   articleslistStylus.scss 2:9  root stylesheet";
+*,
+* before::after {
+  box-sizing: border-box;
 }
+
+body {
+  margin: 0;
+}
+
+.primaryContainer {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: 100vh;
+}
+
+.primaryContainer--backgroundImage {
+  background-image: url("/Ressources/images/cogs.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.containerArticlesBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.containerArticlesBox::-webkit-scrollbar {
+  display: none;
+}
+
+.articlesListBox {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+.articlesListBox::-webkit-scrollbar {
+  display: none;
+}
+
+.articleBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: aliceblue;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.articleTitleBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.articleTitle {
+  color: #80D8FF;
+}
+
+.articleTitle--size {
+  font-size: 1.2em;
+}
+
+.articleNews--text {
+  text-align: justify;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.menuTabBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  height: 7vh;
+}
+
+.menuTabBar--text {
+  color: white;
+  font-size: 1.2em;
+}
+
+.menuTabBar--backgroundColor {
+  background-color: #40C4FF;
+}
+
+.backImgBox img {
+  width: 125%;
+  height: 125%;
+}
+
+.backImgBox--spaceBetween {
+  padding-left: 5px;
+  padding-right: 25px;
+}
+
+.header__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.header--color {
+  color: white;
+  font-weight: bold;
+  background: #050057;
+  background: linear-gradient(180deg, rgba(5, 0, 87, 0.83) 0%, rgba(5, 0, 87, 0.83) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+@media only screen and (max-width: 600px) {
+  .header-sizeTitle {
+    font-size: 1.3em;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .header-sizeTitle {
+    font-size: 1.4em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .header-sizeTitle {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .header-sizeTitle {
+    font-size: 1.6em;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .header-sizeTitle {
+    font-size: 1.8em;
+  }
+}
+
+/*# sourceMappingURL=articleslistStylus.css.map */

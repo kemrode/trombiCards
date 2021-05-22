@@ -1,5 +1,5 @@
 <?php
-require '../Controllers/adminRegisteredController.php';
+require '../oldContr/adminRegisteredController.php';
 
 if(isset($_POST['okButton'])){
 

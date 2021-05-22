@@ -1,5 +1,5 @@
 <?php
-require '../Controllers/articlesListController.php';
+require '../oldContr/articlesListController.php';
 ?>
 
 <!DOCTYPE html>

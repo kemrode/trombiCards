@@ -1,9 +1,8 @@
-
-@import 'BaseoxSizing';
-@import 'Baseody';
-@import 'BaserimaryContainerBackgroundImg';
-@import 'Utilsariables';
-@import 'LayouteaderStyle';
-@import 'Utilsixin';
-@import 'LayoutrticlesList';
-@import 'LayoutenuTabBar';
+@import "Base/boxSizing";
+@import "Base/body";
+@import "Base/primaryContainerBackgroundImg";
+@import "Utils/variables";
+@import "Layout/articlesList";
+@import "Layout/menuTabBar";
+@import "Layout/headerStyle";
+@import "Utils/mixin";

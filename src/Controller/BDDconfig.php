@@ -3,8 +3,8 @@ namespace src\Controller;
 use PDO;
 
 
-class BDDconfig
-{
+class BDDconfig {
+
     //private static $_instance = null;
     private static $_instance = null;
 
