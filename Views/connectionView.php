@@ -10,7 +10,7 @@ require '../Controllers/loginController.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- put the links about material design here and about scss files -->
     <link rel="stylesheet" href="../public/Assets/sass/connectionStylus.scss">
-    <link rel="stylesheet" href="../public/Assets/sass/main.css">
+    <link rel="stylesheet" href="../public/Assets/css/main.css">
     <title>Connexion Mon Admin</title>
 </head>
 <body>
