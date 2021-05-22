@@ -8,8 +8,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Models/public/css/sass/adminMainStylus.scss">
-    <link rel="stylesheet" href="../Models/public/css/sass/adminMainStylus.css">
+    <link rel="stylesheet" href="../public/Assets/sass/adminMainStylus.scss">
+    <link rel="stylesheet" href="../public/Assets/sass/adminMainStylus.css">
     <link rel="stylesheet" href="">
     <title>Mon Admin</title>
 </head>

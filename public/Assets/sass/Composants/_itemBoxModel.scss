@@ -1,6 +1,6 @@
 @import '../Utils/mixin';
 @import '../Utils/variables';
-@import '../Composants/overflowDisplay';
+@import 'ay';
 
 .containerFlexBox {
   @include flexBoxRowJustifyCenter;

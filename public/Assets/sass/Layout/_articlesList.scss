@@ -1,4 +1,4 @@
-@use "./node_modules/@material/fab";
+@use "../../../../Models/node_modules/@material/fab/index";
 @include fab.core-styles;
 @import '../Utils/mixin';
 @import '../Utils/variables';

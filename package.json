@@ -1,0 +1,14 @@
+{
+  "name": "sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch /public/Assets/sass/:/public/Assets/css/"
+  },
+  "author": "kemrode",
+  "license": "ISC",
+  "dependencies": {
+    "@material/fab": "^11.0.0"
+  }
+}
