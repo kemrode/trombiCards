@@ -1,0 +1,71 @@
+@import '../Utils/mixin';
+@import '../Utils/variables';
+@import '../Composants/buttonField';
+@import '../Composants/okButton';
+@import '../Composants/itemField';
+
+  .primaryContainer__connectionBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .connectionBox__itemsBox {
+    @include flexboxAlignCentering;
+    width: 500px;
+    height: 50vh;
+  }
+  .itemsBox__itemsField{
+    @include flexboxAlignCentering;
+    @include itemFieldToComplete;
+  }
+  .itemsBox__itemsField--backgroundColor {
+    background-color: $thirdColor;
+    border-radius: 45px;
+  }
+  .itemsBox__nameField--input {
+    @include rowFlex;
+  }
+  .field {
+    @include fieldToComplete;
+  }
+  .okButton--color {
+    @include okButtonBody;
+  }
+@media only screen and (max-width: 600px) {
+  .connectionBox__itemsBox{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .itemsField__okButton {
+    margin-top: 50px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .connectionBox__itemsBox{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .itemsField__okButton {
+    margin-top: 75px;
+  }
+}
+@media only screen and (min-width: 768px){
+  .connectionBox__itemsBox{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .itemsField__okButton {
+    margin-top: 85px;
+  }
+}
+@media only screen and (min-width: 992px){
+  .itemsField__okButton {
+    margin-top: 100px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .itemsField__okButton {
+    margin-top: 125px;
+  }
+}
+

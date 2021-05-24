@@ -8,8 +8,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Models/public/css/sass/adminMainStylus.scss">
-    <link rel="stylesheet" href="../Models/public/css/sass/adminMainStylus.css">
+    <link rel="stylesheet" href="../public/Assets/sass/adminMainStylus.scss">
+    <link rel="stylesheet" href="../public/Assets/sass/adminMainStylus.css">
     <link rel="stylesheet" href="">
     <title>Mon Admin</title>
 </head>
@@ -26,7 +26,7 @@
                 </div>
                 <div class="itemContainer itemContainer__contain">
                     <div class="itemImage itemImage__image">
-                        <a href=""><img src="../Ressources/images/icons/article.svg"></a>
+                        <a href=""><img src="../public/Ressources/images/icons/article.svg"></a>
                     </div>
                 </div>
             </div>
@@ -36,7 +36,7 @@
                 </div>
                 <div class="itemContainer itemContainer__contain">
                     <div class="itemImage itemImage__image">
-                        <a href=""><img src="../Ressources/images/icons/engineering.svg"></a>
+                        <a href=""><img src="../public/Ressources/images/icons/engineering.svg"></a>
                     </div>
                 </div>
             </div>
@@ -46,7 +46,7 @@
                 </div>
                 <div class="itemContainer itemContainer__contain">
                     <div class="itemImage itemImage__image">
-                        <a href=""><img src="../Ressources/images/icons/mail.svg"></a>
+                        <a href=""><img src="../public/Ressources/images/icons/mail.svg"></a>
                     </div>
                 </div>
             </div>
@@ -56,7 +56,7 @@
                 </div>
                 <div class="itemContainer itemContainer__contain">
                     <div class="itemImage itemImage__image">
-                        <a href=""><img src="../Ressources/images/icons/peopleDouble.svg"></a>
+                        <a href=""><img src="../public/Ressources/images/icons/peopleDouble.svg"></a>
                     </div>
                 </div>
             </div>
@@ -66,7 +66,7 @@
                 </div>
                 <div class="itemContainer itemContainer__contain">
                     <div class="itemImage itemImage__image">
-                        <a href=""><img src="../Ressources/images/icons/analytics.svg"></a>
+                        <a href=""><img src="../public/Ressources/images/icons/analytics.svg"></a>
                     </div>
                 </div>
             </div>

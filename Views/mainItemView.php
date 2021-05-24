@@ -8,8 +8,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Models/public/css/sass/articleslistStylus.scss">
-    <link rel="stylesheet" href="../Models/public/css/sass/articleslistStylus.css">
+    <link rel="stylesheet" href="../public/Assets/sass/articleslistStylus.scss">
+    <link rel="stylesheet" href="../public/Assets/sass/articleslistStylus.css">
     <link rel="stylesheet" href="">
     <title>MonAdmin - Articles</title>
 </head>
@@ -20,7 +20,7 @@
     </div>
     <div class="containerFlexBox">
         <div class="menuTabBar menuTabBar--backgroundColor menuTabBar--text">
-            <div class="backImgBox backImgBox--spaceBetween"><img src="../Ressources/images/icons/backArrow.svg"><a href="adminMainView.php"></a></div>
+            <div class="backImgBox backImgBox--spaceBetween"><img src="../public/Ressources/images/icons/backArrow.svg"><a href="adminMainView.php"></a></div>
             <div class="namePageBox"><h3>Articles</h3></div>
         </div>
     </div>
