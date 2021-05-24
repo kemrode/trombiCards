@@ -2,7 +2,7 @@
 namespace src\Controller;
 
 
-class userController extends \src\Controller\AbstractController
+class userController extends AbstractController
 {
 
     public function connectionView() {

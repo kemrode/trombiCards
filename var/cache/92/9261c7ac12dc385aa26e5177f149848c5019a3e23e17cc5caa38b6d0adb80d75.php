@@ -12,8 +12,8 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* connectionView\connectionView.html.twig */
-class __TwigTemplate_326aac214e9d4f78f85bee0afc7a2feb92516d4ee4a84316a0c9503544d97e19 extends Template
+/* connectionView.html.twig */
+class __TwigTemplate_42c39240771fe274ecdce078f56e83f2ebf89f4d509bb5c1fcd757fe35ed28b7 extends Template
 {
     private $source;
     private $macros = [];
@@ -89,7 +89,7 @@ class __TwigTemplate_326aac214e9d4f78f85bee0afc7a2feb92516d4ee4a84316a0c9503544d
 
     public function getTemplateName()
     {
-        return "connectionView\\connectionView.html.twig";
+        return "connectionView.html.twig";
     }
 
     public function getDebugInfo()
@@ -106,7 +106,7 @@ class __TwigTemplate_326aac214e9d4f78f85bee0afc7a2feb92516d4ee4a84316a0c9503544d
 <body>
 <div class=\"primaryContainer primaryContainer--backgroundImage\">
     <div class=\"primaryContainer__header\">
-        {%  block headerBlock %}{% endblock %}
+        {% block headerBlock %}{% endblock %}
     </div>
     <!-- definition about the connection items -->
     <div class=\"primaryContainer__connectionBox\">
@@ -129,6 +129,6 @@ class __TwigTemplate_326aac214e9d4f78f85bee0afc7a2feb92516d4ee4a84316a0c9503544d
 </div>
 </body>
 </html>
-", "connectionView\\connectionView.html.twig", "C:\\Users\\2217873\\Documents\\developpementPerso\\trombiCards\\templates\\connectionView\\connectionView.html.twig");
+", "connectionView.html.twig", "C:\\Users\\2217873\\Documents\\developpementPerso\\trombiCards\\templates\\connectionView.html.twig");
     }
 }

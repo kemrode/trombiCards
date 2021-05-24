@@ -4,7 +4,7 @@
 namespace src\Controller;
 
 
-class newsController
+class newsController extends AbstractController
 {
 
 }

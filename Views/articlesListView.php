@@ -24,7 +24,7 @@ require '../oldContr/articlesListController.php';
     </div>
     <div class="containerFlexBox">
         <div class="menuTabBar menuTabBar--backgroundColor menuTabBar--text">
-            <div class="backImgBox backImgBox--spaceBetween"><img src="../Ressources/images/icons/backArrow.svg"><a href="adminMainView.php"></a></div>
+            <div class="backImgBox backImgBox--spaceBetween"><img src="../public/Ressources/images/icons/backArrow.svg"><a href="adminMainView.php"></a></div>
             <div class="namePageBox"><h3>Articles</h3></div>
         </div>
     </div>

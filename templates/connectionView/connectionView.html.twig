@@ -1,8 +1,11 @@
-{%  block metaBlock %}{% endblock %}
+<header>
+    {%  block metaBlock %}{% endblock %}
+    <link rel="stylesheet" type="text/css" href="/Assets/css/connectionStylus.css">
+</header>
 <body>
 <div class="primaryContainer primaryContainer--backgroundImage">
     <div class="primaryContainer__header">
-        {%  block headerBlock %}{% endblock %}
+        {% block headerBlock %}{% endblock %}
     </div>
     <!-- definition about the connection items -->
     <div class="primaryContainer__connectionBox">

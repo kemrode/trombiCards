@@ -26,7 +26,7 @@
                 </div>
                 <div class="itemContainer itemContainer__contain">
                     <div class="itemImage itemImage__image">
-                        <a href=""><img src="../Ressources/images/icons/article.svg"></a>
+                        <a href=""><img src="../public/Ressources/images/icons/article.svg"></a>
                     </div>
                 </div>
             </div>
@@ -36,7 +36,7 @@
                 </div>
                 <div class="itemContainer itemContainer__contain">
                     <div class="itemImage itemImage__image">
-                        <a href=""><img src="../Ressources/images/icons/engineering.svg"></a>
+                        <a href=""><img src="../public/Ressources/images/icons/engineering.svg"></a>
                     </div>
                 </div>
             </div>
@@ -46,7 +46,7 @@
                 </div>
                 <div class="itemContainer itemContainer__contain">
                     <div class="itemImage itemImage__image">
-                        <a href=""><img src="../Ressources/images/icons/mail.svg"></a>
+                        <a href=""><img src="../public/Ressources/images/icons/mail.svg"></a>
                     </div>
                 </div>
             </div>
@@ -56,7 +56,7 @@
                 </div>
                 <div class="itemContainer itemContainer__contain">
                     <div class="itemImage itemImage__image">
-                        <a href=""><img src="../Ressources/images/icons/peopleDouble.svg"></a>
+                        <a href=""><img src="../public/Ressources/images/icons/peopleDouble.svg"></a>
                     </div>
                 </div>
             </div>
@@ -66,7 +66,7 @@
                 </div>
                 <div class="itemContainer itemContainer__contain">
                     <div class="itemImage itemImage__image">
-                        <a href=""><img src="../Ressources/images/icons/analytics.svg"></a>
+                        <a href=""><img src="../public/Ressources/images/icons/analytics.svg"></a>
                     </div>
                 </div>
             </div>

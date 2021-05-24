@@ -178,18 +178,6 @@ body {
     font-size: xx-large;
   }
 }
-@media only screen and (max-width: 600px) {
-  .containerFlexBox {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+/*# sourceMappingURL=adminMainStylus.css.map */
 
-  .listItemsBox {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-}
-
-/*# sourceMappingURL=adminMainStyle.css.map */
+/*# sourceMappingURL=adminMainStylus.css.map */

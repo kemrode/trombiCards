@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch /public/Assets/sass/:/public/Assets/css/"
+    "sass": "sass --watch public/Assets/sass/:public/Assets/css/"
   },
   "author": "kemrode",
   "license": "ISC",
