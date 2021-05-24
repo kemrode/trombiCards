@@ -7,8 +7,7 @@ class userController extends AbstractController
     public function connectionView() {
         return $this->twig->render("connectionView\connectionView.html.twig");
     }
-    public function log()
-    {
+    public function log() {
         if (isset($_POST['okButton'])) {
             $user = new userModel();
             $user->setUserMail($_POST['connMail']);
@@ -25,6 +24,13 @@ class userController extends AbstractController
                 return;
             }
         }
+    }
+    //function to logout
+    public function logOut(){
+        session_start();
+        $_SESSION = array();
+        session_destroy();
+        header('Location:/');
     }
     //function to POST new user
     public function newUserPost(\PDO $bdd){
@@ -71,5 +77,7 @@ class userController extends AbstractController
             return $e->getMessage();
         }
     }
+
+
 
 }
