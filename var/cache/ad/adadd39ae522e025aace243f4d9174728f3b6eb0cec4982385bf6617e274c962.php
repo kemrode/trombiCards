@@ -57,14 +57,18 @@ class __TwigTemplate_326aac214e9d4f78f85bee0afc7a2feb92516d4ee4a84316a0c9503544d
             <form method=\"post\" action=\"\" name=\"connectionBoxForm\">
                 <div class=\"itemsBox__itemsField itemsBox__itemsField--backgroundColor\">
                     <div class=\"itemsField itemsField__nameField itemsBox__nameField--input\">
-                        <input type=\"text\" name=\"nameField\" placeholder=\"Nom...\" class=\"field nameField\">
+                        <input type=\"text\" name=\"nameField\" placeholder=\"Nom...\" class=\"field nameField\" required>
                     </div>
                     <div class=\"itemsField itemsField__passwdField itemsBox__passwdField--input\">
-                        <input type=\"password\" name=\"pwd\" placeholder=\"Mot de Passe...\" class=\"field passwdField\">
+                        <input type=\"password\" name=\"pwd\" placeholder=\"Mot de Passe...\" class=\"field passwdField\" required>
+                    </div>
+                    <div class=\"itemsField itemsField__okButton itemsField__okButton--input\">
+                        <button type=\"submit\" name=\"okButton\" class=\"field okButton okButton--color\">OK</button>
+                        <!--<input type=\"submit\" name=\"okButton\" value=\"OK\" class=\"field okButton okButton--color\">-->
                     </div>
                 </div>
-                <div class=\"itemsField itemsField__okButton itemsField__okButton--input\">
-                    <input type=\"submit\" name=\"okButton\" value=\"OK\" class=\"field okButton okButton--color\">
+                <div class=\"registerLinkBox\">
+                    <a class=\"registerLink registerLink__text--color registerLink__text--font\" href=\"/?controller=user&action=registerView\">s'enregistrer</a>
                 </div>
             </form>
         </div>
@@ -109,14 +113,18 @@ class __TwigTemplate_326aac214e9d4f78f85bee0afc7a2feb92516d4ee4a84316a0c9503544d
             <form method=\"post\" action=\"\" name=\"connectionBoxForm\">
                 <div class=\"itemsBox__itemsField itemsBox__itemsField--backgroundColor\">
                     <div class=\"itemsField itemsField__nameField itemsBox__nameField--input\">
-                        <input type=\"text\" name=\"nameField\" placeholder=\"Nom...\" class=\"field nameField\">
+                        <input type=\"text\" name=\"nameField\" placeholder=\"Nom...\" class=\"field nameField\" required>
                     </div>
                     <div class=\"itemsField itemsField__passwdField itemsBox__passwdField--input\">
-                        <input type=\"password\" name=\"pwd\" placeholder=\"Mot de Passe...\" class=\"field passwdField\">
+                        <input type=\"password\" name=\"pwd\" placeholder=\"Mot de Passe...\" class=\"field passwdField\" required>
+                    </div>
+                    <div class=\"itemsField itemsField__okButton itemsField__okButton--input\">
+                        <button type=\"submit\" name=\"okButton\" class=\"field okButton okButton--color\">OK</button>
+                        <!--<input type=\"submit\" name=\"okButton\" value=\"OK\" class=\"field okButton okButton--color\">-->
                     </div>
                 </div>
-                <div class=\"itemsField itemsField__okButton itemsField__okButton--input\">
-                    <input type=\"submit\" name=\"okButton\" value=\"OK\" class=\"field okButton okButton--color\">
+                <div class=\"registerLinkBox\">
+                    <a class=\"registerLink registerLink__text--color registerLink__text--font\" href=\"/?controller=user&action=registerView\">s'enregistrer</a>
                 </div>
             </form>
         </div>

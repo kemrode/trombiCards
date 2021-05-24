@@ -83,6 +83,25 @@ body {
   font-weight: bold;
 }
 
+.registerLinkBox {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: 7vh;
+}
+
+.registerLink {
+  width: auto;
+  height: auto;
+}
+.registerLink__text--color {
+  color: white;
+}
+.registerLink__text--font {
+  font-size: 1.1em;
+  text-decoration: black;
+}
+
 @media only screen and (max-width: 600px) {
   .connectionBox__itemsBox {
     padding-left: 10px;

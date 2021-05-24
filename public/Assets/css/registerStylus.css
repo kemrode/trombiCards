@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+}
+
+*,
+* before::after {
+  box-sizing: border-box;
+}
+
+.primaryContainer {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: 100vh;
+}
+
+.primaryContainer--backgroundImage {
+  background-image: url("/../Ressources/images/cogs.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/*# sourceMappingURL=registerStylus.css.map */
+
+/*# sourceMappingURL=registerStylus.css.map */
