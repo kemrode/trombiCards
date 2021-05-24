@@ -130,13 +130,6 @@ body {
     width: auto;
     height: 100vh;
   }
-
-  .primaryContainer--backgroundImage {
-    background-image: url("/public/Ressources/images/cogs.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  }
 }
 .header__title {
   display: flex;

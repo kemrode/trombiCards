@@ -4,11 +4,9 @@ namespace src\Controller;
 
 class userController extends AbstractController
 {
-
     public function connectionView() {
         return $this->twig->render("connectionView\connectionView.html.twig");
     }
-
     public function log()
     {
         if (isset($_POST['okButton'])) {
@@ -27,6 +25,5 @@ class userController extends AbstractController
                 return;
             }
         }
-
     }
 }

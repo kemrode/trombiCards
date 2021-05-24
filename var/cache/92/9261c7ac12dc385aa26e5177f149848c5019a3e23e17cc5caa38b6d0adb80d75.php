@@ -36,21 +36,23 @@ class __TwigTemplate_42c39240771fe274ecdce078f56e83f2ebf89f4d509bb5c1fcd757fe35e
     {
         $macros = $this->macros;
         // line 1
-        echo "<header>
+        echo "<head>
     ";
         // line 2
         $this->displayBlock('metaBlock', $context, $blocks);
         // line 3
         echo "    <link rel=\"stylesheet\" type=\"text/css\" href=\"/Assets/css/connectionStylus.css\">
-</header>
+</head>
 <body>
 <div class=\"primaryContainer primaryContainer--backgroundImage\">
     <div class=\"primaryContainer__header\">
-        ";
-        // line 8
-        $this->displayBlock('headerBlock', $context, $blocks);
+        <header>
+            ";
         // line 9
-        echo "    </div>
+        $this->displayBlock('headerBlock', $context, $blocks);
+        // line 10
+        echo "        </header>
+    </div>
     <!-- definition about the connection items -->
     <div class=\"primaryContainer__connectionBox\">
         <div class=\"connectionBox__itemsBox connectionBox--backgroundColor connectionBox--size\">
@@ -81,7 +83,7 @@ class __TwigTemplate_42c39240771fe274ecdce078f56e83f2ebf89f4d509bb5c1fcd757fe35e
         $macros = $this->macros;
     }
 
-    // line 8
+    // line 9
     public function block_headerBlock($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -94,19 +96,21 @@ class __TwigTemplate_42c39240771fe274ecdce078f56e83f2ebf89f4d509bb5c1fcd757fe35e
 
     public function getDebugInfo()
     {
-        return array (  85 => 8,  79 => 2,  53 => 9,  51 => 8,  44 => 3,  42 => 2,  39 => 1,);
+        return array (  87 => 9,  81 => 2,  54 => 10,  52 => 9,  44 => 3,  42 => 2,  39 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<header>
+        return new Source("<head>
     {%  block metaBlock %}{% endblock %}
     <link rel=\"stylesheet\" type=\"text/css\" href=\"/Assets/css/connectionStylus.css\">
-</header>
+</head>
 <body>
 <div class=\"primaryContainer primaryContainer--backgroundImage\">
     <div class=\"primaryContainer__header\">
-        {% block headerBlock %}{% endblock %}
+        <header>
+            {% block headerBlock %}{% endblock %}
+        </header>
     </div>
     <!-- definition about the connection items -->
     <div class=\"primaryContainer__connectionBox\">

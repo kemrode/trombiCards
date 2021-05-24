@@ -27,8 +27,6 @@ class __TwigTemplate_326aac214e9d4f78f85bee0afc7a2feb92516d4ee4a84316a0c9503544d
         $this->parent = false;
 
         $this->blocks = [
-            'metaBlock' => [$this, 'block_metaBlock'],
-            'headerBlock' => [$this, 'block_headerBlock'],
         ];
     }
 
@@ -36,21 +34,23 @@ class __TwigTemplate_326aac214e9d4f78f85bee0afc7a2feb92516d4ee4a84316a0c9503544d
     {
         $macros = $this->macros;
         // line 1
-        echo "<header>
+        echo "<head>
     ";
         // line 2
-        $this->displayBlock('metaBlock', $context, $blocks);
+        $this->loadTemplate("metaBlock/metaBlock.html.twig", "connectionView\\connectionView.html.twig", 2)->display($context);
         // line 3
         echo "    <link rel=\"stylesheet\" type=\"text/css\" href=\"/Assets/css/connectionStylus.css\">
-</header>
+</head>
 <body>
 <div class=\"primaryContainer primaryContainer--backgroundImage\">
     <div class=\"primaryContainer__header\">
-        ";
-        // line 8
-        $this->displayBlock('headerBlock', $context, $blocks);
+        <header>
+            ";
         // line 9
-        echo "    </div>
+        $this->loadTemplate("headerView/headerView.html.twig", "connectionView\\connectionView.html.twig", 9)->display($context);
+        // line 10
+        echo "        </header>
+    </div>
     <!-- definition about the connection items -->
     <div class=\"primaryContainer__connectionBox\">
         <div class=\"connectionBox__itemsBox connectionBox--backgroundColor connectionBox--size\">
@@ -75,38 +75,33 @@ class __TwigTemplate_326aac214e9d4f78f85bee0afc7a2feb92516d4ee4a84316a0c9503544d
 ";
     }
 
-    // line 2
-    public function block_metaBlock($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-    }
-
-    // line 8
-    public function block_headerBlock($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-    }
-
     public function getTemplateName()
     {
         return "connectionView\\connectionView.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  85 => 8,  79 => 2,  53 => 9,  51 => 8,  44 => 3,  42 => 2,  39 => 1,);
+        return array (  52 => 10,  50 => 9,  42 => 3,  40 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<header>
-    {%  block metaBlock %}{% endblock %}
+        return new Source("<head>
+    {% include \"metaBlock/metaBlock.html.twig\" %}
     <link rel=\"stylesheet\" type=\"text/css\" href=\"/Assets/css/connectionStylus.css\">
-</header>
+</head>
 <body>
 <div class=\"primaryContainer primaryContainer--backgroundImage\">
     <div class=\"primaryContainer__header\">
-        {%  block headerBlock %}{% endblock %}
+        <header>
+            {% include \"headerView/headerView.html.twig\" %}
+        </header>
     </div>
     <!-- definition about the connection items -->
     <div class=\"primaryContainer__connectionBox\">

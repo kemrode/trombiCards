@@ -1,11 +1,13 @@
-<header>
-    {%  block metaBlock %}{% endblock %}
+<head>
+    {% include "metaBlock/metaBlock.html.twig" %}
     <link rel="stylesheet" type="text/css" href="/Assets/css/connectionStylus.css">
-</header>
+</head>
 <body>
 <div class="primaryContainer primaryContainer--backgroundImage">
     <div class="primaryContainer__header">
-        {% block headerBlock %}{% endblock %}
+        <header>
+            {% include "headerView/headerView.html.twig" %}
+        </header>
     </div>
     <!-- definition about the connection items -->
     <div class="primaryContainer__connectionBox">
