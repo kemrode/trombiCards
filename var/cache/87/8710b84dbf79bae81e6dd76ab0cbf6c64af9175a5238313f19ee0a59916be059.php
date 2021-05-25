@@ -55,22 +55,22 @@ class __TwigTemplate_2d41c865bd300213db0824b0f1e169f3a48472ac3d624c3cbd36656ecaa
         <div class=\"formContainer\">
             <form class=\"formBox\" method=\"post\" action=\"\">
                 <div class=\"itemsContainer\">
-                    <div class=\"itemsBox\">
+                    <div class=\"itemBox\">
                         <input type=\"text\" name=\"userName\" placeholder=\"Votre Nom\" required>
                     </div>
-                    <div class=\"itemsBox\">
+                    <div class=\"itemBox\">
                         <input type=\"text\" name=\"userFirstName\" placeholder=\"Votre prénom\" required>
                     </div>
-                    <div class=\"itemsBox\">
+                    <div class=\"itemBox\">
                         <input type=\"text\" name=\"userNickName\" placeholder=\"Votre pseudonyme\" required>
                     </div>
-                    <div class=\"itemsBox\">
+                    <div class=\"itemBox\">
                         <input type=\"email\" name=\"userMail\" placeholder=\"Votre adresse e-mail\" required>
                     </div>
-                    <div class=\"itemsBox\">
+                    <div class=\"itemBox\">
                         <input type=\"password\" name=\"userPwd\" placeholder=\"Votre mot de passe\" required>
                     </div>
-                    <div class=\"itemsBox\">
+                    <div class=\"itemBox\">
                         <input type=\"password\" name=\"verifUserPwd\" placeholder=\"Votre mot de passe (pour vérification)\" required>
                     </div>
                 </div>
@@ -116,22 +116,22 @@ class __TwigTemplate_2d41c865bd300213db0824b0f1e169f3a48472ac3d624c3cbd36656ecaa
         <div class=\"formContainer\">
             <form class=\"formBox\" method=\"post\" action=\"\">
                 <div class=\"itemsContainer\">
-                    <div class=\"itemsBox\">
+                    <div class=\"itemBox\">
                         <input type=\"text\" name=\"userName\" placeholder=\"Votre Nom\" required>
                     </div>
-                    <div class=\"itemsBox\">
+                    <div class=\"itemBox\">
                         <input type=\"text\" name=\"userFirstName\" placeholder=\"Votre prénom\" required>
                     </div>
-                    <div class=\"itemsBox\">
+                    <div class=\"itemBox\">
                         <input type=\"text\" name=\"userNickName\" placeholder=\"Votre pseudonyme\" required>
                     </div>
-                    <div class=\"itemsBox\">
+                    <div class=\"itemBox\">
                         <input type=\"email\" name=\"userMail\" placeholder=\"Votre adresse e-mail\" required>
                     </div>
-                    <div class=\"itemsBox\">
+                    <div class=\"itemBox\">
                         <input type=\"password\" name=\"userPwd\" placeholder=\"Votre mot de passe\" required>
                     </div>
-                    <div class=\"itemsBox\">
+                    <div class=\"itemBox\">
                         <input type=\"password\" name=\"verifUserPwd\" placeholder=\"Votre mot de passe (pour vérification)\" required>
                     </div>
                 </div>
