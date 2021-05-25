@@ -7,6 +7,9 @@ class userController extends AbstractController
     public function connectionView() {
         return $this->twig->render("connectionView\connectionView.html.twig");
     }
+    public function registerView(){
+        return $this->twig->render("registerView/registerView.html.twig");
+    }
     public function log() {
         if (isset($_POST['okButton'])) {
             $user = new userModel();

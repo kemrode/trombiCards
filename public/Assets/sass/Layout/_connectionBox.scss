@@ -31,6 +31,24 @@
   .okButton--color {
     @include okButtonBody;
   }
+  .registerLinkBox{
+    @include rowFlex;
+    width: auto;
+    height: 7vh;
+  }
+  .registerLink{
+    width: auto;
+    height: auto;
+    &__text{
+      &--color{
+        color: white;
+      }
+      &--font{
+        font-size: 1.1em;
+        text-decoration: black;
+      }
+    }
+  }
 @media only screen and (max-width: 600px) {
   .connectionBox__itemsBox{
     padding-left: 10px;
