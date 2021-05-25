@@ -6,9 +6,26 @@ namespace src\Model;
 
 class newsModel
 {
-    public string $title;
-    public string $text;
-    public string $dateTime;
+    private string $title;
+    private string $text;
+    private string $dateTime;
+    private int $newsId;
+
+    /**
+     * @return int
+     */
+    public function getNewsId(): int
+    {
+        return $this->newsId;
+    }
+
+    /**
+     * @param int $newsId
+     */
+    public function setNewsId(int $newsId): void
+    {
+        $this->newsId = $newsId;
+    }
 
     /**
      * @return string

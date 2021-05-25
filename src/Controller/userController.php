@@ -13,8 +13,8 @@ class userController extends AbstractController
     public function log() {
         if (isset($_POST['okButton'])) {
             $user = new userModel();
-            $user->setUserMail($_POST['connMail']);
-            $user->setUserPasswd($_POST['connPWD']);
+            $user->setMail($_POST['connMail']);
+            $user->setPwd($_POST['connPWD']);
             $result = $user->loginUser(BDD::getInstance());
             if ($result == true) {
                 $userConnected = $user->fetchUser(BDD::getInstance());
@@ -38,13 +38,15 @@ class userController extends AbstractController
     //function to POST new user
     public function newUserPost(\PDO $bdd){
         try {
-            $sql = 'INSERT INTO users(Username, Userprenom, Userpseudo, Userpwd) VALUES(:userName,:userPrenom,:userPseudo;:userPwd)';
+            $sql = 'INSERT INTO users(userName, userFirstname, userNickname, userPasswd, userMail, userJob) VALUES(:userName,:userFirstname,:userNickname;:userPasswd,:userMail,:userJob)';
             $request = $bdd->prepare($sql);
             $request->execute([
-                'Username'=> $this->getName(),
-                'Userprenom' => $this->getSurname(),
-                'Userpseudo' => $this->getPseudo(),
-                'Userpwd' => $this->getPwd()
+                'userName'=> $this->getName(),
+                'userFirstname' => $this->getFirstname(),
+                'userNickname' => $this->getNickname(),
+                'userPasswd' => $this->getPasswd(),
+                'userMail' => $this->getMail(),
+                'userJob' => $this->getHob()
             ]);
             return "ok";
         } catch (\Exception $e){

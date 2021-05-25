@@ -23,7 +23,7 @@ class BDDconfig {
             $hostname = "localhost";
             $username = "root";
             $password = "";
-            $dbname = "testadmin";
+            $dbname = "trombicard_bdd";
 
             SELF::$_instance = new PDO('mysql:host=' . $hostname . ';dbname=' . $dbname . ';charset=utf8', $username, $password);
             SELF::$_instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

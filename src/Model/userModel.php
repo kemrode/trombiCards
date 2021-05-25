@@ -7,57 +7,60 @@ namespace src\Model;
 class userModel
 {
     //define varaibles about user
-    public string $name;
-    public string $surname;
-    public string $pseudo;
-    public string $pwd;
+    private string $name;
+    private string $firstname;
+    private string $nickname;
+    private string $pwd;
+    private string $mail;
+    private string $job;
+    private int $userId;
 
     /**
-     * @return string
+     * @return int
      */
-    public function getName(): string
+    public function getUserId(): int
     {
-        return $this->name;
+        return $this->userId;
     }
 
     /**
-     * @param string $name
+     * @param int $userId
      */
-    public function setName(string $name): void
+    public function setUserId(int $userId): void
     {
-        $this->name = $name;
-    }
-
-    /**
-     * @return string
-     */
-    public function getSurname(): string
-    {
-        return $this->surname;
-    }
-
-    /**
-     * @param string $surname
-     */
-    public function setSurname(string $surname): void
-    {
-        $this->surname = $surname;
+        $this->userId = $userId;
     }
 
     /**
      * @return string
      */
-    public function getPseudo(): string
+    public function getFirstname(): string
     {
-        return $this->pseudo;
+        return $this->firstname;
     }
 
     /**
-     * @param string $pseudo
+     * @param string $firstname
      */
-    public function setPseudo(string $pseudo): void
+    public function setFirstname(string $firstname): void
     {
-        $this->pseudo = $pseudo;
+        $this->firstname = $firstname;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNickname(): string
+    {
+        return $this->nickname;
+    }
+
+    /**
+     * @param string $nickname
+     */
+    public function setNickname(string $nickname): void
+    {
+        $this->nickname = $nickname;
     }
 
     /**
@@ -75,6 +78,55 @@ class userModel
     {
         $this->pwd = $pwd;
     }
+
+    /**
+     * @return string
+     */
+    public function getMail(): string
+    {
+        return $this->mail;
+    }
+
+    /**
+     * @param string $mail
+     */
+    public function setMail(string $mail): void
+    {
+        $this->mail = $mail;
+    }
+
+    /**
+     * @return string
+     */
+    public function getJob(): string
+    {
+        return $this->job;
+    }
+
+    /**
+     * @param string $job
+     */
+    public function setJob(string $job): void
+    {
+        $this->job = $job;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param string $name
+     */
+    public function setName(string $name): void
+    {
+        $this->name = $name;
+    }
+
 
 
 }
