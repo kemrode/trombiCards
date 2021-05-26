@@ -119,4 +119,23 @@ class newsModel
 
     }
 
+    //function to update a notification from database
+    public function updateNotification(\PDO $bdd, $notifId,$array=[]){
+        $sql = 'UPDATE notifications SET notifTitle =:titleArray, notifTxt =:txtArray, notifDate =:dateArray WHERE notifId =:notifId';
+        $request = $bdd->prepare($sql);
+        $request->execute([
+            "notifTitle" => $_POST[''],
+            "notifTxt"   => $_POST[''],
+            "notifDate" =>  $_POST['']
+        ]);
+    }
+
+    //function to delete a notification from database
+    public function deleteNotification(\PDO $bdd, $notifId){
+        $sql = 'DELETE FROM notifications WHERE notifId:=notifId';
+        $request = $bdd->prepare($sql);
+        $request->execute(['notifId'=>$notifId]);
+        header("Location:\ ");
+    }
+
 }
