@@ -75,4 +75,48 @@ class newsModel
         $this->dateTime = $dateTime;
     }
 
+    //function to post a new notification into database
+    public function postNewArticle(\PDO $bdd){
+        try {
+            $sql = 'INSERT INTO notifications (notifTxt, notifDate, notifTitle) VALUE (:notifTxt,:notifDate,:notifTitle)';
+            $request = $bdd->prepare($sql);
+            $request->execute([
+                "notifTxt" => $this->setText(),
+                "notifDate" => $this->setDateTime(),
+                "notifTitle" => $this->setTitle()
+            ]);
+            return "ok";
+        } catch (\Exception $e){
+            return $e->getMessage();
+        }
+    }
+
+    /*
+    public function getNotificationById(\PDO $bdd){
+        try {
+            $sql = 'SELECT notifId FROM notifications';
+            $request = $bdd->prepare($sql);
+            $request->execute();
+            return $request->fetch(\PDO::FETCH_CLASS, "src\Model\\newsModel");
+        } catch (\Exception $e){
+            return $e->getMessage();
+        }
+    }
+    */
+
+    //function to fetch notifications from database
+    public function fetchNotification(\PDO $bdd, $notifData){
+        try {
+            //$notifData = $this->getNewsId();
+            $sql = 'SELECT * FROM notifications WHERE notifId=:notifData';
+            $request = $bdd->prepare($sql);
+            $request->setFetchMode(\PDO::FETCH_CLASS, "src\Model\newsModel");
+            $request->execute(['notifData'=>$notifData]);
+            return $request->fetch();
+        } catch (\Exception $e){
+            return $e->getMessage();
+        }
+
+    }
+
 }
