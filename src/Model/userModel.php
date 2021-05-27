@@ -172,6 +172,13 @@ class userModel
             return $e->getMessage();
         }
     }
+    //function to logout
+    public function logOut(){
+        session_start();
+        $_SESSION = array();
+        session_destroy();
+        header('Location:/');
+    }
 
 
 
