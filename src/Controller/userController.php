@@ -76,6 +76,7 @@ class userController extends AbstractController
             $newUser->setPwd($_POST['userPwd']);
             $newUser->setMail($_POST['userMail']);
             $newUserRegistered = $newUser->postNewUser(BDDconfig::getInstance());
+            header('Location:/');
             return true;
         } else {
             echo "veuillez remplir tous les champs, svp.";

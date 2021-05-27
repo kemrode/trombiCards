@@ -44,12 +44,9 @@ class __TwigTemplate_98df61174878e94ef31f8a9bffd694e81df369c4cb80952b821c0fecbe6
         // line 2
         echo "    <!DOCTYPE html>
     <html lang=\"fr\">
-    <head>
-        <meta charset=\"UTF-8\">
-        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
-        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-    </head>
-";
+    ";
+        // line 4
+        $this->loadTemplate("headBlock/headBlock.html.twig", "metaBlock/metaBlock.html.twig", 4)->display($context);
     }
 
     public function getTemplateName()
@@ -59,7 +56,7 @@ class __TwigTemplate_98df61174878e94ef31f8a9bffd694e81df369c4cb80952b821c0fecbe6
 
     public function getDebugInfo()
     {
-        return array (  45 => 2,  38 => 1,);
+        return array (  49 => 4,  45 => 2,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -67,11 +64,7 @@ class __TwigTemplate_98df61174878e94ef31f8a9bffd694e81df369c4cb80952b821c0fecbe6
         return new Source("{% block metaBlock %}
     <!DOCTYPE html>
     <html lang=\"fr\">
-    <head>
-        <meta charset=\"UTF-8\">
-        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
-        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-    </head>
+    {% include \"headBlock/headBlock.html.twig\" %}
 {% endblock %}", "metaBlock/metaBlock.html.twig", "C:\\Users\\2217873\\Documents\\developpementPerso\\trombiCards\\templates\\metaBlock\\metaBlock.html.twig");
     }
 }

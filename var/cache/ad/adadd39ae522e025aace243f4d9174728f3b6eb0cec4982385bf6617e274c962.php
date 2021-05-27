@@ -40,15 +40,16 @@ class __TwigTemplate_326aac214e9d4f78f85bee0afc7a2feb92516d4ee4a84316a0c9503544d
         $this->loadTemplate("metaBlock/metaBlock.html.twig", "connectionView\\connectionView.html.twig", 2)->display($context);
         // line 3
         echo "    <link rel=\"stylesheet\" type=\"text/css\" href=\"/Assets/css/connectionStylus.css\">
+    <title>MonAdmin - Se connecter</title>
 </head>
 <body>
 <div class=\"primaryContainer primaryContainer--backgroundImage\">
     <div class=\"primaryContainer__header\">
         <header>
             ";
-        // line 9
-        $this->loadTemplate("headerView/headerView.html.twig", "connectionView\\connectionView.html.twig", 9)->display($context);
         // line 10
+        $this->loadTemplate("headerView/headerView.html.twig", "connectionView\\connectionView.html.twig", 10)->display($context);
+        // line 11
         echo "        </header>
     </div>
     <!-- definition about the connection items -->
@@ -91,7 +92,7 @@ class __TwigTemplate_326aac214e9d4f78f85bee0afc7a2feb92516d4ee4a84316a0c9503544d
 
     public function getDebugInfo()
     {
-        return array (  52 => 10,  50 => 9,  42 => 3,  40 => 2,  37 => 1,);
+        return array (  53 => 11,  51 => 10,  42 => 3,  40 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -99,6 +100,7 @@ class __TwigTemplate_326aac214e9d4f78f85bee0afc7a2feb92516d4ee4a84316a0c9503544d
         return new Source("<head>
     {% include \"metaBlock/metaBlock.html.twig\" %}
     <link rel=\"stylesheet\" type=\"text/css\" href=\"/Assets/css/connectionStylus.css\">
+    <title>MonAdmin - Se connecter</title>
 </head>
 <body>
 <div class=\"primaryContainer primaryContainer--backgroundImage\">
