@@ -48,7 +48,6 @@ class __TwigTemplate_98df61174878e94ef31f8a9bffd694e81df369c4cb80952b821c0fecbe6
         <meta charset=\"UTF-8\">
         <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-        <title>MonAdmin - Articles</title>
     </head>
 ";
     }
@@ -72,7 +71,6 @@ class __TwigTemplate_98df61174878e94ef31f8a9bffd694e81df369c4cb80952b821c0fecbe6
         <meta charset=\"UTF-8\">
         <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-        <title>MonAdmin - Articles</title>
     </head>
 {% endblock %}", "metaBlock/metaBlock.html.twig", "C:\\Users\\2217873\\Documents\\developpementPerso\\trombiCards\\templates\\metaBlock\\metaBlock.html.twig");
     }

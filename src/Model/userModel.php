@@ -127,6 +127,24 @@ class userModel
         $this->name = $name;
     }
 
+    //function to POST a new user
+    public function postNewUser(\PDO $bdd){
+        try {
+            $sql = 'INSERT INTO users (userName, userFirstname, userPasswd, userMail, userNickname) VALUE(:userName,:userFirstname,:userPasswd,:userMail,:userNickname)';
+            $request = $bdd->prepare($sql);
+            $request->execute([
+                "userName" => $this->setName(),
+                "userFirstname" => $this->setFirstname(),
+                "userPasswd" => $this->setPwd(),
+                "userMail" => $this->setMail(),
+                "userNickname" => $this->setNickname()
+            ]);
+            return "ok";
+        } catch (\Exception $e){
+            die('Erreur :'.$e->getMessage());
+        }
+    }
+
 
 
 }

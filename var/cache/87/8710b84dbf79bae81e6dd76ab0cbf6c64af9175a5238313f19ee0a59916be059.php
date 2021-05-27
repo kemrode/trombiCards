@@ -39,16 +39,17 @@ class __TwigTemplate_2d41c865bd300213db0824b0f1e169f3a48472ac3d624c3cbd36656ecaa
         // line 2
         $this->loadTemplate("metaBlock/metaBlock.html.twig", "registerView/registerView.html.twig", 2)->display($context);
         // line 3
-        echo "    <link rel=\"stylesheet\" type=\"text/css\" href=\"/Assets/css/registerStylus.css\">
+        echo "    <title>MonAdmin - S'enregistrer</title>
+    <link rel=\"stylesheet\" type=\"text/css\" href=\"/Assets/css/registerStylus.css\">
 </head>
 <body>
 <div class=\"primaryContainer primaryContainer--backgroundImage\">
     <div class=\"primaryContainer__header\">
         <header>
             ";
-        // line 9
-        $this->loadTemplate("headerView/headerView.html.twig", "registerView/registerView.html.twig", 9)->display($context);
         // line 10
+        $this->loadTemplate("headerView/headerView.html.twig", "registerView/registerView.html.twig", 10)->display($context);
+        // line 11
         echo "        </header>
     </div>
     <div class=\"registerContainer\">
@@ -96,13 +97,14 @@ class __TwigTemplate_2d41c865bd300213db0824b0f1e169f3a48472ac3d624c3cbd36656ecaa
 
     public function getDebugInfo()
     {
-        return array (  52 => 10,  50 => 9,  42 => 3,  40 => 2,  37 => 1,);
+        return array (  53 => 11,  51 => 10,  42 => 3,  40 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("<head>
     {% include \"metaBlock/metaBlock.html.twig\" %}
+    <title>MonAdmin - S'enregistrer</title>
     <link rel=\"stylesheet\" type=\"text/css\" href=\"/Assets/css/registerStylus.css\">
 </head>
 <body>
