@@ -17,15 +17,16 @@ class userController extends AbstractController
     public function log() {
         if (isset($_POST['okButton'])) {
             $user = new userModel();
-            $user->setMail($_POST['connMail']);
-            $user->setPwd($_POST['connPWD']);
-            $result = $user->loginUser(BDD::getInstance());
+            $user->setMail($_POST['mailToPost']);
+            $user->setPwd($_POST['pwdToPost']);
+            $result = $user->login(BDDconfig::getInstance());
             if ($result == true) {
-                $userConnected = $user->fetchUser(BDD::getInstance());
+                $userConnected = $user->fetchUser(BDDconfig::getInstance());
                 foreach ($userConnected as $key => $value) {
                     $_SESSION[$key] = $value;
                 }
-                header('Location:/');
+                $controller = new adminMainController();
+                echo $controller->adminMainView();
                 return;
             } else {
                 return;
@@ -38,33 +39,6 @@ class userController extends AbstractController
         $_SESSION = array();
         session_destroy();
         header('Location:/');
-    }
-    //function to fetch user infos
-    public function fetchUser(\PDO $bdd){
-        try {
-            $userConnected = $this->getName();
-            $sql = 'SELECT * FROM users WHERE Username:=userName';
-            $request = $bdd->prepare($sql);
-            $request->setFetchMode(\PDO::FETCH_CLASS, 'src\Model\userModel');
-            $request->execute(['userName'=>$userConnected]);
-            return $request->fetch();
-        } catch (\Exception $e){
-            return $e->getMessage();
-        }
-    }
-    //function about login of a user
-    public function login(\PDO $bdd){
-        $nameLog = htmlentities($this->getName());
-        $passwdLog = htmlentities($this->getPwd());
-        try {
-            $sql = 'SELECT Username, Userpwd FROM users WHERE Username=:nameLog AND Userpwd=:passwdLog';
-            $request = $bdd->prepare($sql);
-            $request->setFetchMode(\PDO::FETCH_CLASS, 'src\Model\userModel');
-            $request->execute(['nameLog'=>$nameLog, 'passwdLog'=>$passwdLog]);
-            return $request->fetch();
-        } catch (\Exception $e){
-            return $e->getMessage();
-        }
     }
     //function to bring back datas given by new user in register form
     public function registerNewUser(){

@@ -2,7 +2,7 @@
 namespace src\Controller;
 
 
-class adminMainController extends \src\Controller\AbstractController
+class adminMainController extends AbstractController
 {
 
     //function to display adminMainView

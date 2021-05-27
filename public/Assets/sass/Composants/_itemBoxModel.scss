@@ -25,14 +25,21 @@
 .itemImage {
   @include flexBoxRowJustifyCenter;
 }
-
+.imgBox {
+  @include flexBoxRowJustifyCenter;
+  width: auto;
+}
+.itemImage img{
+  width: $largeImg;
+}
+//media querries for itemBoxModel
 @media only screen and (max-width: 600px) {
   .itemsBox{
     @include smallWidth;
     @include spaceBetween;
   }
   .itemImage img{
-    width: 200%;
+    width: $smallImage;
   }
   .itemTitle {
     font-size: large;
@@ -45,7 +52,7 @@
     @include spaceBetween;
   }
   .itemImage img{
-    width: 200%;
+    width: $mediumImg;
   }
   .itemTitle {
     font-size: x-large;
@@ -57,9 +64,6 @@
     @include mediumWidth;
     @include spaceBetween;
   }
-  .itemImage img{
-    width: 250%;
-  }
   .itemTitle {
     font-size: x-large;
   }
@@ -70,9 +74,6 @@
     @include highWidth;
     @include spaceBetweenHight;
   }
-  .itemImage img{
-    width: 300%;
-  }
   .itemTitle {
     font-size: xx-large;
   }
@@ -82,9 +83,6 @@
   .itemsBox{
     @include highWidth;
     @include spaceBetweenHight;
-  }
-  .itemImage img{
-    width: 300%;
   }
   .itemTitle {
     font-size: xx-large;

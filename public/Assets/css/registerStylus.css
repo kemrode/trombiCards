@@ -229,6 +229,17 @@ body {
   justify-content: center;
 }
 
+.imgBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: auto;
+}
+
+.itemImage img {
+  width: 150px;
+}
+
 @media only screen and (max-width: 600px) {
   .itemsBox {
     width: 250px;
@@ -238,7 +249,7 @@ body {
   }
 
   .itemImage img {
-    width: 200%;
+    width: 50px;
   }
 
   .itemTitle {
@@ -254,7 +265,7 @@ body {
   }
 
   .itemImage img {
-    width: 200%;
+    width: 125px;
   }
 
   .itemTitle {
@@ -269,10 +280,6 @@ body {
     margin-bottom: 15px;
   }
 
-  .itemImage img {
-    width: 250%;
-  }
-
   .itemTitle {
     font-size: x-large;
   }
@@ -285,10 +292,6 @@ body {
     margin-top: 25px;
   }
 
-  .itemImage img {
-    width: 300%;
-  }
-
   .itemTitle {
     font-size: xx-large;
   }
@@ -299,10 +302,6 @@ body {
     height: 25vh;
     margin-bottom: 25px;
     margin-top: 25px;
-  }
-
-  .itemImage img {
-    width: 300%;
   }
 
   .itemTitle {

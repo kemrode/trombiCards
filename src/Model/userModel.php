@@ -6,13 +6,14 @@ namespace src\Model;
 
 class userModel
 {
+
     //define varaibles about user
     private string $name;
     private string $firstname;
     private string $nickname;
     private string $pwd;
     private string $mail;
-    private string $job;
+    private string $job = 'user';
     private int $userId;
 
     /**
@@ -142,6 +143,33 @@ class userModel
             return "ok";
         } catch (\Exception $e){
             die('Erreur :'.$e->getMessage());
+        }
+    }
+    //function about login of a user
+    public function login(\PDO $bdd){
+        $mailLog = htmlentities($this->getMail());
+        $passwdLog = htmlentities($this->getPwd());
+        try {
+            $sql = 'SELECT userMail, userPasswd FROM users WHERE userMail=:mailLog AND Userpwd=:passwdLog';
+            $request = $bdd->prepare($sql);
+            $request->setFetchMode(\PDO::FETCH_CLASS, 'src\Model\userModel');
+            $request->execute(['nameLog'=>$mailLog, 'passwdLog'=>$passwdLog]);
+            return $request->fetch();
+        } catch (\Exception $e){
+            return $e->getMessage();
+        }
+    }
+    //function to fetch user infos
+    public function fetchUser(\PDO $bdd){
+        try {
+            $userConnected = $this->getMail();
+            $sql = 'SELECT * FROM users WHERE userMail=:userConnected';
+            $request = $bdd->prepare($sql);
+            $request->setFetchMode(\PDO::FETCH_CLASS, 'src\Model\userModel');
+            $request->execute(['userConnected'=>$userConnected]);
+            return $request->fetch();
+        } catch (\Exception $e){
+            return $e->getMessage();
         }
     }
 
