@@ -40,27 +40,28 @@ class __TwigTemplate_326aac214e9d4f78f85bee0afc7a2feb92516d4ee4a84316a0c9503544d
         $this->loadTemplate("metaBlock/metaBlock.html.twig", "connectionView\\connectionView.html.twig", 2)->display($context);
         // line 3
         echo "    <link rel=\"stylesheet\" type=\"text/css\" href=\"/Assets/css/connectionStylus.css\">
+    <title>MonAdmin - Se connecter</title>
 </head>
 <body>
 <div class=\"primaryContainer primaryContainer--backgroundImage\">
     <div class=\"primaryContainer__header\">
         <header>
             ";
-        // line 9
-        $this->loadTemplate("headerView/headerView.html.twig", "connectionView\\connectionView.html.twig", 9)->display($context);
         // line 10
+        $this->loadTemplate("headerView/headerView.html.twig", "connectionView\\connectionView.html.twig", 10)->display($context);
+        // line 11
         echo "        </header>
     </div>
     <!-- definition about the connection items -->
     <div class=\"primaryContainer__connectionBox\">
         <div class=\"connectionBox__itemsBox connectionBox--backgroundColor connectionBox--size\">
-            <form method=\"post\" action=\"\" name=\"connectionBoxForm\">
+            <form method=\"post\" action=\"/?controller=user&action=log\" name=\"connectionBoxForm\">
                 <div class=\"itemsBox__itemsField itemsBox__itemsField--backgroundColor\">
                     <div class=\"itemsField itemsField__nameField itemsBox__nameField--input\">
-                        <input type=\"text\" name=\"nameField\" placeholder=\"Nom...\" class=\"field nameField\" required>
+                        <input type=\"email\" name=\"mailToPost\" placeholder=\"Votre e-mail\" class=\"field nameField\" required>
                     </div>
                     <div class=\"itemsField itemsField__passwdField itemsBox__passwdField--input\">
-                        <input type=\"password\" name=\"pwd\" placeholder=\"Mot de Passe...\" class=\"field passwdField\" required>
+                        <input type=\"password\" name=\"pwdToPost\" placeholder=\"Mot de Passe...\" class=\"field passwdField\" required>
                     </div>
                     <div class=\"itemsField itemsField__okButton itemsField__okButton--input\">
                         <button type=\"submit\" name=\"okButton\" class=\"field okButton okButton--color\">OK</button>
@@ -91,7 +92,7 @@ class __TwigTemplate_326aac214e9d4f78f85bee0afc7a2feb92516d4ee4a84316a0c9503544d
 
     public function getDebugInfo()
     {
-        return array (  52 => 10,  50 => 9,  42 => 3,  40 => 2,  37 => 1,);
+        return array (  53 => 11,  51 => 10,  42 => 3,  40 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -99,6 +100,7 @@ class __TwigTemplate_326aac214e9d4f78f85bee0afc7a2feb92516d4ee4a84316a0c9503544d
         return new Source("<head>
     {% include \"metaBlock/metaBlock.html.twig\" %}
     <link rel=\"stylesheet\" type=\"text/css\" href=\"/Assets/css/connectionStylus.css\">
+    <title>MonAdmin - Se connecter</title>
 </head>
 <body>
 <div class=\"primaryContainer primaryContainer--backgroundImage\">
@@ -110,13 +112,13 @@ class __TwigTemplate_326aac214e9d4f78f85bee0afc7a2feb92516d4ee4a84316a0c9503544d
     <!-- definition about the connection items -->
     <div class=\"primaryContainer__connectionBox\">
         <div class=\"connectionBox__itemsBox connectionBox--backgroundColor connectionBox--size\">
-            <form method=\"post\" action=\"\" name=\"connectionBoxForm\">
+            <form method=\"post\" action=\"/?controller=user&action=log\" name=\"connectionBoxForm\">
                 <div class=\"itemsBox__itemsField itemsBox__itemsField--backgroundColor\">
                     <div class=\"itemsField itemsField__nameField itemsBox__nameField--input\">
-                        <input type=\"text\" name=\"nameField\" placeholder=\"Nom...\" class=\"field nameField\" required>
+                        <input type=\"email\" name=\"mailToPost\" placeholder=\"Votre e-mail\" class=\"field nameField\" required>
                     </div>
                     <div class=\"itemsField itemsField__passwdField itemsBox__passwdField--input\">
-                        <input type=\"password\" name=\"pwd\" placeholder=\"Mot de Passe...\" class=\"field passwdField\" required>
+                        <input type=\"password\" name=\"pwdToPost\" placeholder=\"Mot de Passe...\" class=\"field passwdField\" required>
                     </div>
                     <div class=\"itemsField itemsField__okButton itemsField__okButton--input\">
                         <button type=\"submit\" name=\"okButton\" class=\"field okButton okButton--color\">OK</button>
