@@ -134,7 +134,6 @@
 @mixin scrollPrimary{
   overflow-x: hidden;
   overflow-y: auto;
-  @include scrollDisplayNone;
 }
 
 //mixin about button concept

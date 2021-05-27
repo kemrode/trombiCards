@@ -196,6 +196,12 @@ body {
   justify-content: center;
   width: auto;
   height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.containerFlexBox::-webkit-scrollbar {
+  display: none;
 }
 
 .itemsBox {
