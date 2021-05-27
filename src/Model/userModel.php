@@ -133,11 +133,11 @@ class userModel
             $sql = 'INSERT INTO users (userName, userFirstname, userPasswd, userMail, userNickname) VALUE(:userName,:userFirstname,:userPasswd,:userMail,:userNickname)';
             $request = $bdd->prepare($sql);
             $request->execute([
-                "userName" => $this->setName(),
-                "userFirstname" => $this->setFirstname(),
-                "userPasswd" => $this->setPwd(),
-                "userMail" => $this->setMail(),
-                "userNickname" => $this->setNickname()
+                "userName" => $this->getName(),
+                "userFirstname" => $this->getFirstname(),
+                "userPasswd" => $this->getPwd(),
+                "userMail" => $this->getMail(),
+                "userNickname" => $this->getNickname()
             ]);
             return "ok";
         } catch (\Exception $e){

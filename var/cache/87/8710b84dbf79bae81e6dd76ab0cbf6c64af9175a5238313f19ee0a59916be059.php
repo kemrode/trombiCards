@@ -54,7 +54,7 @@ class __TwigTemplate_2d41c865bd300213db0824b0f1e169f3a48472ac3d624c3cbd36656ecaa
     </div>
     <div class=\"registerContainer\">
         <div class=\"formContainer\">
-            <form class=\"formBox\" method=\"post\" action=\"\">
+            <form class=\"formBox\" method=\"post\" action=\"/?controller=user&action=registerNewUser\">
                 <div class=\"itemsContainer\">
                     <div class=\"itemBox\">
                         <input type=\"text\" name=\"userName\" placeholder=\"Votre Nom\" required>
@@ -116,7 +116,7 @@ class __TwigTemplate_2d41c865bd300213db0824b0f1e169f3a48472ac3d624c3cbd36656ecaa
     </div>
     <div class=\"registerContainer\">
         <div class=\"formContainer\">
-            <form class=\"formBox\" method=\"post\" action=\"\">
+            <form class=\"formBox\" method=\"post\" action=\"/?controller=user&action=registerNewUser\">
                 <div class=\"itemsContainer\">
                     <div class=\"itemBox\">
                         <input type=\"text\" name=\"userName\" placeholder=\"Votre Nom\" required>
