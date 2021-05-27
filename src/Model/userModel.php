@@ -4,6 +4,8 @@
 namespace src\Model;
 
 
+use src\Controller\BDDconfig;
+
 class userModel
 {
 
@@ -180,6 +182,16 @@ class userModel
         header('Location:/');
     }
 
-
+    public static function GetMembers(){
+        try {
+            $bdd = BDDconfig::getInstance();
+            $sql = 'SELECT userId, userName, userFirstname, userPasswd, userMail, userNickname FROM users';
+            $request = $bdd->prepare($sql);
+            $request->execute();
+            return $request->fetchAll();
+        } catch (\Exception $e){
+            return $e->getMessage();
+        }
+    }
 
 }

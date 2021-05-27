@@ -57,7 +57,7 @@ class __TwigTemplate_48d7a6a92d76893d5f58cd1d34237e2b578830671d112334c0afc1cbc79
                     </div>
                     <div class=\"itemContainer itemContainer__contain\">
                         <div class=\"itemImage\">
-                            <a class=\"imgBox imgBox__img--size\" href=\"\"><img src=\"/Ressources/images/icons/article.svg\"></a>
+                            <a name=\"listMembers\" class=\"imgBox imgBox__img--size\" href=\"/?controller=listMembers&action=listMembersView\"><img src=\"/Ressources/images/icons/article.svg\"></a>
                         </div>
                     </div>
                 </div>
@@ -67,7 +67,7 @@ class __TwigTemplate_48d7a6a92d76893d5f58cd1d34237e2b578830671d112334c0afc1cbc79
                     </div>
                     <div class=\"itemContainer itemContainer__contain\">
                         <div class=\"itemImage itemImage__image\">
-                            <a class=\"imgBox imgBox__img--size\" href=\"\"><img src=\"/Ressources/images/icons/engineering.svg\"></a>
+                            <a name=\"engineering\" class=\"imgBox imgBox__img--size\" href=\"\"><img src=\"/Ressources/images/icons/engineering.svg\"></a>
                         </div>
                     </div>
                 </div>
@@ -77,7 +77,7 @@ class __TwigTemplate_48d7a6a92d76893d5f58cd1d34237e2b578830671d112334c0afc1cbc79
                     </div>
                     <div class=\"itemContainer itemContainer__contain\">
                         <div class=\"itemImage itemImage__image\">
-                            <a class=\"imgBox imgBox__img--size\" href=\"\"><img src=\"/Ressources/images/icons/mail.svg\"></a>
+                            <a name=\"mail\" class=\"imgBox imgBox__img--size\" href=\"\"><img src=\"/Ressources/images/icons/mail.svg\"></a>
                         </div>
                     </div>
                 </div>
@@ -87,7 +87,7 @@ class __TwigTemplate_48d7a6a92d76893d5f58cd1d34237e2b578830671d112334c0afc1cbc79
                     </div>
                     <div class=\"itemContainer itemContainer__contain\">
                         <div class=\"itemImage itemImage__image\">
-                            <a class=\"imgBox imgBox__img--size\" href=\"\"><img src=\"/Ressources/images/icons/peopleDouble.svg\"></a>
+                            <a name=\"peopleDouble\" class=\"imgBox imgBox__img--size\" href=\"\"><img src=\"/Ressources/images/icons/peopleDouble.svg\"></a>
                         </div>
                     </div>
                 </div>
@@ -97,7 +97,7 @@ class __TwigTemplate_48d7a6a92d76893d5f58cd1d34237e2b578830671d112334c0afc1cbc79
                     </div>
                     <div class=\"itemContainer itemContainer__contain\">
                         <div class=\"itemImage itemImage__image\">
-                            <a class=\"imgBox imgBox__img--size\" href=\"\"><img src=\"/Ressources/images/icons/analytics.svg\"></a>
+                            <a name=\"analytics\" class=\"imgBox imgBox__img--size\" href=\"\"><img src=\"/Ressources/images/icons/analytics.svg\"></a>
                         </div>
                     </div>
                 </div>
@@ -143,7 +143,7 @@ class __TwigTemplate_48d7a6a92d76893d5f58cd1d34237e2b578830671d112334c0afc1cbc79
                     </div>
                     <div class=\"itemContainer itemContainer__contain\">
                         <div class=\"itemImage\">
-                            <a class=\"imgBox imgBox__img--size\" href=\"\"><img src=\"/Ressources/images/icons/article.svg\"></a>
+                            <a name=\"listMembers\" class=\"imgBox imgBox__img--size\" href=\"/?controller=listMembers&action=listMembersView\"><img src=\"/Ressources/images/icons/article.svg\"></a>
                         </div>
                     </div>
                 </div>
@@ -153,7 +153,7 @@ class __TwigTemplate_48d7a6a92d76893d5f58cd1d34237e2b578830671d112334c0afc1cbc79
                     </div>
                     <div class=\"itemContainer itemContainer__contain\">
                         <div class=\"itemImage itemImage__image\">
-                            <a class=\"imgBox imgBox__img--size\" href=\"\"><img src=\"/Ressources/images/icons/engineering.svg\"></a>
+                            <a name=\"engineering\" class=\"imgBox imgBox__img--size\" href=\"\"><img src=\"/Ressources/images/icons/engineering.svg\"></a>
                         </div>
                     </div>
                 </div>
@@ -163,7 +163,7 @@ class __TwigTemplate_48d7a6a92d76893d5f58cd1d34237e2b578830671d112334c0afc1cbc79
                     </div>
                     <div class=\"itemContainer itemContainer__contain\">
                         <div class=\"itemImage itemImage__image\">
-                            <a class=\"imgBox imgBox__img--size\" href=\"\"><img src=\"/Ressources/images/icons/mail.svg\"></a>
+                            <a name=\"mail\" class=\"imgBox imgBox__img--size\" href=\"\"><img src=\"/Ressources/images/icons/mail.svg\"></a>
                         </div>
                     </div>
                 </div>
@@ -173,7 +173,7 @@ class __TwigTemplate_48d7a6a92d76893d5f58cd1d34237e2b578830671d112334c0afc1cbc79
                     </div>
                     <div class=\"itemContainer itemContainer__contain\">
                         <div class=\"itemImage itemImage__image\">
-                            <a class=\"imgBox imgBox__img--size\" href=\"\"><img src=\"/Ressources/images/icons/peopleDouble.svg\"></a>
+                            <a name=\"peopleDouble\" class=\"imgBox imgBox__img--size\" href=\"\"><img src=\"/Ressources/images/icons/peopleDouble.svg\"></a>
                         </div>
                     </div>
                 </div>
@@ -183,7 +183,7 @@ class __TwigTemplate_48d7a6a92d76893d5f58cd1d34237e2b578830671d112334c0afc1cbc79
                     </div>
                     <div class=\"itemContainer itemContainer__contain\">
                         <div class=\"itemImage itemImage__image\">
-                            <a class=\"imgBox imgBox__img--size\" href=\"\"><img src=\"/Ressources/images/icons/analytics.svg\"></a>
+                            <a name=\"analytics\" class=\"imgBox imgBox__img--size\" href=\"\"><img src=\"/Ressources/images/icons/analytics.svg\"></a>
                         </div>
                     </div>
                 </div>
