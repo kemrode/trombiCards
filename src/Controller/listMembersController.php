@@ -13,7 +13,7 @@ class listMembersController extends AbstractController
         $membersList = userModel::GetMembers();
         return $this->twig->render("listMembersView\listMembersView.html.twig",["membersList"=>$membersList]);
     }
-
+    //function to delete selected member from id
     public function deleteUser(){
         try {
             $userId = $_GET['param'];
