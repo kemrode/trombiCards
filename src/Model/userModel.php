@@ -162,13 +162,15 @@ class userModel
         }
     }
     //function to fetch user infos
-    public function fetchUser(\PDO $bdd){
+    public static function fetchUser(\PDO $bdd, $userId){
         try {
-            $userConnected = $this->getMail();
-            $sql = 'SELECT * FROM users WHERE userMail=:userConnected';
+            //$userConnected = $this->getMail();
+            //$sql = 'SELECT * FROM users WHERE userMail=:userConnected';
+            $sql = 'SELECT * FROM users WHERE userId=:iserId';
             $request = $bdd->prepare($sql);
             $request->setFetchMode(\PDO::FETCH_CLASS, 'src\Model\userModel');
-            $request->execute(['userConnected'=>$userConnected]);
+            //$request->execute(['userConnected'=>$userConnected]);
+            $request->execute(['userId'=>$userId]);
             return $request->fetch();
         } catch (\Exception $e){
             return $e->getMessage();
