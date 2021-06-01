@@ -182,6 +182,7 @@ class userModel
         header('Location:/');
     }
 
+    //function to bring back all the members from database
     public static function GetMembers(){
         try {
             $bdd = BDDconfig::getInstance();
@@ -193,5 +194,28 @@ class userModel
             return $e->getMessage();
         }
     }
+
+    //function to update members data
+    public static function updateMembers(\PDO $bdd, $id){
+        try {
+            $sql = 'UPDATE * FROM users WHERE userID:=userId';
+
+
+        } catch (\Exception $e){
+            return $e->getMessage();
+        }
+    }
+
+    //function to delete a member drom data
+    public static function deleteMember(\PDO $bdd, $userId) {
+        try {
+                $sql = 'DELETE FROM users WHERE userId=:userId';
+                $request = $bdd->prepare($sql);
+                $request->execute(['userId'=> $userId]);
+                return "ok";
+            } catch (\Exception $e){
+            return $e->getMessage();
+        }
+        }
 
 }

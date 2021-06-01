@@ -32,7 +32,7 @@ if($controller != ''){
         if(method_exists($class,$action))
             echo $controller->$action($param);
         else
-            echo $controller->index();
+            echo $controller->connectionView();
     }else{
         $controller = new src\Controller\userController();
         echo $controller->connectionView();

@@ -14,4 +14,17 @@ class listMembersController extends AbstractController
         return $this->twig->render("listMembersView\listMembersView.html.twig",["membersList"=>$membersList]);
     }
 
+    public function deleteUser(){
+        try {
+            $userId = $_GET['param'];
+            if(isset($userId)){
+                $deleteUser = userModel::deleteMember(BDDconfig::getInstance(), $userId);
+                header('Location: /');
+                //$this->listMembersView();
+            }
+        } catch (\Exception $e){
+            return $e->getMessage();
+        }
+    }
+
 }
