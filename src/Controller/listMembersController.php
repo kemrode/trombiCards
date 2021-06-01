@@ -19,8 +19,8 @@ class listMembersController extends AbstractController
             $userId = $_GET['param'];
             if(isset($userId)){
                 $deleteUser = userModel::deleteMember(BDDconfig::getInstance(), $userId);
-                header('Location: /');
-                //$this->listMembersView();
+                //header('Location: /');
+                echo $this->listMembersView();
             }
         } catch (\Exception $e){
             return $e->getMessage();
