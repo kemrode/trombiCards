@@ -21,4 +21,166 @@ body {
   background-size: cover;
 }
 
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.memberContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: auto;
+  height: 100vh;
+}
+
+.formBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 55%;
+  height: 50vh;
+}
+.formBox__background--backgroundColor {
+  background-color: #E5E7E9;
+}
+.formBox__background--border {
+  border: 1px solid black;
+  border-radius: 45px;
+}
+
+.blockMember {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 150px;
+}
+
+.blockBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+}
+.blockBox input {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 85%;
+  height: 75px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 45px;
+  font-style: italic;
+  font-size: 1.2em;
+}
+.blockBox input:focus {
+  background-color: #D6EAF8;
+}
+
+.jobBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  height: 100%;
+}
+.jobBox__background--backgroundColor {
+  background-color: #C0392B;
+}
+.jobBox__background--border {
+  border: 1px solid black;
+  border-radius: 45px;
+}
+
+.blockButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 45%;
+  height: 50%;
+}
+
+.buttonBox {
+  width: 100%;
+  height: 100%;
+}
+.buttonBox button {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  border-radius: 45px;
+  font-weight: bold;
+  background-color: yellow;
+}
+.buttonBox button:hover {
+  background-color: #239B56;
+}
+
 /*# sourceMappingURL=updateMemberStylus.css.map */

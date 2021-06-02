@@ -1,0 +1,89 @@
+@import "../Utils/mixin";
+@import "../Utils/variables";
+
+.memberContainer {
+  @include flexBoxRowJustifyCenter;
+  width: auto;
+  height: 100vh;
+}
+.formBox {
+  @include flexBoxRowJustifyCenter;
+  width: 55%;
+  height: 50vh;
+  &__background {
+    &--backgroundColor {
+      background-color: #E5E7E9;
+    }
+    &--border {
+      border: 1px solid black;
+      border-radius: $quarterBorder;
+    }
+  }
+}
+.blockMember {
+  @include flexBoxColumn;
+  width: 100%;
+  height: 100%;
+}
+.block{
+  @include rowFlex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 150px;
+}
+.blockBox{
+  @include rowFlex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  & input{
+    @include flexBoxRowJustifyCenter;
+    width: 85%;
+    height: 75px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: $quarterBorder;
+    font-style: italic;
+    font-size: 1.2em;
+  }
+  & input:focus {
+    background-color: #D6EAF8;
+  }
+}
+.jobBox {
+  @include flexBoxColumnJustifyCenter;
+  align-items: center;
+  width: 45%;
+  height: 100%;
+  &__background {
+    &--backgroundColor {
+      background-color: #C0392B;
+    }
+    &--border {
+      border: 1px solid black;
+      border-radius: $quarterBorder;
+    }
+  }
+}
+.blockButton {
+  @include flexBoxRowJustifyCenter;
+  width: 45%;
+  height: 50%;
+}
+.buttonBox {
+  width: 100%;
+  height: 100%;
+  & button {
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    border-radius: $quarterBorder;
+    font-weight: bold;
+    background-color: yellow;
+  }
+  & button:hover {
+    background-color: #239B56;
+  }
+}
