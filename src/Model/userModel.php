@@ -164,8 +164,6 @@ class userModel
     //function to fetch user infos
     public static function fetchUser(\PDO $bdd, $userId){
         try {
-            //$userConnected = $this->getMail();
-            //$sql = 'SELECT * FROM users WHERE userMail=:userConnected';
             $sql = 'SELECT * FROM users WHERE userId=:iserId';
             $request = $bdd->prepare($sql);
             $request->setFetchMode(\PDO::FETCH_CLASS, 'src\Model\userModel');
@@ -183,7 +181,6 @@ class userModel
         session_destroy();
         header('Location:/');
     }
-
     //function to bring back all the members from database
     public static function GetMembers(){
         try {
@@ -196,18 +193,25 @@ class userModel
             return $e->getMessage();
         }
     }
-
     //function to update members data
     public static function updateMembers(\PDO $bdd, $id){
         try {
-            $sql = 'UPDATE * FROM users WHERE userID:=userId';
-
-
+            $sql = 'UPDATE users SET userName:=userName, userFirstname:=userFirstname, userPasswd:=userPasswd, userMail:=userMail, userNickname:=userNickname, userJob:=userJob WHERE userID:=userId';
+            $request = $bdd->prepare($sql);
+            $request->execute([
+                "userName" => $this->getName(),
+                "userFirstname" => $this->getFirstname(),
+                "userPasswd" => $this->getPwd(),
+                "userMail" => $this->getMail(),
+                "userNickname" => $this->getNickname(),
+                "userJob" => $this->getJob(),
+                "userId" => $id
+            ]);
+            return "ok";
         } catch (\Exception $e){
             return $e->getMessage();
         }
     }
-
     //function to delete a member drom data
     public static function deleteMember(\PDO $bdd, $userId) {
         try {
