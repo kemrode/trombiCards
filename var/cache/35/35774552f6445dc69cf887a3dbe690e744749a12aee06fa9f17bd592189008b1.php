@@ -87,7 +87,7 @@ class __TwigTemplate_26f64b04dd15cac49808de1aaf3b977690528e875072925474dc9e5079a
                                 <div class=\"updateBtn updateBtn__button--backgroundColor updateBtn__button--borderradius updateBtn__button--size\">
                                     <button type=\"submit\" name=\"updateBtn\" formaction=\"/?controller=updateView&action=updateMemberView&param=";
             // line 31
-            echo twig_escape_filter($this->env, (($__internal_d7fc55f1a54b629533d60b43063289db62e68921ee7a5f8de562bd9d4a2b7ad4 = $context["member"]) && is_array($__internal_d7fc55f1a54b629533d60b43063289db62e68921ee7a5f8de562bd9d4a2b7ad4) || $__internal_d7fc55f1a54b629533d60b43063289db62e68921ee7a5f8de562bd9d4a2b7ad4 instanceof ArrayAccess ? ($__internal_d7fc55f1a54b629533d60b43063289db62e68921ee7a5f8de562bd9d4a2b7ad4["userid"] ?? null) : null), "html", null, true);
+            echo twig_escape_filter($this->env, (($__internal_d7fc55f1a54b629533d60b43063289db62e68921ee7a5f8de562bd9d4a2b7ad4 = $context["member"]) && is_array($__internal_d7fc55f1a54b629533d60b43063289db62e68921ee7a5f8de562bd9d4a2b7ad4) || $__internal_d7fc55f1a54b629533d60b43063289db62e68921ee7a5f8de562bd9d4a2b7ad4 instanceof ArrayAccess ? ($__internal_d7fc55f1a54b629533d60b43063289db62e68921ee7a5f8de562bd9d4a2b7ad4["userId"] ?? null) : null), "html", null, true);
             echo "\">Modifier</button>
                                 </div>
                                 <div class=\"deleteBtn deleteBtn__button--backgroundColor deleteBtn__button--borderradius deleteBtn__button--size\">
@@ -159,7 +159,7 @@ class __TwigTemplate_26f64b04dd15cac49808de1aaf3b977690528e875072925474dc9e5079a
                             </div>
                             <div class=\"buttonBox\">
                                 <div class=\"updateBtn updateBtn__button--backgroundColor updateBtn__button--borderradius updateBtn__button--size\">
-                                    <button type=\"submit\" name=\"updateBtn\" formaction=\"/?controller=updateView&action=updateMemberView&param={{ member['userid'] }}\">Modifier</button>
+                                    <button type=\"submit\" name=\"updateBtn\" formaction=\"/?controller=updateView&action=updateMemberView&param={{ member['userId'] }}\">Modifier</button>
                                 </div>
                                 <div class=\"deleteBtn deleteBtn__button--backgroundColor deleteBtn__button--borderradius deleteBtn__button--size\">
                                     <button type=\"submit\" name=\"deleteBtn\" formaction=\"/?controller=listMembers&action=deleteUser&param={{ member['userId'] }}\">Supprimer</button>

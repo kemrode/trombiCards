@@ -1,7 +1,7 @@
 {% include "metaBlock/metaBlock.html.twig" %}
 <head>
     <link rel="stylesheet" type="text/css" href="/Assets/css/updateMemberStylus.css">
-    <title>MonAdmin - modifier {{ membre['userName']+' '+membre['userFirstname'] }}</title>
+    <title>MonAdmin - modifier {{ member.userName+' '+member.userFirstname }}</title>
 </head>
 <body>
 <div class="primaryContainer primaryContainer--backgroundImage">
@@ -10,22 +10,26 @@
         {% include "headerView/headerView.html.twig" %}
     </div>
     <div class="memberContainer">
-        <form class="formBox" method="post" action="">
+        <form class="formBox" method="post" action="/?controller=updateView&action=updateSelectedMember&param={{ 'userId' }}">
             <div class="blockMember">
                 <div class="blockName">
                     <div class="nameBox">
-                        <p>{{ member['userName'] }}</p>
+                        <input type="text" name="selectedName" value="{{ member.userName}}">
+                        <!--<p>{# item['userName'] #}</p>-->
                     </div>
                     <div class="firstnameBox">
-                        <p>{{ member['userFirstname'] }}</p>
+                        <input type="text" name="selectedName" value="{{ member.userFirstname }}">
+                        <!--<p>{# member['userId'] #}</p>-->
                     </div>
                 </div>
                 <div class="blockNickMail">
                     <div class="nicknameBox">
-                        <p>{{ member['userNickname'] }}</p>
+                        <input type="text" name="selectedName" value="{{ member.userNickname }}">
+                        <!--<p>{# member['userNickname'] #}</p>-->
                     </div>
                     <div class="mailBox">
-                        <p>{{ member['userMail'] }}</p>
+                        <input type="text" name="selectedName" value="{{ member.userMail }}">
+                        <!--<p>{# member['userMail'] #}</p>-->
                     </div>
                 </div>
                 <div class="blockJob">

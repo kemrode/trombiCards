@@ -21,7 +21,7 @@ class userController extends AbstractController
             $user->setPwd($_POST['pwdToPost']);
             $result = $user->login(BDDconfig::getInstance());
             if ($result == true) {
-                $userConnected = $user->fetchUser(BDDconfig::getInstance());
+                $userConnected = $user->fetchLogUser(BDDconfig::getInstance());
                 foreach ($userConnected as $key => $value) {
                     $_SESSION[$key] = $value;
                 }

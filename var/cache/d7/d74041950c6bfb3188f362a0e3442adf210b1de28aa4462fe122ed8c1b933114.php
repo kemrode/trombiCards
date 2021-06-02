@@ -40,7 +40,7 @@ class __TwigTemplate_29831b4152348ad2a92699c2ad1de2c928a610fafc0ebabb7a910bf1cdd
     <link rel=\"stylesheet\" type=\"text/css\" href=\"/Assets/css/updateMemberStylus.css\">
     <title>MonAdmin - modifier ";
         // line 4
-        echo twig_escape_filter($this->env, (((($__internal_f607aeef2c31a95a7bf963452dff024ffaeb6aafbe4603f9ca3bec57be8633f4 = ($context["membre"] ?? null)) && is_array($__internal_f607aeef2c31a95a7bf963452dff024ffaeb6aafbe4603f9ca3bec57be8633f4) || $__internal_f607aeef2c31a95a7bf963452dff024ffaeb6aafbe4603f9ca3bec57be8633f4 instanceof ArrayAccess ? ($__internal_f607aeef2c31a95a7bf963452dff024ffaeb6aafbe4603f9ca3bec57be8633f4["userName"] ?? null) : null) + " ") + (($__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144 = ($context["membre"] ?? null)) && is_array($__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144) || $__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144 instanceof ArrayAccess ? ($__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144["userFirstname"] ?? null) : null)), "html", null, true);
+        echo twig_escape_filter($this->env, ((twig_get_attribute($this->env, $this->source, ($context["member"] ?? null), "userName", [], "any", false, false, false, 4) + " ") + twig_get_attribute($this->env, $this->source, ($context["member"] ?? null), "userFirstname", [], "any", false, false, false, 4)), "html", null, true);
         echo "</title>
 </head>
 <body>
@@ -53,34 +53,49 @@ class __TwigTemplate_29831b4152348ad2a92699c2ad1de2c928a610fafc0ebabb7a910bf1cdd
         // line 11
         echo "    </div>
     <div class=\"memberContainer\">
-        <form class=\"formBox\" method=\"post\" action=\"\">
+        <form class=\"formBox\" method=\"post\" action=\"/?controller=updateView&action=updateSelectedMember&param=";
+        // line 13
+        echo "userId";
+        echo "\">
             <div class=\"blockMember\">
                 <div class=\"blockName\">
                     <div class=\"nameBox\">
-                        <p>";
+                        <input type=\"text\" name=\"selectedName\" value=\"";
         // line 17
-        echo twig_escape_filter($this->env, (($__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b = ($context["member"] ?? null)) && is_array($__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b) || $__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b instanceof ArrayAccess ? ($__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b["userName"] ?? null) : null), "html", null, true);
-        echo "</p>
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["member"] ?? null), "userName", [], "any", false, false, false, 17), "html", null, true);
+        echo "\">
+                        <!--<p>";
+        // line 18
+        echo "</p>-->
                     </div>
                     <div class=\"firstnameBox\">
-                        <p>";
-        // line 20
-        echo twig_escape_filter($this->env, (($__internal_68aa442c1d43d3410ea8f958ba9090f3eaa9a76f8de8fc9be4d6c7389ba28002 = ($context["member"] ?? null)) && is_array($__internal_68aa442c1d43d3410ea8f958ba9090f3eaa9a76f8de8fc9be4d6c7389ba28002) || $__internal_68aa442c1d43d3410ea8f958ba9090f3eaa9a76f8de8fc9be4d6c7389ba28002 instanceof ArrayAccess ? ($__internal_68aa442c1d43d3410ea8f958ba9090f3eaa9a76f8de8fc9be4d6c7389ba28002["userFirstname"] ?? null) : null), "html", null, true);
-        echo "</p>
+                        <input type=\"text\" name=\"selectedName\" value=\"";
+        // line 21
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["member"] ?? null), "userFirstname", [], "any", false, false, false, 21), "html", null, true);
+        echo "\">
+                        <!--<p>";
+        // line 22
+        echo "</p>-->
                     </div>
                 </div>
                 <div class=\"blockNickMail\">
                     <div class=\"nicknameBox\">
-                        <p>";
-        // line 25
-        echo twig_escape_filter($this->env, (($__internal_d7fc55f1a54b629533d60b43063289db62e68921ee7a5f8de562bd9d4a2b7ad4 = ($context["member"] ?? null)) && is_array($__internal_d7fc55f1a54b629533d60b43063289db62e68921ee7a5f8de562bd9d4a2b7ad4) || $__internal_d7fc55f1a54b629533d60b43063289db62e68921ee7a5f8de562bd9d4a2b7ad4 instanceof ArrayAccess ? ($__internal_d7fc55f1a54b629533d60b43063289db62e68921ee7a5f8de562bd9d4a2b7ad4["userNickname"] ?? null) : null), "html", null, true);
-        echo "</p>
+                        <input type=\"text\" name=\"selectedName\" value=\"";
+        // line 27
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["member"] ?? null), "userNickname", [], "any", false, false, false, 27), "html", null, true);
+        echo "\">
+                        <!--<p>";
+        // line 28
+        echo "</p>-->
                     </div>
                     <div class=\"mailBox\">
-                        <p>";
-        // line 28
-        echo twig_escape_filter($this->env, (($__internal_01476f8db28655ee4ee02ea2d17dd5a92599be76304f08cd8bc0e05aced30666 = ($context["member"] ?? null)) && is_array($__internal_01476f8db28655ee4ee02ea2d17dd5a92599be76304f08cd8bc0e05aced30666) || $__internal_01476f8db28655ee4ee02ea2d17dd5a92599be76304f08cd8bc0e05aced30666 instanceof ArrayAccess ? ($__internal_01476f8db28655ee4ee02ea2d17dd5a92599be76304f08cd8bc0e05aced30666["userMail"] ?? null) : null), "html", null, true);
-        echo "</p>
+                        <input type=\"text\" name=\"selectedName\" value=\"";
+        // line 31
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["member"] ?? null), "userMail", [], "any", false, false, false, 31), "html", null, true);
+        echo "\">
+                        <!--<p>";
+        // line 32
+        echo "</p>-->
                     </div>
                 </div>
                 <div class=\"blockJob\">
@@ -122,7 +137,7 @@ class __TwigTemplate_29831b4152348ad2a92699c2ad1de2c928a610fafc0ebabb7a910bf1cdd
 
     public function getDebugInfo()
     {
-        return array (  82 => 28,  76 => 25,  68 => 20,  62 => 17,  54 => 11,  52 => 10,  43 => 4,  39 => 2,  37 => 1,);
+        return array (  98 => 32,  94 => 31,  89 => 28,  85 => 27,  78 => 22,  74 => 21,  69 => 18,  65 => 17,  58 => 13,  54 => 11,  52 => 10,  43 => 4,  39 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -130,7 +145,7 @@ class __TwigTemplate_29831b4152348ad2a92699c2ad1de2c928a610fafc0ebabb7a910bf1cdd
         return new Source("{% include \"metaBlock/metaBlock.html.twig\" %}
 <head>
     <link rel=\"stylesheet\" type=\"text/css\" href=\"/Assets/css/updateMemberStylus.css\">
-    <title>MonAdmin - modifier {{ membre['userName']+' '+membre['userFirstname'] }}</title>
+    <title>MonAdmin - modifier {{ member.userName+' '+member.userFirstname }}</title>
 </head>
 <body>
 <div class=\"primaryContainer primaryContainer--backgroundImage\">
@@ -139,22 +154,26 @@ class __TwigTemplate_29831b4152348ad2a92699c2ad1de2c928a610fafc0ebabb7a910bf1cdd
         {% include \"headerView/headerView.html.twig\" %}
     </div>
     <div class=\"memberContainer\">
-        <form class=\"formBox\" method=\"post\" action=\"\">
+        <form class=\"formBox\" method=\"post\" action=\"/?controller=updateView&action=updateSelectedMember&param={{ 'userId' }}\">
             <div class=\"blockMember\">
                 <div class=\"blockName\">
                     <div class=\"nameBox\">
-                        <p>{{ member['userName'] }}</p>
+                        <input type=\"text\" name=\"selectedName\" value=\"{{ member.userName}}\">
+                        <!--<p>{# item['userName'] #}</p>-->
                     </div>
                     <div class=\"firstnameBox\">
-                        <p>{{ member['userFirstname'] }}</p>
+                        <input type=\"text\" name=\"selectedName\" value=\"{{ member.userFirstname }}\">
+                        <!--<p>{# member['userId'] #}</p>-->
                     </div>
                 </div>
                 <div class=\"blockNickMail\">
                     <div class=\"nicknameBox\">
-                        <p>{{ member['userNickname'] }}</p>
+                        <input type=\"text\" name=\"selectedName\" value=\"{{ member.userNickname }}\">
+                        <!--<p>{# member['userNickname'] #}</p>-->
                     </div>
                     <div class=\"mailBox\">
-                        <p>{{ member['userMail'] }}</p>
+                        <input type=\"text\" name=\"selectedName\" value=\"{{ member.userMail }}\">
+                        <!--<p>{# member['userMail'] #}</p>-->
                     </div>
                 </div>
                 <div class=\"blockJob\">

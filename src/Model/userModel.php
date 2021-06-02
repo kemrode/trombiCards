@@ -161,10 +161,23 @@ class userModel
             return $e->getMessage();
         }
     }
+    //function to fetch user data when log
+    public function fetchLogUser(\PDO $bdd){
+        try {
+            $userConnected = $this->getMail();
+            $sql = 'SELECT * FROM users WHERE userMail=:userConnected';
+            $request = $bdd->prepare($sql);
+            $request->setFetchMode(\PDO::FETCH_CLASS, 'src\Model\userModel');
+            $request->execute(['userConnected'=>$userConnected]);
+            return $request->fetch();
+        } catch (\Exception $e){
+            return $e->getMessage();
+        }
+    }
     //function to fetch user infos
     public static function fetchUser(\PDO $bdd, $userId){
         try {
-            $sql = 'SELECT * FROM users WHERE userId=:iserId';
+            $sql = 'SELECT * FROM users WHERE userId=:userId';
             $request = $bdd->prepare($sql);
             $request->setFetchMode(\PDO::FETCH_CLASS, 'src\Model\userModel');
             //$request->execute(['userConnected'=>$userConnected]);
@@ -194,14 +207,13 @@ class userModel
         }
     }
     //function to update members data
-    public static function updateMembers(\PDO $bdd, $id){
+    public function updateMembers(\PDO $bdd, $id){
         try {
-            $sql = 'UPDATE users SET userName:=userName, userFirstname:=userFirstname, userPasswd:=userPasswd, userMail:=userMail, userNickname:=userNickname, userJob:=userJob WHERE userID:=userId';
+            $sql = 'UPDATE users SET userName:=userName, userFirstname:=userFirstname, userMail:=userMail, userNickname:=userNickname, userJob:=userJob WHERE userID:=userId';
             $request = $bdd->prepare($sql);
             $request->execute([
                 "userName" => $this->getName(),
                 "userFirstname" => $this->getFirstname(),
-                "userPasswd" => $this->getPwd(),
                 "userMail" => $this->getMail(),
                 "userNickname" => $this->getNickname(),
                 "userJob" => $this->getJob(),
