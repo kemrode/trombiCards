@@ -16,11 +16,13 @@ class registerController extends AbstractController
     public function registerNewUser(){
         if(isset($_POST['okButton'])){
             $newUser = new userModel();
-            $newUser->setName($_POST['userName']);
-            $newUser->setFirstname($_POST['userFirstName']);
-            $newUser->setNickname($_POST['userNickName']);
-            $newUser->setPwd($_POST['userPwd']);
-            $newUser->setMail($_POST['userMail']);
+            $defaultJob = "user";
+            $newUser->setName(htmlentities($_POST['userName']));
+            $newUser->setFirstname(htmlentities($_POST['userFirstName']));
+            $newUser->setNickname(htmlentities($_POST['userNickName']));
+            $newUser->setPwd(htmlentities($_POST['userPwd']));
+            $newUser->setMail(htmlentities($_POST['userMail']));
+            $newUser->setJob($defaultJob);
             $newUserRegistered = $newUser->postNewUser(BDDconfig::getInstance());
             header('Location:/');
             return true;

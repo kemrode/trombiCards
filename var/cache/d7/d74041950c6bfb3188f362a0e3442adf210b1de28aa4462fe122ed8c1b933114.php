@@ -55,7 +55,7 @@ class __TwigTemplate_29831b4152348ad2a92699c2ad1de2c928a610fafc0ebabb7a910bf1cdd
     <div class=\"memberContainer\">
         <form class=\"formBox formBox__background--backgroundColor formBox__background--border\" method=\"post\" action=\"/?controller=updateView&action=updateSelectedMember&param=";
         // line 13
-        echo "userId";
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["member"] ?? null), "userId", [], "any", false, false, false, 13), "html", null, true);
         echo "\">
             <div class=\"blockMember\">
                 <div class=\"block\">
@@ -66,7 +66,7 @@ class __TwigTemplate_29831b4152348ad2a92699c2ad1de2c928a610fafc0ebabb7a910bf1cdd
         echo "\">
                     </div>
                     <div class=\"blockBox firstnameBox\">
-                        <input type=\"text\" name=\"selectedName\" value=\"";
+                        <input type=\"text\" name=\"selectedFirstname\" value=\"";
         // line 20
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["member"] ?? null), "userFirstname", [], "any", false, false, false, 20), "html", null, true);
         echo "\">
@@ -74,13 +74,13 @@ class __TwigTemplate_29831b4152348ad2a92699c2ad1de2c928a610fafc0ebabb7a910bf1cdd
                 </div>
                 <div class=\"block\">
                     <div class=\"blockBox nicknameBox\">
-                        <input type=\"text\" name=\"selectedName\" value=\"";
+                        <input type=\"text\" name=\"selectedNickname\" value=\"";
         // line 25
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["member"] ?? null), "userNickname", [], "any", false, false, false, 25), "html", null, true);
         echo "\">
                     </div>
                     <div class=\"blockBox mailBox\">
-                        <input type=\"text\" name=\"selectedName\" value=\"";
+                        <input type=\"text\" name=\"selectedMail\" value=\"";
         // line 28
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["member"] ?? null), "userMail", [], "any", false, false, false, 28), "html", null, true);
         echo "\">
@@ -142,22 +142,22 @@ class __TwigTemplate_29831b4152348ad2a92699c2ad1de2c928a610fafc0ebabb7a910bf1cdd
         {% include \"headerView/headerView.html.twig\" %}
     </div>
     <div class=\"memberContainer\">
-        <form class=\"formBox formBox__background--backgroundColor formBox__background--border\" method=\"post\" action=\"/?controller=updateView&action=updateSelectedMember&param={{ 'userId' }}\">
+        <form class=\"formBox formBox__background--backgroundColor formBox__background--border\" method=\"post\" action=\"/?controller=updateView&action=updateSelectedMember&param={{ member.userId }}\">
             <div class=\"blockMember\">
                 <div class=\"block\">
                     <div class=\"blockBox nameBox\">
                         <input type=\"text\" name=\"selectedName\" value=\"{{ member.userName}}\">
                     </div>
                     <div class=\"blockBox firstnameBox\">
-                        <input type=\"text\" name=\"selectedName\" value=\"{{ member.userFirstname }}\">
+                        <input type=\"text\" name=\"selectedFirstname\" value=\"{{ member.userFirstname }}\">
                     </div>
                 </div>
                 <div class=\"block\">
                     <div class=\"blockBox nicknameBox\">
-                        <input type=\"text\" name=\"selectedName\" value=\"{{ member.userNickname }}\">
+                        <input type=\"text\" name=\"selectedNickname\" value=\"{{ member.userNickname }}\">
                     </div>
                     <div class=\"blockBox mailBox\">
-                        <input type=\"text\" name=\"selectedName\" value=\"{{ member.userMail }}\">
+                        <input type=\"text\" name=\"selectedMail\" value=\"{{ member.userMail }}\">
                     </div>
                 </div>
                 <div class=\"block blockJob\">

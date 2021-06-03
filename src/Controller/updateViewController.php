@@ -5,6 +5,7 @@ namespace src\Controller;
 
 
 use src\Model\userModel;
+use src\Controller\listMembersController;
 
 class updateViewController extends AbstractController
 {
@@ -15,16 +16,38 @@ class updateViewController extends AbstractController
     }
     //function to update the selected member with id
     public function updateSelectedMember(){
-        $selectedId = $_POST['userId'];
-        var_dump($selectedId);
+        $selectedId = $_GET['param'];
         if(isset($_POST['updateBtn'])){
             $selectedMember = new userModel();
-            $selectedMember->setName($_POST['']);
-            $selectedMember->setFirstname($_POST['']);
-            $selectedMember->setNickname($_POST['']);
-            $selectedMember->setMail($_POST['']);
-            $selectedMember->setJob($_POST['']);
+            $selectedMember->setName(htmlentities($_POST['selectedName']));
+            $selectedMember->setFirstname(htmlentities($_POST['selectedFirstname']));
+            $selectedMember->setNickname(htmlentities($_POST['selectedNickname']));
+            $selectedMember->setMail(htmlentities($_POST['selectedMail']));
+            $newJob = $this->isAdminJob(htmlentities($_POST['switchAdmin']));
+            $selectedMember->setJob($newJob);
+            //$selectedMember->isAdminJob(htmlentities($_POST['switchAdmin']));
+            $selectedMember->updateMembers(BDDconfig::getInstance(), $selectedId);
+            $listView = new listMembersController();
+            echo $listView->listMembersView();
+
         }
+    }
+
+    private function isAdminJob($switchResponse){
+        //$selectedMember = new userModel();
+        $userJob = "";
+        switch (true){
+            case $switchResponse == 1:
+                $userJob = "administrator";
+                break;
+            case $switchResponse == 0:
+                $userJob = "user";
+                break;
+            default:
+                header('Location:/'); //create an error page and put here the link
+                break;
+        }
+        return $userJob;
     }
 
 }

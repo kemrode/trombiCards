@@ -17,8 +17,8 @@ class userController extends AbstractController
     public function log() {
         if (isset($_POST['okButton'])) {
             $user = new userModel();
-            $user->setMail($_POST['mailToPost']);
-            $user->setPwd($_POST['pwdToPost']);
+            $user->setMail(htmlentities($_POST['mailToPost']));
+            $user->setPwd(htmlentities($_POST['pwdToPost']));
             $result = $user->login(BDDconfig::getInstance());
             if ($result == true) {
                 $userConnected = $user->fetchLogUser(BDDconfig::getInstance());

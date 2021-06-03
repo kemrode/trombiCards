@@ -15,7 +15,7 @@ class userModel
     private string $nickname;
     private string $pwd;
     private string $mail;
-    private string $job = 'user';
+    private string $job;
     private int $userId;
 
     /**
@@ -133,14 +133,15 @@ class userModel
     //function to POST a new user
     public function postNewUser(\PDO $bdd){
         try {
-            $sql = 'INSERT INTO users (userName, userFirstname, userPasswd, userMail, userNickname) VALUE(:userName,:userFirstname,:userPasswd,:userMail,:userNickname)';
+            $sql = 'INSERT INTO users (userName, userFirstname, userPasswd, userMail, userNickname, userJob) VALUE(:userName,:userFirstname,:userPasswd,:userMail,:userNickname,:userJob)';
             $request = $bdd->prepare($sql);
             $request->execute([
                 "userName" => $this->getName(),
                 "userFirstname" => $this->getFirstname(),
                 "userPasswd" => $this->getPwd(),
                 "userMail" => $this->getMail(),
-                "userNickname" => $this->getNickname()
+                "userNickname" => $this->getNickname(),
+                "userJob" => $this->getJob()
             ]);
             return "ok";
         } catch (\Exception $e){
@@ -149,13 +150,13 @@ class userModel
     }
     //function about login of a user
     public function login(\PDO $bdd){
-        $mailLog = htmlentities($this->getMail());
-        $passwdLog = htmlentities($this->getPwd());
+        $mailLog = $this->getMail();
+        $passwdLog = $this->getPwd();
         try {
-            $sql = 'SELECT userMail, userPasswd FROM users WHERE userMail=:mailLog AND Userpwd=:passwdLog';
+            $sql = 'SELECT userMail, userPasswd FROM users WHERE userMail=:mailLog AND Userpasswd=:passwdLog';
             $request = $bdd->prepare($sql);
             $request->setFetchMode(\PDO::FETCH_CLASS, 'src\Model\userModel');
-            $request->execute(['nameLog'=>$mailLog, 'passwdLog'=>$passwdLog]);
+            $request->execute(['mailLog'=>$mailLog, 'passwdLog'=>$passwdLog]);
             return $request->fetch();
         } catch (\Exception $e){
             return $e->getMessage();
@@ -209,7 +210,7 @@ class userModel
     //function to update members data
     public function updateMembers(\PDO $bdd, $id){
         try {
-            $sql = 'UPDATE users SET userName:=userName, userFirstname:=userFirstname, userMail:=userMail, userNickname:=userNickname, userJob:=userJob WHERE userID:=userId';
+            $sql = 'UPDATE users SET userName=:userName, userFirstname=:userFirstname, userMail=:userMail, userNickname=:userNickname, userJob=:userJob WHERE userID=:userId';
             $request = $bdd->prepare($sql);
             $request->execute([
                 "userName" => $this->getName(),
