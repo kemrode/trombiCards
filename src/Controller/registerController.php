@@ -20,7 +20,7 @@ class registerController extends AbstractController
             $newUser->setName(htmlentities($_POST['userName']));
             $newUser->setFirstname(htmlentities($_POST['userFirstName']));
             $newUser->setNickname(htmlentities($_POST['userNickName']));
-            $newUser->setPwd(htmlentities($_POST['userPwd']));
+            $newUser->setPwd(password_hash(htmlentities($_POST['userPwd']), PASSWORD_DEFAULT));
             $newUser->setMail(htmlentities($_POST['userMail']));
             $newUser->setJob($defaultJob);
             $newUserRegistered = $newUser->postNewUser(BDDconfig::getInstance());
