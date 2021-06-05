@@ -151,12 +151,14 @@ class userModel
     //function about login of a user
     public function login(\PDO $bdd){
         $mailLog = $this->getMail();
-        $passwdLog = $this->getPwd();
+        //$passwdLog = $this->getPwd();
         try {
-            $sql = 'SELECT userMail, userPasswd FROM users WHERE userMail=:mailLog AND Userpasswd=:passwdLog';
+            //$sql = 'SELECT userMail, userPasswd FROM users WHERE userMail=:mailLog AND Userpasswd=:passwdLog';
+            $sql = 'SELECT userMail FROM users WHERE userMail=:mailLog';
             $request = $bdd->prepare($sql);
             $request->setFetchMode(\PDO::FETCH_CLASS, 'src\Model\userModel');
-            $request->execute(['mailLog'=>$mailLog, 'passwdLog'=>$passwdLog]);
+            //$request->execute(['mailLog'=>$mailLog, 'passwdLog'=>$passwdLog]);
+            $request->execute(['mailLog'=>$mailLog]);
             return $request->fetch();
         } catch (\Exception $e){
             return $e->getMessage();
@@ -181,8 +183,19 @@ class userModel
             $sql = 'SELECT * FROM users WHERE userId=:userId';
             $request = $bdd->prepare($sql);
             $request->setFetchMode(\PDO::FETCH_CLASS, 'src\Model\userModel');
-            //$request->execute(['userConnected'=>$userConnected]);
             $request->execute(['userId'=>$userId]);
+            return $request->fetch();
+        } catch (\Exception $e){
+            return $e->getMessage();
+        }
+    }
+    //function to get the hash
+    public static function getHash(\PDO $bdd, $userMail){
+        try {
+            $sql = 'SELECT userPasswd FROM users WHERE userMail=:userMail';
+            $request = $bdd->prepare($sql);
+            $request->setFetchMode(\PDO::FETCH_CLASS, 'src\Model\userModel');
+            $request->execute(['userMail' => $userMail]);
             return $request->fetch();
         } catch (\Exception $e){
             return $e->getMessage();
