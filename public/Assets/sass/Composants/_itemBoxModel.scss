@@ -6,11 +6,10 @@
   width: auto;
   height: auto;
   @include scrollPrimary;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
-.containerFlexBox::-webkit-scrollbar {
-  display: none;
-}
-
 .itemsBox{
   @include boxDisplay;
   @include boxItemContruct;

@@ -18,3 +18,35 @@
   }
 
 }
+
+@media only screen and (min-width: 600px) {
+  
+}
+
+@media only screen and (min-width: 768px) {
+  
+}
+
+@media only screen and (min-width: 992px) {
+
+  .containerFlexBox {
+    display: grid;
+    grid-template-columns: repeat(20,5%);
+    grid-template-rows: repeat(20,5%);
+    width: auto;
+    height: 100%;
+  }
+  
+}
+
+@media only screen and (min-width: 1200px) {
+
+  .containerFlexBox {
+    display: grid;
+    grid-template-columns: repeat(20,5%);
+    grid-template-rows: repeat(20,5%);
+    width: auto;
+    height: 100%;
+  }
+  
+}

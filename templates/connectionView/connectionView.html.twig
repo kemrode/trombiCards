@@ -1,37 +1,31 @@
-<head>
-    {% include "metaBlock/metaBlock.html.twig" %}
+{% extends "base/baseView.html.twig" %}
+
+{% block css %}
     <link rel="stylesheet" type="text/css" href="/Assets/css/connectionStylus.css">
+{% endblock %}
+{% block title %}
     <title>MonAdmin - Se connecter</title>
-</head>
-<body>
-<div class="primaryContainer primaryContainer--backgroundImage">
-    <div class="primaryContainer__header">
-        <header>
-            {% include "headerView/headerView.html.twig" %}
-        </header>
-    </div>
-    <!-- definition about the connection items -->
+{% endblock %}
+{% block connectionView %}
     <div class="primaryContainer__connectionBox">
-        <div class="connectionBox__itemsBox connectionBox--backgroundColor connectionBox--size">
-            <form method="post" action="/?controller=user&action=log" name="connectionBoxForm">
-                <div class="itemsBox__itemsField itemsBox__itemsField--backgroundColor">
-                    <div class="itemsField itemsField__nameField itemsBox__nameField--input">
-                        <input type="email" name="mailToPost" placeholder="Votre e-mail" class="field nameField" required>
+            <div class="connectionBox__itemsBox connectionBox--backgroundColor connectionBox--size">
+                <form method="post" action="/?controller=user&action=log" name="connectionBoxForm">
+                    <div class="itemsBox__itemsField itemsBox__itemsField--backgroundColor">
+                        <div class="itemsField itemsField__nameField itemsBox__nameField--input">
+                            <input type="email" name="mailToPost" placeholder="Votre e-mail" class="field nameField" required>
+                        </div>
+                        <div class="itemsField itemsField__passwdField itemsBox__passwdField--input">
+                            <input type="password" name="pwdToPost" placeholder="Mot de Passe..." class="field passwdField" required>
+                        </div>
+                        <div class="itemsField itemsField__okButton itemsField__okButton--input">
+                            <button type="submit" name="okButton" class="field okButton okButton--color">OK</button>
+                            <!--<input type="submit" name="okButton" value="OK" class="field okButton okButton--color">-->
+                        </div>
                     </div>
-                    <div class="itemsField itemsField__passwdField itemsBox__passwdField--input">
-                        <input type="password" name="pwdToPost" placeholder="Mot de Passe..." class="field passwdField" required>
+                    <div class="registerLinkBox">
+                        <a class="registerLink registerLink__text--color registerLink__text--font" href="/?controller=user&action=registerView">s'enregistrer</a>
                     </div>
-                    <div class="itemsField itemsField__okButton itemsField__okButton--input">
-                        <button type="submit" name="okButton" class="field okButton okButton--color">OK</button>
-                        <!--<input type="submit" name="okButton" value="OK" class="field okButton okButton--color">-->
-                    </div>
-                </div>
-                <div class="registerLinkBox">
-                    <a class="registerLink registerLink__text--color registerLink__text--font" href="/?controller=user&action=registerView">s'enregistrer</a>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
-    </div>
-</div>
-</body>
-</html>
+{% endblock %}

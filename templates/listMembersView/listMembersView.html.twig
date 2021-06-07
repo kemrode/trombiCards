@@ -1,15 +1,12 @@
-{% include "metaBlock/metaBlock.html.twig" %}
-<head>
+{% extends "base/baseView.html.twig" %}
+{% block css %}
     <link rel="stylesheet" type="text/css" href="/Assets/css/listMemberStylus.css">
+{% endblock %}
+{% block title %}
     <title>MonAdmin - membres</title>
-</head>
-<body>
-    <div class="primaryContainer primaryContainer--backgroundImage">
-        <div class="primaryContainer__header">
-            <?php require 'headerView.php';?>
-            {% include "headerView/headerView.html.twig" %}
-        </div>
-        <div class="mainListContainer">
+{% endblock %}
+{% block listMembersView %}
+    <div class="mainListContainer">
             <div class="listBoxes">
                 {% for member in membersList %}
                     <div class="userBox userBox__background--backgroundColor">
@@ -38,7 +35,5 @@
                     </div>
                 {% endfor %}
             </div>
-        </div>
-    </div>
-<script></script>
-</body>
+            </div>
+{% endblock %}

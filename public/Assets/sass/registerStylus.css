@@ -199,7 +199,6 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
 }
-
 .containerFlexBox::-webkit-scrollbar {
   display: none;
 }

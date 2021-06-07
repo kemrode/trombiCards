@@ -151,13 +151,10 @@ class userModel
     //function about login of a user
     public function login(\PDO $bdd){
         $mailLog = $this->getMail();
-        //$passwdLog = $this->getPwd();
         try {
-            //$sql = 'SELECT userMail, userPasswd FROM users WHERE userMail=:mailLog AND Userpasswd=:passwdLog';
             $sql = 'SELECT userMail FROM users WHERE userMail=:mailLog';
             $request = $bdd->prepare($sql);
             $request->setFetchMode(\PDO::FETCH_CLASS, 'src\Model\userModel');
-            //$request->execute(['mailLog'=>$mailLog, 'passwdLog'=>$passwdLog]);
             $request->execute(['mailLog'=>$mailLog]);
             return $request->fetch();
         } catch (\Exception $e){
@@ -192,7 +189,7 @@ class userModel
     //function to get the hash
     public static function getHash(\PDO $bdd, $userMail){
         try {
-            $sql = 'SELECT userPasswd FROM users WHERE userMail=:userMail';
+            $sql = 'SELECT userPasswd FROM users WHERE userMail=:userMail LIMIT 1';
             $request = $bdd->prepare($sql);
             $request->setFetchMode(\PDO::FETCH_CLASS, 'src\Model\userModel');
             $request->execute(['userMail' => $userMail]);
