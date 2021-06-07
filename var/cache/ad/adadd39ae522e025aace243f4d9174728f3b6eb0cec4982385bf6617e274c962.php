@@ -34,13 +34,13 @@ class __TwigTemplate_326aac214e9d4f78f85bee0afc7a2feb92516d4ee4a84316a0c9503544d
     protected function doGetParent(array $context)
     {
         // line 1
-        return "base/baseView.html.twig";
+        return "baseView.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
     {
         $macros = $this->macros;
-        $this->parent = $this->loadTemplate("base/baseView.html.twig", "connectionView\\connectionView.html.twig", 1);
+        $this->parent = $this->loadTemplate("baseView.html.twig", "connectionView\\connectionView.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
@@ -108,7 +108,7 @@ class __TwigTemplate_326aac214e9d4f78f85bee0afc7a2feb92516d4ee4a84316a0c9503544d
 
     public function getSourceContext()
     {
-        return new Source("{% extends \"base/baseView.html.twig\" %}
+        return new Source("{% extends \"baseView.html.twig\" %}
 
 {% block css %}
     <link rel=\"stylesheet\" type=\"text/css\" href=\"/Assets/css/connectionStylus.css\">

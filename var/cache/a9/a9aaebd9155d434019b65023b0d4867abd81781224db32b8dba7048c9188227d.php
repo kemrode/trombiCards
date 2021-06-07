@@ -53,20 +53,20 @@ class __TwigTemplate_48d7a6a92d76893d5f58cd1d34237e2b578830671d112334c0afc1cbc79
 ";
     }
 
-    // line 6
+    // line 7
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 7
+        // line 8
         echo "    <title>MonAdmin - accueil</title>
 ";
     }
 
-    // line 9
+    // line 10
     public function block_adminMainView($context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 10
+        // line 11
         echo "    <div class=\"containerFlexBox containerFlexBox__itemsList\">
                 <div class=\"listItemsBox listItemsBox__listItemssettings\">
                     <div class=\"itemsBox itemsBox__article itemsBox__itemsElement--background\">
@@ -136,7 +136,7 @@ class __TwigTemplate_48d7a6a92d76893d5f58cd1d34237e2b578830671d112334c0afc1cbc79
 
     public function getDebugInfo()
     {
-        return array (  70 => 10,  66 => 9,  61 => 7,  57 => 6,  52 => 4,  48 => 3,  37 => 1,);
+        return array (  70 => 11,  66 => 10,  61 => 8,  57 => 7,  52 => 4,  48 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -146,6 +146,7 @@ class __TwigTemplate_48d7a6a92d76893d5f58cd1d34237e2b578830671d112334c0afc1cbc79
 {% block css %}
     <link rel=\"stylesheet\" type=\"text/css\" href=\"/Assets/css/adminMainStylus.css\">
 {% endblock %}
+
 {% block title %}
     <title>MonAdmin - accueil</title>
 {% endblock %}

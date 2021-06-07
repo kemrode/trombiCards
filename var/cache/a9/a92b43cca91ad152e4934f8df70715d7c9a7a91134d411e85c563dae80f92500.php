@@ -59,24 +59,28 @@ class __TwigTemplate_ccb9fb7a2a768e4a05b7e1d843362fc8d33988a1fbff19509e91f4eca75
 <div class=\"primaryContainer primaryContainer--backgroundImage\">
     <div class=\"primaryContainer__header\">
         <header>
-        </header>
+            ";
+        // line 14
+        $this->loadTemplate("headerView/headerView.html.twig", "baseView.html.twig", 14)->display($context);
+        // line 15
+        echo "        </header>
     </div>
     ";
-        // line 16
-        $this->displayBlock('connectionView', $context, $blocks);
         // line 17
-        echo "    ";
-        $this->displayBlock('registerView', $context, $blocks);
+        $this->displayBlock('connectionView', $context, $blocks);
         // line 18
         echo "    ";
-        $this->displayBlock('adminMainView', $context, $blocks);
+        $this->displayBlock('registerView', $context, $blocks);
         // line 19
         echo "    ";
-        $this->displayBlock('listMembersView', $context, $blocks);
+        $this->displayBlock('adminMainView', $context, $blocks);
         // line 20
         echo "    ";
-        $this->displayBlock('updateMemberView', $context, $blocks);
+        $this->displayBlock('listMembersView', $context, $blocks);
         // line 21
+        echo "    ";
+        $this->displayBlock('updateMemberView', $context, $blocks);
+        // line 22
         echo "</div>
 </body>
 </html>";
@@ -94,31 +98,31 @@ class __TwigTemplate_ccb9fb7a2a768e4a05b7e1d843362fc8d33988a1fbff19509e91f4eca75
         $macros = $this->macros;
     }
 
-    // line 16
+    // line 17
     public function block_connectionView($context, array $blocks = [])
     {
         $macros = $this->macros;
     }
 
-    // line 17
+    // line 18
     public function block_registerView($context, array $blocks = [])
     {
         $macros = $this->macros;
     }
 
-    // line 18
+    // line 19
     public function block_adminMainView($context, array $blocks = [])
     {
         $macros = $this->macros;
     }
 
-    // line 19
+    // line 20
     public function block_listMembersView($context, array $blocks = [])
     {
         $macros = $this->macros;
     }
 
-    // line 20
+    // line 21
     public function block_updateMemberView($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -129,9 +133,14 @@ class __TwigTemplate_ccb9fb7a2a768e4a05b7e1d843362fc8d33988a1fbff19509e91f4eca75
         return "baseView.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  122 => 20,  116 => 19,  110 => 18,  104 => 17,  98 => 16,  92 => 8,  86 => 7,  80 => 21,  77 => 20,  74 => 19,  71 => 18,  68 => 17,  66 => 16,  57 => 9,  54 => 8,  52 => 7,  44 => 1,);
+        return array (  126 => 21,  120 => 20,  114 => 19,  108 => 18,  102 => 17,  96 => 8,  90 => 7,  84 => 22,  81 => 21,  78 => 20,  75 => 19,  72 => 18,  70 => 17,  66 => 15,  64 => 14,  57 => 9,  54 => 8,  52 => 7,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -149,6 +158,7 @@ class __TwigTemplate_ccb9fb7a2a768e4a05b7e1d843362fc8d33988a1fbff19509e91f4eca75
 <div class=\"primaryContainer primaryContainer--backgroundImage\">
     <div class=\"primaryContainer__header\">
         <header>
+            {% include \"headerView/headerView.html.twig\" %}
         </header>
     </div>
     {% block connectionView %}{% endblock %}
