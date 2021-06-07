@@ -1,0 +1,24 @@
+@import '../Utils/variables';
+@import '../Utils/mixin';
+
+.menuTabBar {
+  @include flexBoxRowJustifyCenter;
+  justify-content: flex-start;
+  align-items: center;
+  height: 7vh;
+}
+.menuTabBar--text{
+  color: white;
+  font-size: 1.2em;
+}
+.menuTabBar--backgroundColor{
+  background-color: $secondColor;
+}
+.backImgBox img{
+  width: 125%;
+  height: 125%;
+}
+.backImgBox--spaceBetween{
+  padding-left: 5px;
+  padding-right: 25px;
+}

@@ -1,0 +1,43 @@
+<head>
+    {% include "metaBlock/metaBlock.html.twig" %}
+    <title>MonAdmin - S'enregistrer</title>
+    <link rel="stylesheet" type="text/css" href="/Assets/css/registerStylus.css">
+</head>
+<body>
+<div class="primaryContainer primaryContainer--backgroundImage">
+    <div class="primaryContainer__header">
+        <header>
+            {% include "headerView/headerView.html.twig" %}
+        </header>
+    </div>
+    <div class="registerContainer">
+        <div class="formContainer">
+            <form class="formBox" method="post" action="/?controller=register&action=registerNewUser">
+                <div class="itemsContainer">
+                    <div class="itemBox">
+                        <input type="text" name="userName" placeholder="Votre Nom" required>
+                    </div>
+                    <div class="itemBox">
+                        <input type="text" name="userFirstName" placeholder="Votre prénom" required>
+                    </div>
+                    <div class="itemBox">
+                        <input type="text" name="userNickName" placeholder="Votre pseudonyme" required>
+                    </div>
+                    <div class="itemBox">
+                        <input type="email" name="userMail" placeholder="Votre adresse e-mail" required>
+                    </div>
+                    <div class="itemBox">
+                        <input type="password" name="userPwd" placeholder="Votre mot de passe" required>
+                    </div>
+                    <div class="itemBox">
+                        <input type="password" name="verifUserPwd" placeholder="Votre mot de passe (pour vérification)" required>
+                    </div>
+                </div>
+                <div class="okBtn">
+                    <button type="submit" name="okButton">Ok, s'enregistrer</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>

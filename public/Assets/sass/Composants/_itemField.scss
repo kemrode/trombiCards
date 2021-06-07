@@ -1,0 +1,7 @@
+@import '../Utils/variables';
+@import '../Utils/mixin';
+
+.itemsField {
+  @include rowFlex;
+  justify-content: center;
+}

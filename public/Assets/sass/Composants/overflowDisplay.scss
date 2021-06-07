@@ -1,0 +1,12 @@
+@import '../Utils/variables';
+@import '../Utils/mixin';
+
+@mixin scrollbarDisplayNone {
+  .containerFlexBox {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .containerFlexBox::-webkit-scrollbar {
+    display: none;
+  }
+}

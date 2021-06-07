@@ -1,0 +1,55 @@
+{% include "metaBlock/metaBlock.html.twig" %}
+<head>
+    <link rel="stylesheet" type="text/css" href="/Assets/css/updateMemberStylus.css">
+    <title>MonAdmin - modifier {{ member.userName+' '+member.userFirstname }}</title>
+</head>
+<body>
+<div class="primaryContainer primaryContainer--backgroundImage">
+    <div class="primaryContainer__header">
+        <?php require 'headerView.php';?>
+        {% include "headerView/headerView.html.twig" %}
+    </div>
+    <div class="memberContainer">
+        <form class="formBox formBox__background--backgroundColor formBox__background--border" method="post" action="/?controller=updateView&action=updateSelectedMember&param={{ member.userId }}">
+            <div class="blockMember">
+                <div class="block">
+                    <div class="blockBox nameBox">
+                        <input type="text" name="selectedName" value="{{ member.userName}}">
+                    </div>
+                    <div class="blockBox firstnameBox">
+                        <input type="text" name="selectedFirstname" value="{{ member.userFirstname }}">
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="blockBox nicknameBox">
+                        <input type="text" name="selectedNickname" value="{{ member.userNickname }}">
+                    </div>
+                    <div class="blockBox mailBox">
+                        <input type="text" name="selectedMail" value="{{ member.userMail }}">
+                    </div>
+                </div>
+                <div class="block blockJob">
+                    <div class="jobBox jobBox__background--backgroundColor jobBox__background--border">
+                        <div class="jobAdminBox">
+                            <h3>Passer Admin ?</h3>
+                        </div>
+                        <div class="switchBox">
+                            <label class="switch">
+                                <input type="hidden" class="switchAdmin" name="switchAdmin" value="0">
+                                <input type="checkbox" class="switchAdmin" name="switchAdmin" value="1">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="blockButton">
+                        <div class="buttonBox">
+                            <button type="submit" name="updateBtn">MODIFIER PROFIL</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>

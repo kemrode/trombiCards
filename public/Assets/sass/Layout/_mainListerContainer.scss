@@ -1,0 +1,14 @@
+@import "../Utils/mixin";
+@import "../Utils/variables";
+
+.mainListContainer {
+  @include flexBoxColumnJustifyCenter;
+  width: auto;
+  height: 100vh;
+}
+.listBoxes {
+  @include flexBoxColumn;
+  justify-content: space-evenly;
+  width: auto;
+  height: 100%;
+}

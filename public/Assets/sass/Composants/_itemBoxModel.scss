@@ -1,0 +1,89 @@
+@import '../Utils/mixin';
+@import '../Utils/variables';
+
+.containerFlexBox {
+  @include flexBoxRowJustifyCenter;
+  width: auto;
+  height: auto;
+  @include scrollPrimary;
+}
+.containerFlexBox::-webkit-scrollbar {
+  display: none;
+}
+
+.itemsBox{
+  @include boxDisplay;
+  @include boxItemContruct;
+  justify-content: space-evenly;
+  height: auto;
+}
+.itemTitle {
+  @include flexBoxRowJustifyCenter;
+}
+.itemContainer {
+  @include flexBoxRowJustifyCenter;
+  height: 75%;
+}
+.itemImage {
+  @include flexBoxRowJustifyCenter;
+}
+.imgBox {
+  @include flexBoxRowJustifyCenter;
+  width: auto;
+}
+.itemImage img{
+  width: $largeImg;
+}
+
+//media querries for itemBoxModel
+@media only screen and (max-width: 600px) {
+  .itemsBox{
+    @include smallWidth;
+    @include spaceBetween;
+  }
+  .itemImage img{
+    width: $smallImage;
+  }
+  .itemTitle {
+    font-size: large;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .itemsBox{
+    @include smallWidth;
+    @include spaceBetween;
+  }
+  .itemImage img{
+    width: $mediumImg;
+  }
+  .itemTitle {
+    font-size: x-large;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .itemsBox{
+    @include mediumWidth;
+    @include spaceBetween;
+  }
+  .itemTitle {
+    font-size: x-large;
+  }
+}
+@media only screen and (min-width: 992px){
+  .itemsBox{
+    @include highWidth;
+    @include spaceBetweenHight;
+  }
+  .itemTitle {
+    font-size: xx-large;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .itemsBox{
+    @include highWidth;
+    @include spaceBetweenHight;
+  }
+  .itemTitle {
+    font-size: xx-large;
+  }
+}
