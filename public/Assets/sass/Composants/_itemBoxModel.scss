@@ -69,9 +69,19 @@
   }
 }
 @media only screen and (min-width: 992px){
+  .containerFlexBox {
+    display: grid;
+    grid-template-columns: repeat(20,5%);
+    grid-template-rows: repeat(20,5%);
+    grid-gap: 10px;
+    width: auto;
+    height: 100vh;
+  }
   .itemsBox{
     @include highWidth;
     @include spaceBetweenHight;
+    display: grid;
+    grid-area: span 5;
   }
   .itemTitle {
     font-size: xx-large;
