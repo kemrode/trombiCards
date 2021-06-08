@@ -64,12 +64,10 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 .homeImg__background--backgroundcolor {
   background: #024eb6;
   border-radius: 45px;
 }
-
 .homeImg img {
   width: 45px;
   height: 45px;
@@ -174,11 +172,9 @@ input:checked + .slider:before {
   width: 55%;
   height: 50vh;
 }
-
 .formBox__background--backgroundColor {
   background-color: #E5E7E9;
 }
-
 .formBox__background--border {
   border: 1px solid black;
   border-radius: 45px;
@@ -208,7 +204,6 @@ input:checked + .slider:before {
   width: 100%;
   height: 100%;
 }
-
 .blockBox input {
   display: flex;
   flex-direction: row;
@@ -221,7 +216,6 @@ input:checked + .slider:before {
   font-style: italic;
   font-size: 1.2em;
 }
-
 .blockBox input:focus {
   background-color: #D6EAF8;
 }
@@ -234,11 +228,9 @@ input:checked + .slider:before {
   width: 45%;
   height: 100%;
 }
-
 .jobBox__background--backgroundColor {
   background-color: #C0392B;
 }
-
 .jobBox__background--border {
   border: 1px solid black;
   border-radius: 45px;
@@ -256,7 +248,6 @@ input:checked + .slider:before {
   width: 100%;
   height: 100%;
 }
-
 .buttonBox button {
   width: 100%;
   height: 100%;
@@ -265,11 +256,8 @@ input:checked + .slider:before {
   font-weight: bold;
   background-color: yellow;
 }
-
 .buttonBox button:hover {
   background-color: #239B56;
 }
-
-/*# sourceMappingURL=updateMemberStylus.css.map */
 
 /*# sourceMappingURL=updateMemberStylus.css.map */

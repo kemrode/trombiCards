@@ -64,12 +64,10 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 .homeImg__background--backgroundcolor {
   background: #024eb6;
   border-radius: 45px;
 }
-
 .homeImg img {
   width: 45px;
   height: 45px;
@@ -133,7 +131,6 @@ body {
   width: auto;
   height: 65px;
 }
-
 .userBox__background--backgroundColor {
   background-color: #40C4FF;
 }
@@ -146,7 +143,6 @@ body {
   height: 55px;
   border-radius: 45px;
 }
-
 .nameBox__background--backgroundColor {
   background-color: #80D8FF;
 }
@@ -159,7 +155,6 @@ body {
   height: 55px;
   border-radius: 45px;
 }
-
 .firstnameBox__background--backgroundColor {
   background-color: #03A9F4;
 }
@@ -172,7 +167,6 @@ body {
   height: 55px;
   border-radius: 45px;
 }
-
 .nicknameBox__background--backgroundColor {
   background-color: #80D8FF;
 }
@@ -185,7 +179,6 @@ body {
   height: 55px;
   border-radius: 45px;
 }
-
 .mailBox__background--backgroundColor {
   background-color: #03A9F4;
 }
@@ -209,15 +202,12 @@ p {
   font-weight: bold;
   width: 50%;
 }
-
 .updateBtn__button--backgroundColor button {
   background-color: orange;
 }
-
 .updateBtn__button--borderradius button {
   border-radius: 45px;
 }
-
 .updateBtn__button--size button {
   height: 50px;
 }
@@ -229,19 +219,14 @@ p {
   font-weight: bold;
   width: 50%;
 }
-
 .deleteBtn__button--backgroundColor button {
   background-color: red;
 }
-
 .deleteBtn__button--borderradius button {
   border-radius: 45px;
 }
-
 .deleteBtn__button--size button {
   height: 50px;
 }
-
-/*# sourceMappingURL=listMemberStylus.css.map */
 
 /*# sourceMappingURL=listMemberStylus.css.map */

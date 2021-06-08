@@ -33,12 +33,10 @@
   justify-content: center;
   align-items: center;
 }
-
 .homeImg__background--backgroundcolor {
   background: #024eb6;
   border-radius: 45px;
 }
-
 .homeImg img {
   width: 45px;
   height: 45px;
@@ -69,6 +67,5 @@
     font-size: 1.8em;
   }
 }
-/*# sourceMappingURL=headerStylus.css.map */
 
 /*# sourceMappingURL=headerStylus.css.map */
