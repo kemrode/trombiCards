@@ -196,6 +196,24 @@ body {
     justify-content: center;
   }
 }
+@media only screen and (min-width: 992px) {
+  .containerFlexBox {
+    display: grid;
+    grid-template-columns: repeat(20, 5%);
+    grid-template-rows: repeat(20, 5%);
+    width: auto;
+    height: 100%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .containerFlexBox {
+    display: grid;
+    grid-template-columns: repeat(20, 5%);
+    grid-template-rows: repeat(20, 5%);
+    width: auto;
+    height: 100%;
+  }
+}
 /*# sourceMappingURL=adminMainStyle.css.map */
 
 /*# sourceMappingURL=adminMainStyle.css.map */

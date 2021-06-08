@@ -24,59 +24,70 @@ class __TwigTemplate_326aac214e9d4f78f85bee0afc7a2feb92516d4ee4a84316a0c9503544d
 
         $this->source = $this->getSourceContext();
 
-        $this->parent = false;
-
         $this->blocks = [
+            'css' => [$this, 'block_css'],
+            'title' => [$this, 'block_title'],
+            'connectionView' => [$this, 'block_connectionView'],
         ];
+    }
+
+    protected function doGetParent(array $context)
+    {
+        // line 1
+        return "baseView.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 1
-        echo "<head>
-    ";
-        // line 2
-        $this->loadTemplate("metaBlock/metaBlock.html.twig", "connectionView\\connectionView.html.twig", 2)->display($context);
-        // line 3
+        $this->parent = $this->loadTemplate("baseView.html.twig", "connectionView\\connectionView.html.twig", 1);
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
+    }
+
+    // line 3
+    public function block_css($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        // line 4
         echo "    <link rel=\"stylesheet\" type=\"text/css\" href=\"/Assets/css/connectionStylus.css\">
-    <title>MonAdmin - Se connecter</title>
-</head>
-<body>
-<div class=\"primaryContainer primaryContainer--backgroundImage\">
-    <div class=\"primaryContainer__header\">
-        <header>
-            ";
+";
+    }
+
+    // line 6
+    public function block_title($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        // line 7
+        echo "    <title>MonAdmin - Se connecter</title>
+";
+    }
+
+    // line 9
+    public function block_connectionView($context, array $blocks = [])
+    {
+        $macros = $this->macros;
         // line 10
-        $this->loadTemplate("headerView/headerView.html.twig", "connectionView\\connectionView.html.twig", 10)->display($context);
-        // line 11
-        echo "        </header>
-    </div>
-    <!-- definition about the connection items -->
-    <div class=\"primaryContainer__connectionBox\">
-        <div class=\"connectionBox__itemsBox connectionBox--backgroundColor connectionBox--size\">
-            <form method=\"post\" action=\"/?controller=user&action=log\" name=\"connectionBoxForm\">
-                <div class=\"itemsBox__itemsField itemsBox__itemsField--backgroundColor\">
-                    <div class=\"itemsField itemsField__nameField itemsBox__nameField--input\">
-                        <input type=\"email\" name=\"mailToPost\" placeholder=\"Votre e-mail\" class=\"field nameField\" required>
+        echo "    <div class=\"primaryContainer__connectionBox\">
+            <div class=\"connectionBox__itemsBox connectionBox--backgroundColor connectionBox--size\">
+                <form method=\"post\" action=\"/?controller=user&action=log\" name=\"connectionBoxForm\">
+                    <div class=\"itemsBox__itemsField itemsBox__itemsField--backgroundColor\">
+                        <div class=\"itemsField itemsField__nameField itemsBox__nameField--input\">
+                            <input type=\"email\" name=\"mailToPost\" placeholder=\"Votre e-mail\" class=\"field nameField\" required>
+                        </div>
+                        <div class=\"itemsField itemsField__passwdField itemsBox__passwdField--input\">
+                            <input type=\"password\" name=\"pwdToPost\" placeholder=\"Mot de Passe...\" class=\"field passwdField\" required>
+                        </div>
+                        <div class=\"itemsField itemsField__okButton itemsField__okButton--input\">
+                            <button type=\"submit\" name=\"okButton\" class=\"field okButton okButton--color\">OK</button>
+                            <!--<input type=\"submit\" name=\"okButton\" value=\"OK\" class=\"field okButton okButton--color\">-->
+                        </div>
                     </div>
-                    <div class=\"itemsField itemsField__passwdField itemsBox__passwdField--input\">
-                        <input type=\"password\" name=\"pwdToPost\" placeholder=\"Mot de Passe...\" class=\"field passwdField\" required>
+                    <div class=\"registerLinkBox\">
+                        <a class=\"registerLink registerLink__text--color registerLink__text--font\" href=\"/?controller=user&action=registerView\">s'enregistrer</a>
                     </div>
-                    <div class=\"itemsField itemsField__okButton itemsField__okButton--input\">
-                        <button type=\"submit\" name=\"okButton\" class=\"field okButton okButton--color\">OK</button>
-                        <!--<input type=\"submit\" name=\"okButton\" value=\"OK\" class=\"field okButton okButton--color\">-->
-                    </div>
-                </div>
-                <div class=\"registerLinkBox\">
-                    <a class=\"registerLink registerLink__text--color registerLink__text--font\" href=\"/?controller=user&action=registerView\">s'enregistrer</a>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
-    </div>
-</div>
-</body>
-</html>
 ";
     }
 
@@ -92,48 +103,41 @@ class __TwigTemplate_326aac214e9d4f78f85bee0afc7a2feb92516d4ee4a84316a0c9503544d
 
     public function getDebugInfo()
     {
-        return array (  53 => 11,  51 => 10,  42 => 3,  40 => 2,  37 => 1,);
+        return array (  70 => 10,  66 => 9,  61 => 7,  57 => 6,  52 => 4,  48 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<head>
-    {% include \"metaBlock/metaBlock.html.twig\" %}
+        return new Source("{% extends \"baseView.html.twig\" %}
+
+{% block css %}
     <link rel=\"stylesheet\" type=\"text/css\" href=\"/Assets/css/connectionStylus.css\">
+{% endblock %}
+{% block title %}
     <title>MonAdmin - Se connecter</title>
-</head>
-<body>
-<div class=\"primaryContainer primaryContainer--backgroundImage\">
-    <div class=\"primaryContainer__header\">
-        <header>
-            {% include \"headerView/headerView.html.twig\" %}
-        </header>
-    </div>
-    <!-- definition about the connection items -->
+{% endblock %}
+{% block connectionView %}
     <div class=\"primaryContainer__connectionBox\">
-        <div class=\"connectionBox__itemsBox connectionBox--backgroundColor connectionBox--size\">
-            <form method=\"post\" action=\"/?controller=user&action=log\" name=\"connectionBoxForm\">
-                <div class=\"itemsBox__itemsField itemsBox__itemsField--backgroundColor\">
-                    <div class=\"itemsField itemsField__nameField itemsBox__nameField--input\">
-                        <input type=\"email\" name=\"mailToPost\" placeholder=\"Votre e-mail\" class=\"field nameField\" required>
+            <div class=\"connectionBox__itemsBox connectionBox--backgroundColor connectionBox--size\">
+                <form method=\"post\" action=\"/?controller=user&action=log\" name=\"connectionBoxForm\">
+                    <div class=\"itemsBox__itemsField itemsBox__itemsField--backgroundColor\">
+                        <div class=\"itemsField itemsField__nameField itemsBox__nameField--input\">
+                            <input type=\"email\" name=\"mailToPost\" placeholder=\"Votre e-mail\" class=\"field nameField\" required>
+                        </div>
+                        <div class=\"itemsField itemsField__passwdField itemsBox__passwdField--input\">
+                            <input type=\"password\" name=\"pwdToPost\" placeholder=\"Mot de Passe...\" class=\"field passwdField\" required>
+                        </div>
+                        <div class=\"itemsField itemsField__okButton itemsField__okButton--input\">
+                            <button type=\"submit\" name=\"okButton\" class=\"field okButton okButton--color\">OK</button>
+                            <!--<input type=\"submit\" name=\"okButton\" value=\"OK\" class=\"field okButton okButton--color\">-->
+                        </div>
                     </div>
-                    <div class=\"itemsField itemsField__passwdField itemsBox__passwdField--input\">
-                        <input type=\"password\" name=\"pwdToPost\" placeholder=\"Mot de Passe...\" class=\"field passwdField\" required>
+                    <div class=\"registerLinkBox\">
+                        <a class=\"registerLink registerLink__text--color registerLink__text--font\" href=\"/?controller=user&action=registerView\">s'enregistrer</a>
                     </div>
-                    <div class=\"itemsField itemsField__okButton itemsField__okButton--input\">
-                        <button type=\"submit\" name=\"okButton\" class=\"field okButton okButton--color\">OK</button>
-                        <!--<input type=\"submit\" name=\"okButton\" value=\"OK\" class=\"field okButton okButton--color\">-->
-                    </div>
-                </div>
-                <div class=\"registerLinkBox\">
-                    <a class=\"registerLink registerLink__text--color registerLink__text--font\" href=\"/?controller=user&action=registerView\">s'enregistrer</a>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
-    </div>
-</div>
-</body>
-</html>
-", "connectionView\\connectionView.html.twig", "C:\\Users\\2217873\\Documents\\developpementPerso\\trombiCards\\templates\\connectionView\\connectionView.html.twig");
+{% endblock %}", "connectionView\\connectionView.html.twig", "C:\\Users\\2217873\\Documents\\developpementPerso\\trombiCards\\templates\\connectionView\\connectionView.html.twig");
     }
 }

@@ -25,6 +25,8 @@ class userController extends AbstractController
                 $user->setPwd($passEntities);
                 $result = $user->login(BDDconfig::getInstance());
                 $this->setSession($result, $user);
+                $controller = new adminMainController();
+                echo $controller->adminMainView();
             } else {
                 header('Location:/');
             }

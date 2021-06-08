@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block css %}{% endblock %}
+    {% block title %}{% endblock %}
+</head>
+<body>
+<div class="primaryContainer primaryContainer--backgroundImage">
+    <div class="primaryContainer__header">
+        <header>
+            {% include "headerView/headerView.html.twig" %}
+        </header>
+    </div>
+    {% block connectionView %}{% endblock %}
+    {% block registerView %}{% endblock %}
+    {% block adminMainView %}{% endblock %}
+    {% block listMembersView %}{% endblock %}
+    {% block updateMemberView %}{% endblock %}
+</div>
+</body>
+</html>

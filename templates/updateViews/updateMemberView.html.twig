@@ -1,14 +1,12 @@
-{% include "metaBlock/metaBlock.html.twig" %}
-<head>
+{% extends "base/baseView.html.twig" %}
+
+{% block css %}
     <link rel="stylesheet" type="text/css" href="/Assets/css/updateMemberStylus.css">
+{% endblock %}
+{% block title %}
     <title>MonAdmin - modifier {{ member.userName+' '+member.userFirstname }}</title>
-</head>
-<body>
-<div class="primaryContainer primaryContainer--backgroundImage">
-    <div class="primaryContainer__header">
-        <?php require 'headerView.php';?>
-        {% include "headerView/headerView.html.twig" %}
-    </div>
+{% endblock %}
+{% block updateMemberView %}
     <div class="memberContainer">
         <form class="formBox formBox__background--backgroundColor formBox__background--border" method="post" action="/?controller=updateView&action=updateSelectedMember&param={{ member.userId }}">
             <div class="blockMember">
@@ -49,7 +47,5 @@
                 </div>
             </div>
         </form>
-    </div>
-</div>
-
-</body>
+        </div>
+{% endblock %}
