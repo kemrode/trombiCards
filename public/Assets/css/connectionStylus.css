@@ -95,9 +95,11 @@ body {
   width: auto;
   height: auto;
 }
+
 .registerLink__text--color {
   color: white;
 }
+
 .registerLink__text--font {
   font-size: 1.1em;
   text-decoration: black;
@@ -186,10 +188,12 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .homeImg__background--backgroundcolor {
   background: #024eb6;
   border-radius: 45px;
 }
+
 .homeImg img {
   width: 45px;
   height: 45px;
@@ -225,5 +229,7 @@ body {
   flex-direction: row;
   justify-content: center;
 }
+
+/*# sourceMappingURL=connectionStylus.css.map */
 
 /*# sourceMappingURL=connectionStylus.css.map */
