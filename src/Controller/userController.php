@@ -62,8 +62,6 @@ class userController extends AbstractController
             foreach ($userConnected as $key => $value) {
                 $_SESSION[$key] = $value;
             }
-            $controller = new adminMainController();
-            echo $controller->adminMainView();
         } else {
             header('Location:/');
         }

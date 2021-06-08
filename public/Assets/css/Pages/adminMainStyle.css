@@ -68,7 +68,6 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
 }
-
 .containerFlexBox::-webkit-scrollbar {
   display: none;
 }
@@ -214,6 +213,5 @@ body {
     height: 100%;
   }
 }
-/*# sourceMappingURL=adminMainStyle.css.map */
 
 /*# sourceMappingURL=adminMainStyle.css.map */

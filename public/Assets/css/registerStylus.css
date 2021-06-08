@@ -199,7 +199,6 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
 }
-
 .containerFlexBox::-webkit-scrollbar {
   display: none;
 }
@@ -314,6 +313,5 @@ body {
     font-size: xx-large;
   }
 }
-/*# sourceMappingURL=registerStylus.css.map */
 
 /*# sourceMappingURL=registerStylus.css.map */
