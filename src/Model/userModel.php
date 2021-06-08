@@ -152,7 +152,7 @@ class userModel
     public function login(\PDO $bdd){
         $mailLog = $this->getMail();
         try {
-            $sql = 'SELECT userMail FROM users WHERE userMail=:mailLog';
+            $sql = 'SELECT userMail, userJob FROM users WHERE userMail=:mailLog';
             $request = $bdd->prepare($sql);
             $request->setFetchMode(\PDO::FETCH_CLASS, 'src\Model\userModel');
             $request->execute(['mailLog'=>$mailLog]);

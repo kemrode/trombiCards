@@ -25,9 +25,22 @@ class userController extends AbstractController
                 $user->setMail($mailEntities);
                 $user->setPwd($passEntities);
                 $result = $user->login(BDDconfig::getInstance());
-                $this->setSession($result, $user);
-                $controller = new adminMainController();
-                echo $controller->adminMainView();
+                $job= '';
+                foreach ($result as $key=>$value){
+                    if ($key == 'userJob'){
+                        $job = $value;
+                    }
+                }
+                switch ($job){
+                    case "administrator":
+                        $this->setSession($result, $user);
+                        $controller = new adminMainController();
+                        echo $controller->adminMainView();
+                        break;
+                    default:
+                        header('Location:/');
+                        break;
+                }
             } else {
                 header('Location:/');
             }

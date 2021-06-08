@@ -24,65 +24,79 @@ class __TwigTemplate_2d41c865bd300213db0824b0f1e169f3a48472ac3d624c3cbd36656ecaa
 
         $this->source = $this->getSourceContext();
 
-        $this->parent = false;
-
         $this->blocks = [
+            'css' => [$this, 'block_css'],
+            'title' => [$this, 'block_title'],
+            'registerView' => [$this, 'block_registerView'],
         ];
+    }
+
+    protected function doGetParent(array $context)
+    {
+        // line 1
+        return "baseView.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 1
-        echo "<head>
-    ";
-        // line 2
-        $this->loadTemplate("metaBlock/metaBlock.html.twig", "registerView/registerView.html.twig", 2)->display($context);
-        // line 3
+        $this->parent = $this->loadTemplate("baseView.html.twig", "registerView/registerView.html.twig", 1);
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
+    }
+
+    // line 3
+    public function block_css($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        // line 4
+        echo "    <link rel=\"stylesheet\" type=\"text/css\" href=\"/Assets/css/registerStylus.css\">
+";
+    }
+
+    // line 6
+    public function block_title($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        // line 7
         echo "    <title>MonAdmin - S'enregistrer</title>
-    <link rel=\"stylesheet\" type=\"text/css\" href=\"/Assets/css/registerStylus.css\">
-</head>
-<body>
-<div class=\"primaryContainer primaryContainer--backgroundImage\">
-    <div class=\"primaryContainer__header\">
-        <header>
-            ";
+";
+    }
+
+    // line 9
+    public function block_registerView($context, array $blocks = [])
+    {
+        $macros = $this->macros;
         // line 10
-        $this->loadTemplate("headerView/headerView.html.twig", "registerView/registerView.html.twig", 10)->display($context);
-        // line 11
-        echo "        </header>
-    </div>
-    <div class=\"registerContainer\">
-        <div class=\"formContainer\">
-            <form class=\"formBox\" method=\"post\" action=\"/?controller=register&action=registerNewUser\">
-                <div class=\"itemsContainer\">
-                    <div class=\"itemBox\">
-                        <input type=\"text\" name=\"userName\" placeholder=\"Votre Nom\" required>
+        echo "    <div class=\"registerContainer\">
+            <div class=\"formContainer\">
+                <form class=\"formBox\" method=\"post\" action=\"/?controller=register&action=registerNewUser\">
+                    <div class=\"itemsContainer\">
+                        <div class=\"itemBox\">
+                            <input type=\"text\" name=\"userName\" placeholder=\"Votre Nom\" required>
+                        </div>
+                        <div class=\"itemBox\">
+                            <input type=\"text\" name=\"userFirstName\" placeholder=\"Votre prénom\" required>
+                        </div>
+                        <div class=\"itemBox\">
+                            <input type=\"text\" name=\"userNickName\" placeholder=\"Votre pseudonyme\" required>
+                        </div>
+                        <div class=\"itemBox\">
+                            <input type=\"email\" name=\"userMail\" placeholder=\"Votre adresse e-mail\" required>
+                        </div>
+                        <div class=\"itemBox\">
+                            <input type=\"password\" name=\"userPwd\" placeholder=\"Votre mot de passe\" required>
+                        </div>
+                        <div class=\"itemBox\">
+                            <input type=\"password\" name=\"verifUserPwd\" placeholder=\"Votre mot de passe (pour vérification)\" required>
+                        </div>
                     </div>
-                    <div class=\"itemBox\">
-                        <input type=\"text\" name=\"userFirstName\" placeholder=\"Votre prénom\" required>
+                    <div class=\"okBtn\">
+                        <button type=\"submit\" name=\"okButton\">Ok, s'enregistrer</button>
                     </div>
-                    <div class=\"itemBox\">
-                        <input type=\"text\" name=\"userNickName\" placeholder=\"Votre pseudonyme\" required>
-                    </div>
-                    <div class=\"itemBox\">
-                        <input type=\"email\" name=\"userMail\" placeholder=\"Votre adresse e-mail\" required>
-                    </div>
-                    <div class=\"itemBox\">
-                        <input type=\"password\" name=\"userPwd\" placeholder=\"Votre mot de passe\" required>
-                    </div>
-                    <div class=\"itemBox\">
-                        <input type=\"password\" name=\"verifUserPwd\" placeholder=\"Votre mot de passe (pour vérification)\" required>
-                    </div>
-                </div>
-                <div class=\"okBtn\">
-                    <button type=\"submit\" name=\"okButton\">Ok, s'enregistrer</button>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
-    </div>
-</div>
-</body>";
+";
     }
 
     public function getTemplateName()
@@ -97,53 +111,49 @@ class __TwigTemplate_2d41c865bd300213db0824b0f1e169f3a48472ac3d624c3cbd36656ecaa
 
     public function getDebugInfo()
     {
-        return array (  53 => 11,  51 => 10,  42 => 3,  40 => 2,  37 => 1,);
+        return array (  70 => 10,  66 => 9,  61 => 7,  57 => 6,  52 => 4,  48 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<head>
-    {% include \"metaBlock/metaBlock.html.twig\" %}
-    <title>MonAdmin - S'enregistrer</title>
+        return new Source("{% extends \"baseView.html.twig\" %}
+
+{% block css %}
     <link rel=\"stylesheet\" type=\"text/css\" href=\"/Assets/css/registerStylus.css\">
-</head>
-<body>
-<div class=\"primaryContainer primaryContainer--backgroundImage\">
-    <div class=\"primaryContainer__header\">
-        <header>
-            {% include \"headerView/headerView.html.twig\" %}
-        </header>
-    </div>
+{% endblock %}
+{% block title %}
+    <title>MonAdmin - S'enregistrer</title>
+{% endblock %}
+{% block registerView %}
     <div class=\"registerContainer\">
-        <div class=\"formContainer\">
-            <form class=\"formBox\" method=\"post\" action=\"/?controller=register&action=registerNewUser\">
-                <div class=\"itemsContainer\">
-                    <div class=\"itemBox\">
-                        <input type=\"text\" name=\"userName\" placeholder=\"Votre Nom\" required>
+            <div class=\"formContainer\">
+                <form class=\"formBox\" method=\"post\" action=\"/?controller=register&action=registerNewUser\">
+                    <div class=\"itemsContainer\">
+                        <div class=\"itemBox\">
+                            <input type=\"text\" name=\"userName\" placeholder=\"Votre Nom\" required>
+                        </div>
+                        <div class=\"itemBox\">
+                            <input type=\"text\" name=\"userFirstName\" placeholder=\"Votre prénom\" required>
+                        </div>
+                        <div class=\"itemBox\">
+                            <input type=\"text\" name=\"userNickName\" placeholder=\"Votre pseudonyme\" required>
+                        </div>
+                        <div class=\"itemBox\">
+                            <input type=\"email\" name=\"userMail\" placeholder=\"Votre adresse e-mail\" required>
+                        </div>
+                        <div class=\"itemBox\">
+                            <input type=\"password\" name=\"userPwd\" placeholder=\"Votre mot de passe\" required>
+                        </div>
+                        <div class=\"itemBox\">
+                            <input type=\"password\" name=\"verifUserPwd\" placeholder=\"Votre mot de passe (pour vérification)\" required>
+                        </div>
                     </div>
-                    <div class=\"itemBox\">
-                        <input type=\"text\" name=\"userFirstName\" placeholder=\"Votre prénom\" required>
+                    <div class=\"okBtn\">
+                        <button type=\"submit\" name=\"okButton\">Ok, s'enregistrer</button>
                     </div>
-                    <div class=\"itemBox\">
-                        <input type=\"text\" name=\"userNickName\" placeholder=\"Votre pseudonyme\" required>
-                    </div>
-                    <div class=\"itemBox\">
-                        <input type=\"email\" name=\"userMail\" placeholder=\"Votre adresse e-mail\" required>
-                    </div>
-                    <div class=\"itemBox\">
-                        <input type=\"password\" name=\"userPwd\" placeholder=\"Votre mot de passe\" required>
-                    </div>
-                    <div class=\"itemBox\">
-                        <input type=\"password\" name=\"verifUserPwd\" placeholder=\"Votre mot de passe (pour vérification)\" required>
-                    </div>
-                </div>
-                <div class=\"okBtn\">
-                    <button type=\"submit\" name=\"okButton\">Ok, s'enregistrer</button>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
-    </div>
-</div>
-</body>", "registerView/registerView.html.twig", "C:\\Users\\2217873\\Documents\\developpementPerso\\trombiCards\\templates\\registerView\\registerView.html.twig");
+{% endblock %}", "registerView/registerView.html.twig", "C:\\Users\\2217873\\Documents\\developpementPerso\\trombiCards\\templates\\registerView\\registerView.html.twig");
     }
 }
