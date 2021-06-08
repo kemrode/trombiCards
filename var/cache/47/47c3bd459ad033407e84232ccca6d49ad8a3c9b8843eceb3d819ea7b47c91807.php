@@ -27,7 +27,8 @@ class __TwigTemplate_2778ea326ca4d9805944ef01c379d253222c1aaa2902b24ee496acb97e0
         $this->parent = false;
 
         $this->blocks = [
-            'headerBlock' => [$this, 'block_headerBlock'],
+            'css' => [$this, 'block_css'],
+            'header' => [$this, 'block_header'],
         ];
     }
 
@@ -35,16 +36,33 @@ class __TwigTemplate_2778ea326ca4d9805944ef01c379d253222c1aaa2902b24ee496acb97e0
     {
         $macros = $this->macros;
         // line 1
-        $this->displayBlock('headerBlock', $context, $blocks);
+        $this->displayBlock('css', $context, $blocks);
+        // line 4
+        echo "
+";
+        // line 5
+        $this->displayBlock('header', $context, $blocks);
     }
 
-    public function block_headerBlock($context, array $blocks = [])
+    // line 1
+    public function block_css($context, array $blocks = [])
     {
         $macros = $this->macros;
         // line 2
-        echo "    <div class=\"header__title header--color header-sizeTitle\">
-        <h1>MonAdmin</h1>
-    </div>
+        echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"/Assets/css/headerStylus.css\"
+";
+    }
+
+    // line 5
+    public function block_header($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        // line 6
+        echo "        <header>
+                <div class=\"header__title header--color header-sizeTitle\">
+                        <h1>MonAdmin</h1>
+                </div>
+        </header>
 ";
     }
 
@@ -55,15 +73,21 @@ class __TwigTemplate_2778ea326ca4d9805944ef01c379d253222c1aaa2902b24ee496acb97e0
 
     public function getDebugInfo()
     {
-        return array (  45 => 2,  38 => 1,);
+        return array (  61 => 6,  57 => 5,  52 => 2,  48 => 1,  44 => 5,  41 => 4,  39 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% block headerBlock %}
-    <div class=\"header__title header--color header-sizeTitle\">
-        <h1>MonAdmin</h1>
-    </div>
+        return new Source("{% block css %}
+<link rel=\"stylesheet\" type=\"text/css\" href=\"/Assets/css/headerStylus.css\"
+{% endblock %}
+
+{% block header %}
+        <header>
+                <div class=\"header__title header--color header-sizeTitle\">
+                        <h1>MonAdmin</h1>
+                </div>
+        </header>
 {% endblock %}", "headerView/headerView.html.twig", "C:\\Users\\2217873\\Documents\\developpementPerso\\trombiCards\\templates\\headerView\\headerView.html.twig");
     }
 }

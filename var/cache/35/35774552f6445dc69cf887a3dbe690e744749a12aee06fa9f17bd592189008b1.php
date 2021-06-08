@@ -34,13 +34,13 @@ class __TwigTemplate_26f64b04dd15cac49808de1aaf3b977690528e875072925474dc9e5079a
     protected function doGetParent(array $context)
     {
         // line 1
-        return "base/baseView.html.twig";
+        return "baseView.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
     {
         $macros = $this->macros;
-        $this->parent = $this->loadTemplate("base/baseView.html.twig", "listMembersView\\listMembersView.html.twig", 1);
+        $this->parent = $this->loadTemplate("baseView.html.twig", "listMembersView\\listMembersView.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
@@ -145,7 +145,7 @@ class __TwigTemplate_26f64b04dd15cac49808de1aaf3b977690528e875072925474dc9e5079a
 
     public function getSourceContext()
     {
-        return new Source("{% extends \"base/baseView.html.twig\" %}
+        return new Source("{% extends \"baseView.html.twig\" %}
 {% block css %}
     <link rel=\"stylesheet\" type=\"text/css\" href=\"/Assets/css/listMemberStylus.css\">
 {% endblock %}
