@@ -59,9 +59,34 @@ class __TwigTemplate_2778ea326ca4d9805944ef01c379d253222c1aaa2902b24ee496acb97e0
         $macros = $this->macros;
         // line 6
         echo "        <header>
-                <div class=\"header__title header--color header-sizeTitle\">
-                        <h1>MonAdmin</h1>
-                </div>
+                <div class=\"headerBox\">
+                        <div class=\"header header__title--size header__title--color header__title--sizeTitle\">
+                                <h1>MonAdmin</h1>
+                        </div>
+                        ";
+        // line 11
+        if ((0 === twig_compare(($context["connected"] ?? null), true))) {
+            // line 12
+            echo "                        <div class=\"home\">
+                                <div class=\"homeImg homeImg__background--backgroundcolor\">
+                                        <a href=\"/?controller=adminMain&action=adminMainView\"><img src=\"/Ressources/images/icons/homeWhite.png\"></a>
+                                </div>
+                        </div>
+                        ";
+        }
+        // line 18
+        echo "                        ";
+        if ((0 === twig_compare(($context["back"] ?? null), true))) {
+            // line 19
+            echo "                        <div class=\"home\">
+                                <div class=\"homeImg homeImg__background--backgroundcolor\">
+                                        <a href=\"/?controller=listMembers&action=listMembersView\"><img src=\"/Ressources/images/icons/backArrowWhite.png\"></a>
+                                </div>
+                        </div>
+                        ";
+        }
+        // line 25
+        echo "                </div>
         </header>
 ";
     }
@@ -73,7 +98,7 @@ class __TwigTemplate_2778ea326ca4d9805944ef01c379d253222c1aaa2902b24ee496acb97e0
 
     public function getDebugInfo()
     {
-        return array (  61 => 6,  57 => 5,  52 => 2,  48 => 1,  44 => 5,  41 => 4,  39 => 1,);
+        return array (  89 => 25,  81 => 19,  78 => 18,  70 => 12,  68 => 11,  61 => 6,  57 => 5,  52 => 2,  48 => 1,  44 => 5,  41 => 4,  39 => 1,);
     }
 
     public function getSourceContext()
@@ -84,8 +109,24 @@ class __TwigTemplate_2778ea326ca4d9805944ef01c379d253222c1aaa2902b24ee496acb97e0
 
 {% block header %}
         <header>
-                <div class=\"header__title header--color header-sizeTitle\">
-                        <h1>MonAdmin</h1>
+                <div class=\"headerBox\">
+                        <div class=\"header header__title--size header__title--color header__title--sizeTitle\">
+                                <h1>MonAdmin</h1>
+                        </div>
+                        {% if connected == true %}
+                        <div class=\"home\">
+                                <div class=\"homeImg homeImg__background--backgroundcolor\">
+                                        <a href=\"/?controller=adminMain&action=adminMainView\"><img src=\"/Ressources/images/icons/homeWhite.png\"></a>
+                                </div>
+                        </div>
+                        {% endif %}
+                        {% if back == true %}
+                        <div class=\"home\">
+                                <div class=\"homeImg homeImg__background--backgroundcolor\">
+                                        <a href=\"/?controller=listMembers&action=listMembersView\"><img src=\"/Ressources/images/icons/backArrowWhite.png\"></a>
+                                </div>
+                        </div>
+                        {% endif %}
                 </div>
         </header>
 {% endblock %}", "headerView/headerView.html.twig", "C:\\Users\\2217873\\Documents\\developpementPerso\\trombiCards\\templates\\headerView\\headerView.html.twig");

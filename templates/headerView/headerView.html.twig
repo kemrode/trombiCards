@@ -4,8 +4,24 @@
 
 {% block header %}
         <header>
-                <div class="header__title header--color header-sizeTitle">
-                        <h1>MonAdmin</h1>
+                <div class="headerBox">
+                        <div class="header header__title--size header__title--color header__title--sizeTitle">
+                                <h1>MonAdmin</h1>
+                        </div>
+                        {% if connected == true %}
+                        <div class="home">
+                                <div class="homeImg homeImg__background--backgroundcolor">
+                                        <a href="/?controller=adminMain&action=adminMainView"><img src="/Ressources/images/icons/homeWhite.png"></a>
+                                </div>
+                        </div>
+                        {% endif %}
+                        {% if back == true %}
+                        <div class="home">
+                                <div class="homeImg homeImg__background--backgroundcolor">
+                                        <a href="/?controller=listMembers&action=listMembersView"><img src="/Ressources/images/icons/backArrowWhite.png"></a>
+                                </div>
+                        </div>
+                        {% endif %}
                 </div>
         </header>
 {% endblock %}

@@ -34,13 +34,13 @@ class __TwigTemplate_29831b4152348ad2a92699c2ad1de2c928a610fafc0ebabb7a910bf1cdd
     protected function doGetParent(array $context)
     {
         // line 1
-        return "base/baseView.html.twig";
+        return "baseView.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
     {
         $macros = $this->macros;
-        $this->parent = $this->loadTemplate("base/baseView.html.twig", "updateViews/updateMemberView.html.twig", 1);
+        $this->parent = $this->loadTemplate("baseView.html.twig", "updateViews/updateMemberView.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
@@ -145,7 +145,7 @@ class __TwigTemplate_29831b4152348ad2a92699c2ad1de2c928a610fafc0ebabb7a910bf1cdd
 
     public function getSourceContext()
     {
-        return new Source("{% extends \"base/baseView.html.twig\" %}
+        return new Source("{% extends \"baseView.html.twig\" %}
 
 {% block css %}
     <link rel=\"stylesheet\" type=\"text/css\" href=\"/Assets/css/updateMemberStylus.css\">

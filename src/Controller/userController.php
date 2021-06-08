@@ -7,7 +7,8 @@ class userController extends AbstractController
 {
     //function to display connection view
     public function connectionView() {
-        return $this->twig->render("connectionView\connectionView.html.twig");
+        $connected = false;
+        return $this->twig->render("connectionView\connectionView.html.twig", ["connected"=>$connected]);
     }
     //function to display view to registering
     public function registerView(){

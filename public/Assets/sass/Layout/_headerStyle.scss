@@ -1,33 +1,83 @@
 @import "../Utils/mixin";
+@import "../Utils/variables";
 
-.header__title {
-  @include headerTitle;
-}
-.header--color {
+.headerBox {
+  display: flex;
+  @include rowFlex;
+  width: auto;
+  height: auto;
   @include headerColor;
 }
+.header {
+  @include headerTitle;
+  width: 80%;
+}
+.home {
+  @include flexBoxRowJustifyCenter;
+  align-items: center;
+  width: 20%;
+  height: auto;
+}
+.homeImg {
+  display: flex;
+  width: 50%;
+  height: 50%;
+  justify-content: center;
+  align-items: center;
+  &__background {
+    &--backgroundcolor {
+      background: rgb(2,78,182);
+      //background: linear-gradient(135deg, rgba(2,78,182,1) 0%, rgba(37,110,182,1) 0%, rgba(255,255,255,0) 100%);
+      border-radius: 45px;
+    }
+  }
+  & img {
+    width: 45px;
+    height: 45px;
+  }
+}
 @media only screen and (max-width: 600px) {
-  .header-sizeTitle{
-    font-size: 1.3em;
+  .header {
+    &__title{
+      &--sizeTitle {
+        font-size: 1.3em;
+      }
+    }
   }
 }
 @media only screen and (min-width: 600px) {
-  .header-sizeTitle{
-    font-size: 1.4em;
+  .header {
+    &__title{
+      &--sizeTitle {
+        font-size: 1.4em;
+      }
+    }
   }
 }
 @media only screen and (min-width: 768px) {
-  .header-sizeTitle {
-    font-size: 1.5em;
+  .header {
+    &__title{
+      &--sizeTitle {
+        font-size: 1.5em;
+      }
+    }
   }
 }
 @media only screen and (min-width: 992px) {
-  .header-sizeTitle{
-    font-size: 1.6em;
+  .header {
+    &__title{
+      &--sizeTitle {
+        font-size: 1.6em;
+      }
+    }
   }
 }
 @media only screen and (min-width: 1200px) {
-  .header-sizeTitle{
-    font-size: 1.8em;
+  .header {
+    &__title{
+      &--sizeTitle {
+        font-size: 1.8em;
+      }
+    }
   }
 }
