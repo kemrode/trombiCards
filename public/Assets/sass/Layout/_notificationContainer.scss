@@ -11,3 +11,8 @@
     display: none;
   }
 }
+.formBox {
+  @include flexBoxColumnJustifySpaceEvenly;
+  width: 85%;
+  height: 100%;
+}

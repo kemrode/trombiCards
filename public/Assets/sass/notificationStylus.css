@@ -33,6 +33,14 @@ body {
   display: none;
 }
 
+.formBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 85%;
+  height: 100%;
+}
+
 .pageTitleBox {
   display: flex;
   flex-direction: row;

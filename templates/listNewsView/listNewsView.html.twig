@@ -7,17 +7,18 @@
 {% endblock %}
 {% block notifAdmin %}
     <div class="notifContainer">
-        <div class="selectOptionsContainer">
-            <div class="addNewNotifBox">
-                <button type="submit" name="addButton"><a href="/?controller=notification&action=notificationView">Nouvelle Notification</a></button> <!-- look at the button -->
-            </div>
-            <div class="updateLastNotifBox">
-                <button type="submit" name="updateButton" formaction="/?controller=user&action=connectionView">Modifier</br>la dernière notification</br>entrée</button>
+        <form class="formBox" name="formBox" method="post" action="">
+            <div class="selectOptionsContainer">
+                <div class="addNewNotifBox">
+                    <button type="submit" name="addButton" formaction="/?controller=notification&action=notificationView">Nouvelle Notification</button>
+                </div>
+                <div class="updateLastNotifBox">
+                    <button type="submit" name="updateButton" formaction="">Modifier</br>la dernière notification</br>entrée</button>
 
+                </div>
             </div>
-        </div>
-        <div class="listNotifBox listNotifBox__backgroundcolor--backgroundcolor">
-            {% for notif in notifications %}
+            <div class="listNotifBox listNotifBox__backgroundcolor--backgroundcolor">
+                {% for notif in notifications %}
                     <div class="notifBox notifBox__backgroundcolor--backgroundcolor">
                         <div class="notifTitle">
                             <label class="textTitle">{{ notif["notifTitle"] }}</label>
@@ -32,14 +33,15 @@
                         </div>
                         <div class="btnBox">
                             <div class="updateBtn">
-                                <button type="submit" name="updateButton" formaction="/?controller=notification&action=notificationView">MODIFIER</button>
+                                <button type="submit" name="updateButton" formaction="/?controller=notification&action=notificationView&param={{ notif['notifId'] }}">MODIFIER</button>
                             </div>
                             <div class="deleteBtn">
-                                <button type="submit" name="deleteButton" formaction="">SUPPRIMER</button>
+                                <button type="submit" name="deleteButton" formaction="/?controller=listNews&action=deleteNotif&param={{ notif['notifId'] }}">SUPPRIMER</button>
                             </div>
                         </div>
                     </div>
-            {% endfor %}
-        </div>
+                {% endfor %}
+            </div>
+        </form>
     </div>
 {% endblock %}

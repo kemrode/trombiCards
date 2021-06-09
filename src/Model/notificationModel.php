@@ -131,7 +131,7 @@ class notificationModel
     }
 
     //function to update a notification from database
-    public function updateNotification(\PDO $bdd, $notifId,$array=[]){
+    public function updateNotification(\PDO $bdd, $notifId){
         try {
             $sql = 'UPDATE notifications SET notifTitle =:titleArray, notifTxt =:txtArray, notifDate =:dateArray WHERE notifId =:notifId';
             $request = $bdd->prepare($sql);
@@ -146,12 +146,12 @@ class notificationModel
     }
 
     //function to delete a notification from database
-    public function deleteNotification(\PDO $bdd, $notifId){
+    public static function deleteNotification(\PDO $bdd, $notifId){
         try {
-            $sql = 'DELETE FROM notifications WHERE notifId:=notifId';
+            $sql = 'DELETE FROM notifications WHERE notifId=:notifId';
             $request = $bdd->prepare($sql);
             $request->execute(['notifId'=>$notifId]);
-            header("Location:\ ");
+            return true;
         } catch (\Exception $e){
             return $e->getMessage();
         }

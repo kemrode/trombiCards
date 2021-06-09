@@ -68,26 +68,27 @@ class __TwigTemplate_d02faf8bf1706ce543fbe694be11677da049263e200b71e46a68546d96b
         $macros = $this->macros;
         // line 9
         echo "    <div class=\"notifContainer\">
-        <div class=\"selectOptionsContainer\">
-            <div class=\"addNewNotifBox\">
-                <button type=\"submit\" name=\"addButton\"><a href=\"/?controller=notification&action=notificationView\">Nouvelle Notification</a></button> <!-- look at the button -->
-            </div>
-            <div class=\"updateLastNotifBox\">
-                <button type=\"submit\" name=\"updateButton\" formaction=\"/?controller=user&action=connectionView\">Modifier</br>la dernière notification</br>entrée</button>
+        <form class=\"formBox\" name=\"formBox\" method=\"post\" action=\"\">
+            <div class=\"selectOptionsContainer\">
+                <div class=\"addNewNotifBox\">
+                    <button type=\"submit\" name=\"addButton\" formaction=\"/?controller=notification&action=notificationView\">Nouvelle Notification</button>
+                </div>
+                <div class=\"updateLastNotifBox\">
+                    <button type=\"submit\" name=\"updateButton\" formaction=\"\">Modifier</br>la dernière notification</br>entrée</button>
 
+                </div>
             </div>
-        </div>
-        <div class=\"listNotifBox listNotifBox__backgroundcolor--backgroundcolor\">
-            ";
-        // line 20
+            <div class=\"listNotifBox listNotifBox__backgroundcolor--backgroundcolor\">
+                ";
+        // line 21
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["notifications"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["notif"]) {
-            // line 21
+            // line 22
             echo "                    <div class=\"notifBox notifBox__backgroundcolor--backgroundcolor\">
                         <div class=\"notifTitle\">
                             <label class=\"textTitle\">";
-            // line 23
+            // line 24
             echo twig_escape_filter($this->env, (($__internal_f607aeef2c31a95a7bf963452dff024ffaeb6aafbe4603f9ca3bec57be8633f4 = $context["notif"]) && is_array($__internal_f607aeef2c31a95a7bf963452dff024ffaeb6aafbe4603f9ca3bec57be8633f4) || $__internal_f607aeef2c31a95a7bf963452dff024ffaeb6aafbe4603f9ca3bec57be8633f4 instanceof ArrayAccess ? ($__internal_f607aeef2c31a95a7bf963452dff024ffaeb6aafbe4603f9ca3bec57be8633f4["notifTitle"] ?? null) : null), "html", null, true);
             echo "</label>
                         </div>
@@ -97,27 +98,34 @@ class __TwigTemplate_d02faf8bf1706ce543fbe694be11677da049263e200b71e46a68546d96b
                             </div>
                             <div class=\"notifTime\">
                                 <label class=\"txtTime\">";
-            // line 30
+            // line 31
             echo twig_escape_filter($this->env, (($__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144 = $context["notif"]) && is_array($__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144) || $__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144 instanceof ArrayAccess ? ($__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144["notifDate"] ?? null) : null), "html", null, true);
             echo "</label>
                             </div>
                         </div>
                         <div class=\"btnBox\">
                             <div class=\"updateBtn\">
-                                <button type=\"submit\" name=\"updateButton\" formaction=\"/?controller=notification&action=notificationView\">MODIFIER</button>
+                                <button type=\"submit\" name=\"updateButton\" formaction=\"/?controller=notification&action=notificationView&param=";
+            // line 36
+            echo twig_escape_filter($this->env, (($__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b = $context["notif"]) && is_array($__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b) || $__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b instanceof ArrayAccess ? ($__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b["notifId"] ?? null) : null), "html", null, true);
+            echo "\">MODIFIER</button>
                             </div>
                             <div class=\"deleteBtn\">
-                                <button type=\"submit\" name=\"deleteButton\" formaction=\"\">SUPPRIMER</button>
+                                <button type=\"submit\" name=\"deleteButton\" formaction=\"/?controller=listNews&action=deleteNotif&param=";
+            // line 39
+            echo twig_escape_filter($this->env, (($__internal_68aa442c1d43d3410ea8f958ba9090f3eaa9a76f8de8fc9be4d6c7389ba28002 = $context["notif"]) && is_array($__internal_68aa442c1d43d3410ea8f958ba9090f3eaa9a76f8de8fc9be4d6c7389ba28002) || $__internal_68aa442c1d43d3410ea8f958ba9090f3eaa9a76f8de8fc9be4d6c7389ba28002 instanceof ArrayAccess ? ($__internal_68aa442c1d43d3410ea8f958ba9090f3eaa9a76f8de8fc9be4d6c7389ba28002["notifId"] ?? null) : null), "html", null, true);
+            echo "\">SUPPRIMER</button>
                             </div>
                         </div>
                     </div>
-            ";
+                ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['notif'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 43
-        echo "        </div>
+        // line 44
+        echo "            </div>
+        </form>
     </div>
 ";
     }
@@ -134,7 +142,7 @@ class __TwigTemplate_d02faf8bf1706ce543fbe694be11677da049263e200b71e46a68546d96b
 
     public function getDebugInfo()
     {
-        return array (  120 => 43,  101 => 30,  91 => 23,  87 => 21,  83 => 20,  70 => 9,  66 => 8,  61 => 6,  57 => 5,  52 => 3,  48 => 2,  37 => 1,);
+        return array (  127 => 44,  116 => 39,  110 => 36,  102 => 31,  92 => 24,  88 => 22,  84 => 21,  70 => 9,  66 => 8,  61 => 6,  57 => 5,  52 => 3,  48 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -148,17 +156,18 @@ class __TwigTemplate_d02faf8bf1706ce543fbe694be11677da049263e200b71e46a68546d96b
 {% endblock %}
 {% block notifAdmin %}
     <div class=\"notifContainer\">
-        <div class=\"selectOptionsContainer\">
-            <div class=\"addNewNotifBox\">
-                <button type=\"submit\" name=\"addButton\"><a href=\"/?controller=notification&action=notificationView\">Nouvelle Notification</a></button> <!-- look at the button -->
-            </div>
-            <div class=\"updateLastNotifBox\">
-                <button type=\"submit\" name=\"updateButton\" formaction=\"/?controller=user&action=connectionView\">Modifier</br>la dernière notification</br>entrée</button>
+        <form class=\"formBox\" name=\"formBox\" method=\"post\" action=\"\">
+            <div class=\"selectOptionsContainer\">
+                <div class=\"addNewNotifBox\">
+                    <button type=\"submit\" name=\"addButton\" formaction=\"/?controller=notification&action=notificationView\">Nouvelle Notification</button>
+                </div>
+                <div class=\"updateLastNotifBox\">
+                    <button type=\"submit\" name=\"updateButton\" formaction=\"\">Modifier</br>la dernière notification</br>entrée</button>
 
+                </div>
             </div>
-        </div>
-        <div class=\"listNotifBox listNotifBox__backgroundcolor--backgroundcolor\">
-            {% for notif in notifications %}
+            <div class=\"listNotifBox listNotifBox__backgroundcolor--backgroundcolor\">
+                {% for notif in notifications %}
                     <div class=\"notifBox notifBox__backgroundcolor--backgroundcolor\">
                         <div class=\"notifTitle\">
                             <label class=\"textTitle\">{{ notif[\"notifTitle\"] }}</label>
@@ -173,15 +182,16 @@ class __TwigTemplate_d02faf8bf1706ce543fbe694be11677da049263e200b71e46a68546d96b
                         </div>
                         <div class=\"btnBox\">
                             <div class=\"updateBtn\">
-                                <button type=\"submit\" name=\"updateButton\" formaction=\"/?controller=notification&action=notificationView\">MODIFIER</button>
+                                <button type=\"submit\" name=\"updateButton\" formaction=\"/?controller=notification&action=notificationView&param={{ notif['notifId'] }}\">MODIFIER</button>
                             </div>
                             <div class=\"deleteBtn\">
-                                <button type=\"submit\" name=\"deleteButton\" formaction=\"\">SUPPRIMER</button>
+                                <button type=\"submit\" name=\"deleteButton\" formaction=\"/?controller=listNews&action=deleteNotif&param={{ notif['notifId'] }}\">SUPPRIMER</button>
                             </div>
                         </div>
                     </div>
-            {% endfor %}
-        </div>
+                {% endfor %}
+            </div>
+        </form>
     </div>
 {% endblock %}", "listNewsView\\listNewsView.html.twig", "C:\\Users\\2217873\\Documents\\developpementPerso\\trombiCards\\templates\\listNewsView\\listNewsView.html.twig");
     }

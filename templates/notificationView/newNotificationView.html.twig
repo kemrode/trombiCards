@@ -1,0 +1,31 @@
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="/Assets/css/notificationStylus.css">
+{% endblock %}
+{% block title %}
+    <title>MonAdmin - nouvelle notification</title>
+{% endblock %}
+{% block newNotif %}
+    <div class="notifContainer">
+        <div class="pageTitleBox">
+            <div class="labelTitle">
+                <h2>Nouvelle notification</h2>
+            </div>
+        </div>
+        <form method="post" action="/?controller=notification&action=addNewNotification" name="newNotifForm">
+            <div class="newNotifBox newNotifBox__backgroundcolor--backgroundcolor newNotifBox__zindex--index">
+                <div class="notifTitle notifTitle__zindex--index">
+                    <input type="text" name="notifTitle" placeholder="titre de la notification...">
+                </div>
+                <div class="notifText notifText__zindex--index">
+                    <textarea name="notifText" placeholder="Que souhaitez-vous raconter ?"></textarea>
+                </div>
+            </div>
+            <div class="btnBox">
+                <div class="addNewNotifBox addButtonNotifView">
+                    <button type="submit" name="addBtn">ajouter</button>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}
