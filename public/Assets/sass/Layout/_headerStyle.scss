@@ -12,23 +12,22 @@
   @include headerTitle;
   width: 80%;
 }
-.home {
-  @include flexBoxRowJustifyCenter;
-  align-items: center;
+.headerButton {
+  @include rowFlex;
+  justify-content: space-evenly;
   width: 20%;
   height: auto;
 }
+.home {
+  @include buttonHeaderSettings;
+}
 .homeImg {
-  display: flex;
-  width: 50%;
-  height: 50%;
-  justify-content: center;
-  align-items: center;
+  @include generalButtonSettings;
   &__background {
     &--backgroundcolor {
       background: rgb(2,78,182);
       //background: linear-gradient(135deg, rgba(2,78,182,1) 0%, rgba(37,110,182,1) 0%, rgba(255,255,255,0) 100%);
-      border-radius: 45px;
+      border-radius: $quarterBorder;
     }
   }
   & img {
@@ -36,12 +35,43 @@
     height: 45px;
   }
 }
+.logout {
+  @include buttonHeaderSettings;
+}
+.logoutImg {
+  @include generalButtonSettings;
+  &__background {
+    &--backgroundcolor {
+      background: rgb(240,25,25);
+      background: linear-gradient(135deg, rgba(240,25,25,1) 0%, rgba(242,48,48,0.41220238095238093) 100%);
+      border-radius: $quarterBorder;
+    }
+  }
+}
 @media only screen and (max-width: 600px) {
   .header {
+    width: 60%;
     &__title{
       &--sizeTitle {
         font-size: 1.3em;
       }
+    }
+  }
+  .headerButton {
+    width: 40%;
+  }
+  .homeImg {
+    height: 60px;
+    & img {
+      width: 35px;
+      height: 35px;
+    }
+  }
+  .logoutImg {
+    height: 60px;
+    & img {
+      width: 35px;
+      height: 35px;
     }
   }
 }
@@ -53,6 +83,23 @@
       }
     }
   }
+  .headerButton {
+    width: 40%;
+  }
+  .homeImg {
+    height: 60px;
+    & img {
+      width: 35px;
+      height: 35px;
+    }
+  }
+  .logoutImg {
+    height: 60px;
+    & img {
+      width: 35px;
+      height: 35px;
+    }
+  }
 }
 @media only screen and (min-width: 768px) {
   .header {
@@ -60,6 +107,23 @@
       &--sizeTitle {
         font-size: 1.5em;
       }
+    }
+  }
+  .headerButton {
+    width: 40%;
+  }
+  .homeImg {
+    height: 75px;
+    & img {
+      width: 45px;
+      height: 45px;
+    }
+  }
+  .logoutImg {
+    height: 75px;
+    & img {
+      width: 45px;
+      height: 45px;
     }
   }
 }

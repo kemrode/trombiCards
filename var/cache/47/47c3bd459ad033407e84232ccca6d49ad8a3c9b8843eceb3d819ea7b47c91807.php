@@ -67,25 +67,39 @@ class __TwigTemplate_2778ea326ca4d9805944ef01c379d253222c1aaa2902b24ee496acb97e0
         // line 11
         if ((0 === twig_compare(($context["connected"] ?? null), true))) {
             // line 12
-            echo "                        <div class=\"home\">
-                                <div class=\"homeImg homeImg__background--backgroundcolor\">
-                                        <a href=\"/?controller=adminMain&action=adminMainView\"><img src=\"/Ressources/images/icons/homeWhite.png\"></a>
+            echo "                                <div class=\"headerButton\">
+                                        <div class=\"home\">
+                                                <div class=\"homeImg homeImg__background--backgroundcolor\">
+                                                        <a href=\"/?controller=adminMain&action=adminMainView\"><img src=\"/Ressources/images/icons/homeWhite.png\"></a>
+                                                </div>
+                                        </div>
+                                        <div class=\"logout\">
+                                                <div class=\"logoutImg logoutImg__background--backgroundcolor\">
+                                                        <a href=\"/?controller=user&action=logout\"><img src=\"/Ressources/images/icons/logoutWhite.svg\"></a>
+                                                </div>
+                                        </div>
                                 </div>
-                        </div>
-                        ";
-        }
-        // line 18
-        echo "                        ";
-        if ((0 === twig_compare(($context["back"] ?? null), true))) {
-            // line 19
-            echo "                        <div class=\"home\">
-                                <div class=\"homeImg homeImg__background--backgroundcolor\">
-                                        <a href=\"/?controller=listMembers&action=listMembersView\"><img src=\"/Ressources/images/icons/backArrowWhite.png\"></a>
-                                </div>
-                        </div>
                         ";
         }
         // line 25
+        echo "                        ";
+        if ((0 === twig_compare(($context["back"] ?? null), true))) {
+            // line 26
+            echo "                                <div class=\"headerButton\">
+                                        <div class=\"home\">
+                                                <div class=\"homeImg homeImg__background--backgroundcolor\">
+                                                        <a href=\"/?controller=listMembers&action=listMembersView\"><img src=\"/Ressources/images/icons/backArrowWhite.png\"></a>
+                                                </div>
+                                        </div>
+                                        <div class=\"logout\">
+                                                <div class=\"logoutImg logoutImg__background--backgroundcolor\">
+                                                        <a href=\"/?controller=user&action=logout\"><img src=\"/Ressources/images/icons/logoutWhite.svg\"></a>
+                                                </div>
+                                        </div>
+                                </div>
+                        ";
+        }
+        // line 39
         echo "                </div>
         </header>
 ";
@@ -98,7 +112,7 @@ class __TwigTemplate_2778ea326ca4d9805944ef01c379d253222c1aaa2902b24ee496acb97e0
 
     public function getDebugInfo()
     {
-        return array (  89 => 25,  81 => 19,  78 => 18,  70 => 12,  68 => 11,  61 => 6,  57 => 5,  52 => 2,  48 => 1,  44 => 5,  41 => 4,  39 => 1,);
+        return array (  103 => 39,  88 => 26,  85 => 25,  70 => 12,  68 => 11,  61 => 6,  57 => 5,  52 => 2,  48 => 1,  44 => 5,  41 => 4,  39 => 1,);
     }
 
     public function getSourceContext()
@@ -114,18 +128,32 @@ class __TwigTemplate_2778ea326ca4d9805944ef01c379d253222c1aaa2902b24ee496acb97e0
                                 <h1>MonAdmin</h1>
                         </div>
                         {% if connected == true %}
-                        <div class=\"home\">
-                                <div class=\"homeImg homeImg__background--backgroundcolor\">
-                                        <a href=\"/?controller=adminMain&action=adminMainView\"><img src=\"/Ressources/images/icons/homeWhite.png\"></a>
+                                <div class=\"headerButton\">
+                                        <div class=\"home\">
+                                                <div class=\"homeImg homeImg__background--backgroundcolor\">
+                                                        <a href=\"/?controller=adminMain&action=adminMainView\"><img src=\"/Ressources/images/icons/homeWhite.png\"></a>
+                                                </div>
+                                        </div>
+                                        <div class=\"logout\">
+                                                <div class=\"logoutImg logoutImg__background--backgroundcolor\">
+                                                        <a href=\"/?controller=user&action=logout\"><img src=\"/Ressources/images/icons/logoutWhite.svg\"></a>
+                                                </div>
+                                        </div>
                                 </div>
-                        </div>
                         {% endif %}
                         {% if back == true %}
-                        <div class=\"home\">
-                                <div class=\"homeImg homeImg__background--backgroundcolor\">
-                                        <a href=\"/?controller=listMembers&action=listMembersView\"><img src=\"/Ressources/images/icons/backArrowWhite.png\"></a>
+                                <div class=\"headerButton\">
+                                        <div class=\"home\">
+                                                <div class=\"homeImg homeImg__background--backgroundcolor\">
+                                                        <a href=\"/?controller=listMembers&action=listMembersView\"><img src=\"/Ressources/images/icons/backArrowWhite.png\"></a>
+                                                </div>
+                                        </div>
+                                        <div class=\"logout\">
+                                                <div class=\"logoutImg logoutImg__background--backgroundcolor\">
+                                                        <a href=\"/?controller=user&action=logout\"><img src=\"/Ressources/images/icons/logoutWhite.svg\"></a>
+                                                </div>
+                                        </div>
                                 </div>
-                        </div>
                         {% endif %}
                 </div>
         </header>
