@@ -153,6 +153,7 @@ class userModel
         $mailLog = $this->getMail();
         try {
             $sql = 'SELECT userMail, userJob FROM users WHERE userMail=:mailLog';
+            sleep(1);
             $request = $bdd->prepare($sql);
             $request->setFetchMode(\PDO::FETCH_CLASS, 'src\Model\userModel');
             $request->execute(['mailLog'=>$mailLog]);
@@ -245,6 +246,20 @@ class userModel
             } catch (\Exception $e){
             return $e->getMessage();
         }
-        }
+    }
 
+    //funcion to check if $_SESSION['administrator] is at true
+    public function checkAdministrator() {
+        try {
+            if(isset($_SESSION['administrator'])){
+                if ($_SESSION['administrator'] != true){
+                    header('Location:/');
+                }
+            } else {
+                header('Location:/');
+            }
+        } catch (\Exception $e){
+            return $e->getMessage();
+        }
+    }
 }

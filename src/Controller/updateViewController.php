@@ -17,25 +17,27 @@ class updateViewController extends AbstractController
     }
     //function to update the selected member with id
     public function updateSelectedMember(){
-        $selectedId = $_GET['param'];
-        if(isset($_POST['updateBtn'])){
-            $selectedMember = new userModel();
-            $selectedMember->setName(htmlentities($_POST['selectedName']));
-            $selectedMember->setFirstname(htmlentities($_POST['selectedFirstname']));
-            $selectedMember->setNickname(htmlentities($_POST['selectedNickname']));
-            $selectedMember->setMail(htmlentities($_POST['selectedMail']));
-            $newJob = $this->isAdminJob(htmlentities($_POST['switchAdmin']));
-            $selectedMember->setJob($newJob);
-            //$selectedMember->isAdminJob(htmlentities($_POST['switchAdmin']));
-            $selectedMember->updateMembers(BDDconfig::getInstance(), $selectedId);
-            $listView = new listMembersController();
-            echo $listView->listMembersView();
-
+        try {
+            $selectedId = $_GET['param'];
+            if(isset($_POST['updateBtn'])){
+                $selectedMember = new userModel();
+                $selectedMember->setName(htmlentities($_POST['selectedName']));
+                $selectedMember->setFirstname(htmlentities($_POST['selectedFirstname']));
+                $selectedMember->setNickname(htmlentities($_POST['selectedNickname']));
+                $selectedMember->setMail(htmlentities($_POST['selectedMail']));
+                $newJob = $this->isAdminJob(htmlentities($_POST['switchAdmin']));
+                $selectedMember->setJob($newJob);
+                //$selectedMember->isAdminJob(htmlentities($_POST['switchAdmin']));
+                $selectedMember->updateMembers(BDDconfig::getInstance(), $selectedId);
+                $listView = new listMembersController();
+                echo $listView->listMembersView();
+            }
+        } catch (\Exception $e){
+            return $e->getMessage();
         }
     }
 
     private function isAdminJob($switchResponse){
-        //$selectedMember = new userModel();
         $userJob = "";
         switch (true){
             case $switchResponse == 1:

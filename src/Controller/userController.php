@@ -75,6 +75,7 @@ class userController extends AbstractController
             foreach ($userConnected as $key => $value) {
                 $_SESSION[$key] = $value;
             }
+            $_SESSION['administrator'] = true;
         } else {
             header('Location:/');
         }

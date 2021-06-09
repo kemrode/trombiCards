@@ -103,19 +103,6 @@ class notificationModel
         }
     }
 
-    /*
-    public function getNotificationById(\PDO $bdd){
-        try {
-            $sql = 'SELECT notifId FROM notifications';
-            $request = $bdd->prepare($sql);
-            $request->execute();
-            return $request->fetch(\PDO::FETCH_CLASS, "src\Model\\notificationModel");
-        } catch (\Exception $e){
-            return $e->getMessage();
-        }
-    }
-    */
-
     //function to fetch notifications from database
     public static function fetchNotification(\PDO $bdd, $notifId){
         try {
@@ -133,13 +120,14 @@ class notificationModel
     //function to update a notification from database
     public function updateNotification(\PDO $bdd, $notifId){
         try {
-            $sql = 'UPDATE notifications SET notifTitle =:titleArray, notifTxt =:txtArray, notifDate =:dateArray WHERE notifId =:notifId';
+            $sql = 'UPDATE notifications SET notifTitle =:notifTitle, notifTxt =:notifTxt WHERE notifId =:notifId';
             $request = $bdd->prepare($sql);
             $request->execute([
-                "notifTitle" => $_POST[''],
-                "notifTxt"   => $_POST[''],
-                "notifDate" =>  $_POST['']
+                "notifTitle" => $this->getTitle(),
+                "notifTxt"   => $this->getText(),
+                "notifId" => $notifId
             ]);
+            return true;
         } catch (\Exception $e){
             return $e->getMessage();
         }

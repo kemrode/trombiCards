@@ -105,7 +105,7 @@ class __TwigTemplate_d02faf8bf1706ce543fbe694be11677da049263e200b71e46a68546d96b
                         </div>
                         <div class=\"btnBox\">
                             <div class=\"updateBtn\">
-                                <button type=\"submit\" name=\"updateButton\" formaction=\"/?controller=notification&action=notificationView&param=";
+                                <button type=\"submit\" name=\"updateButton\" formaction=\"/?controller=listNews&action=updateNotifView&param=";
             // line 36
             echo twig_escape_filter($this->env, (($__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b = $context["notif"]) && is_array($__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b) || $__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b instanceof ArrayAccess ? ($__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b["notifId"] ?? null) : null), "html", null, true);
             echo "\">MODIFIER</button>
@@ -182,7 +182,7 @@ class __TwigTemplate_d02faf8bf1706ce543fbe694be11677da049263e200b71e46a68546d96b
                         </div>
                         <div class=\"btnBox\">
                             <div class=\"updateBtn\">
-                                <button type=\"submit\" name=\"updateButton\" formaction=\"/?controller=notification&action=notificationView&param={{ notif['notifId'] }}\">MODIFIER</button>
+                                <button type=\"submit\" name=\"updateButton\" formaction=\"/?controller=listNews&action=updateNotifView&param={{ notif['notifId'] }}\">MODIFIER</button>
                             </div>
                             <div class=\"deleteBtn\">
                                 <button type=\"submit\" name=\"deleteButton\" formaction=\"/?controller=listNews&action=deleteNotif&param={{ notif['notifId'] }}\">SUPPRIMER</button>

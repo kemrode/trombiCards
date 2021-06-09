@@ -1,29 +1,29 @@
-
+{% extends 'baseView.html.twig' %}
 {% block css %}
-    <link rel="stylesheet" type="text/css" href="/Assets/css/notificationStylus.css">
+    <link rel="stylesheet" type="text/css" href="/Assets/css/updateNotificationStylus.css">
 {% endblock %}
 {% block title %}
     <title>MonAdmin - nouvelle notification</title>
 {% endblock %}
-{% block newNotif %}
+{% block updateNotif %}
     <div class="notifContainer">
         <div class="pageTitleBox">
             <div class="labelTitle">
-                <h2>Nouvelle notification</h2>
+                <h2>Modifier votre notification</h2>
             </div>
         </div>
-        <form method="post" action="/?controller=notification&action=addNewNotification" name="newNotifForm">
+        <form method="post" action="/?controller=listNews&action=updateNotifView&param={{ notification.notifId }}" name="newNotifForm">
             <div class="newNotifBox newNotifBox__backgroundcolor--backgroundcolor newNotifBox__zindex--index">
                 <div class="notifTitle notifTitle__zindex--index">
-                    <input type="text" name="notifTitle" placeholder="titre de la notification...">
+                    <input type="text" name="notifTitle" value="{{ notification.notifTitle }}">
                 </div>
                 <div class="notifText notifText__zindex--index">
-                    <textarea name="notifText" placeholder="Que souhaitez-vous raconter ?"></textarea>
+                    <textarea name="notifText" >{{ notification.notifTxt }}</textarea>
                 </div>
             </div>
             <div class="btnBox">
                 <div class="addNewNotifBox addButtonNotifView">
-                    <button type="submit" name="addBtn">ajouter</button>
+                    <button type="submit" name="updateBtn">modifier</button>
                 </div>
             </div>
         </form>

@@ -36,6 +36,7 @@ class __TwigTemplate_ccb9fb7a2a768e4a05b7e1d843362fc8d33988a1fbff19509e91f4eca75
             'updateMemberView' => [$this, 'block_updateMemberView'],
             'notifAdmin' => [$this, 'block_notifAdmin'],
             'newNotif' => [$this, 'block_newNotif'],
+            'updateNotif' => [$this, 'block_updateNotif'],
         ];
     }
 
@@ -90,6 +91,9 @@ class __TwigTemplate_ccb9fb7a2a768e4a05b7e1d843362fc8d33988a1fbff19509e91f4eca75
         echo "    ";
         $this->displayBlock('newNotif', $context, $blocks);
         // line 25
+        echo "    ";
+        $this->displayBlock('updateNotif', $context, $blocks);
+        // line 26
         echo "</div>
 </body>
 </html>";
@@ -149,6 +153,12 @@ class __TwigTemplate_ccb9fb7a2a768e4a05b7e1d843362fc8d33988a1fbff19509e91f4eca75
         $macros = $this->macros;
     }
 
+    // line 25
+    public function block_updateNotif($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+    }
+
     public function getTemplateName()
     {
         return "baseView.html.twig";
@@ -161,7 +171,7 @@ class __TwigTemplate_ccb9fb7a2a768e4a05b7e1d843362fc8d33988a1fbff19509e91f4eca75
 
     public function getDebugInfo()
     {
-        return array (  147 => 24,  141 => 23,  135 => 22,  129 => 21,  123 => 20,  117 => 19,  111 => 18,  105 => 9,  99 => 8,  93 => 25,  90 => 24,  87 => 23,  84 => 22,  81 => 21,  78 => 20,  75 => 19,  73 => 18,  69 => 16,  67 => 15,  60 => 10,  57 => 9,  55 => 8,  46 => 1,);
+        return array (  157 => 25,  151 => 24,  145 => 23,  139 => 22,  133 => 21,  127 => 20,  121 => 19,  115 => 18,  109 => 9,  103 => 8,  97 => 26,  94 => 25,  91 => 24,  88 => 23,  85 => 22,  82 => 21,  79 => 20,  76 => 19,  74 => 18,  70 => 16,  68 => 15,  61 => 10,  58 => 9,  56 => 8,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -190,6 +200,7 @@ class __TwigTemplate_ccb9fb7a2a768e4a05b7e1d843362fc8d33988a1fbff19509e91f4eca75
     {% block updateMemberView %}{% endblock %}
     {% block notifAdmin %}{% endblock %}
     {% block newNotif %}{% endblock %}
+    {% block updateNotif %}{% endblock %}
 </div>
 </body>
 </html>", "baseView.html.twig", "C:\\Users\\2217873\\Documents\\developpementPerso\\trombiCards\\templates\\baseView.html.twig");
