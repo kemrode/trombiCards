@@ -13,8 +13,22 @@ class listMembersController extends AbstractController
         $administrator = new userModel();
         $administrator->checkAdministrator();
         $connected = true;
+        $memberDecode = [];
+        $memberToSegue=[];
         $membersList = userModel::GetMembers();
-        return $this->twig->render("listMembersView\listMembersView.html.twig",["membersList"=>$membersList,"connected"=>$connected]);
+        //loop to decode special character before display
+        foreach ($membersList as $index=>$arraytoDecode){
+            foreach ($arraytoDecode as $key=>$value){
+                if ($key != "userPasswd" && $key != 3){
+                    $memberDecode[$key] = html_entity_decode($value);
+                } else {
+                    $memberDecode[$key] =$value;
+                }
+
+            }
+            $memberToSegue[$index] = $memberDecode;
+        }
+        return $this->twig->render("listMembersView\listMembersView.html.twig",["membersList"=>$memberToSegue,"connected"=>$connected]);
     }
     //function to delete selected member from id
     public function deleteUser(){

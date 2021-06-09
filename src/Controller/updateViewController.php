@@ -14,8 +14,18 @@ class updateViewController extends AbstractController
         $administrator->checkAdministrator();
         $back = true;
         $userId = $_GET['param'];
+        $memberToSegue=[];
         $memberSelected = userModel::fetchUser(BDDconfig::getInstance(), $userId);
-        return $this->twig->render("updateViews/updateMemberView.html.twig",["member"=>$memberSelected,"back"=>$back]);
+        //loop to decode special character before display
+        $memberToSegue["userId"]=$userId;
+        foreach ($memberSelected as $key=>$value){
+            if($key != "userPasswd"){
+                $memberToSegue[$key] = html_entity_decode($value);
+            } else {
+                $memberToSegue[$key] = $value;
+            }
+        }
+        return $this->twig->render("updateViews/updateMemberView.html.twig",["member"=>$memberToSegue,"back"=>$back]);
     }
     //function to update the selected member with id
     public function updateSelectedMember(){
@@ -31,7 +41,6 @@ class updateViewController extends AbstractController
                 $selectedMember->setMail(htmlentities($_POST['selectedMail']));
                 $newJob = $this->isAdminJob(htmlentities($_POST['switchAdmin']));
                 $selectedMember->setJob($newJob);
-                //$selectedMember->isAdminJob(htmlentities($_POST['switchAdmin']));
                 $selectedMember->updateMembers(BDDconfig::getInstance(), $selectedId);
                 $listView = new listMembersController();
                 echo $listView->listMembersView();

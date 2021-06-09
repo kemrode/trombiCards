@@ -212,7 +212,7 @@ class userModel
     public static function GetMembers(){
         try {
             $bdd = BDDconfig::getInstance();
-            $sql = 'SELECT userId, userName, userFirstname, userPasswd, userMail, userNickname FROM users';
+            $sql = 'SELECT * FROM users';
             $request = $bdd->prepare($sql);
             $request->execute();
             return $request->fetchAll();
