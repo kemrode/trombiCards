@@ -49,100 +49,101 @@ class __TwigTemplate_ccb9fb7a2a768e4a05b7e1d843362fc8d33988a1fbff19509e91f4eca75
     <meta charset=\"UTF-8\">
     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+    <meta http-equiv=\"Content-type\" content=\"text/html;charset=utf-8\">
     ";
-        // line 7
-        $this->displayBlock('css', $context, $blocks);
         // line 8
+        $this->displayBlock('css', $context, $blocks);
+        // line 9
         echo "    ";
         $this->displayBlock('title', $context, $blocks);
-        // line 9
+        // line 10
         echo "</head>
 <body>
 <div class=\"primaryContainer primaryContainer--backgroundImage\">
     <div class=\"primaryContainer__header\">
         <header>
             ";
-        // line 14
-        $this->loadTemplate("headerView/headerView.html.twig", "baseView.html.twig", 14)->display($context);
         // line 15
+        $this->loadTemplate("headerView/headerView.html.twig", "baseView.html.twig", 15)->display($context);
+        // line 16
         echo "        </header>
     </div>
     ";
-        // line 17
-        $this->displayBlock('connectionView', $context, $blocks);
         // line 18
-        echo "    ";
-        $this->displayBlock('registerView', $context, $blocks);
+        $this->displayBlock('connectionView', $context, $blocks);
         // line 19
         echo "    ";
-        $this->displayBlock('adminMainView', $context, $blocks);
+        $this->displayBlock('registerView', $context, $blocks);
         // line 20
         echo "    ";
-        $this->displayBlock('listMembersView', $context, $blocks);
+        $this->displayBlock('adminMainView', $context, $blocks);
         // line 21
         echo "    ";
-        $this->displayBlock('updateMemberView', $context, $blocks);
+        $this->displayBlock('listMembersView', $context, $blocks);
         // line 22
         echo "    ";
-        $this->displayBlock('notifAdmin', $context, $blocks);
+        $this->displayBlock('updateMemberView', $context, $blocks);
         // line 23
         echo "    ";
-        $this->displayBlock('newNotif', $context, $blocks);
+        $this->displayBlock('notifAdmin', $context, $blocks);
         // line 24
+        echo "    ";
+        $this->displayBlock('newNotif', $context, $blocks);
+        // line 25
         echo "</div>
 </body>
 </html>";
     }
 
-    // line 7
+    // line 8
     public function block_css($context, array $blocks = [])
     {
         $macros = $this->macros;
     }
 
-    // line 8
+    // line 9
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
     }
 
-    // line 17
+    // line 18
     public function block_connectionView($context, array $blocks = [])
     {
         $macros = $this->macros;
     }
 
-    // line 18
+    // line 19
     public function block_registerView($context, array $blocks = [])
     {
         $macros = $this->macros;
     }
 
-    // line 19
+    // line 20
     public function block_adminMainView($context, array $blocks = [])
     {
         $macros = $this->macros;
     }
 
-    // line 20
+    // line 21
     public function block_listMembersView($context, array $blocks = [])
     {
         $macros = $this->macros;
     }
 
-    // line 21
+    // line 22
     public function block_updateMemberView($context, array $blocks = [])
     {
         $macros = $this->macros;
     }
 
-    // line 22
+    // line 23
     public function block_notifAdmin($context, array $blocks = [])
     {
         $macros = $this->macros;
     }
 
-    // line 23
+    // line 24
     public function block_newNotif($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -160,7 +161,7 @@ class __TwigTemplate_ccb9fb7a2a768e4a05b7e1d843362fc8d33988a1fbff19509e91f4eca75
 
     public function getDebugInfo()
     {
-        return array (  146 => 23,  140 => 22,  134 => 21,  128 => 20,  122 => 19,  116 => 18,  110 => 17,  104 => 8,  98 => 7,  92 => 24,  89 => 23,  86 => 22,  83 => 21,  80 => 20,  77 => 19,  74 => 18,  72 => 17,  68 => 15,  66 => 14,  59 => 9,  56 => 8,  54 => 7,  46 => 1,);
+        return array (  147 => 24,  141 => 23,  135 => 22,  129 => 21,  123 => 20,  117 => 19,  111 => 18,  105 => 9,  99 => 8,  93 => 25,  90 => 24,  87 => 23,  84 => 22,  81 => 21,  78 => 20,  75 => 19,  73 => 18,  69 => 16,  67 => 15,  60 => 10,  57 => 9,  55 => 8,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -171,6 +172,7 @@ class __TwigTemplate_ccb9fb7a2a768e4a05b7e1d843362fc8d33988a1fbff19509e91f4eca75
     <meta charset=\"UTF-8\">
     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+    <meta http-equiv=\"Content-type\" content=\"text/html;charset=utf-8\">
     {% block css %}{% endblock %}
     {% block title %}{% endblock %}
 </head>

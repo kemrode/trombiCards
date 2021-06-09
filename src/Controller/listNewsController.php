@@ -18,7 +18,7 @@ class listNewsController extends AbstractController
 
     public function listNewsView() {
         $connected = true;
-        $empty = "";
-        return$this->twig->render("listNewsView\listNewsView.html.twig",["notifications"=>$empty,"connected"=>$connected]);
+        $notifList = notificationModel::getAllNotif(BDDconfig::getInstance());
+        return$this->twig->render("listNewsView\listNewsView.html.twig",["notifications"=>$notifList,"connected"=>$connected]);
     }
 }

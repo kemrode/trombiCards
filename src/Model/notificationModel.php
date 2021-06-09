@@ -91,6 +91,18 @@ class notificationModel
         }
     }
 
+    //function to get all notifications from BDD
+    public static function getAllNotif(\PDO $bdd){
+        try {
+            $sql = 'SELECT * FROM notifications';
+            $request = $bdd->prepare($sql);
+            $request->execute();
+            return $request->fetchAll();
+        } catch (\Exception $e){
+            return $e->getMessage();
+        }
+    }
+
     /*
     public function getNotificationById(\PDO $bdd){
         try {
@@ -120,21 +132,29 @@ class notificationModel
 
     //function to update a notification from database
     public function updateNotification(\PDO $bdd, $notifId,$array=[]){
-        $sql = 'UPDATE notifications SET notifTitle =:titleArray, notifTxt =:txtArray, notifDate =:dateArray WHERE notifId =:notifId';
-        $request = $bdd->prepare($sql);
-        $request->execute([
-            "notifTitle" => $_POST[''],
-            "notifTxt"   => $_POST[''],
-            "notifDate" =>  $_POST['']
-        ]);
+        try {
+            $sql = 'UPDATE notifications SET notifTitle =:titleArray, notifTxt =:txtArray, notifDate =:dateArray WHERE notifId =:notifId';
+            $request = $bdd->prepare($sql);
+            $request->execute([
+                "notifTitle" => $_POST[''],
+                "notifTxt"   => $_POST[''],
+                "notifDate" =>  $_POST['']
+            ]);
+        } catch (\Exception $e){
+            return $e->getMessage();
+        }
     }
 
     //function to delete a notification from database
     public function deleteNotification(\PDO $bdd, $notifId){
-        $sql = 'DELETE FROM notifications WHERE notifId:=notifId';
-        $request = $bdd->prepare($sql);
-        $request->execute(['notifId'=>$notifId]);
-        header("Location:\ ");
+        try {
+            $sql = 'DELETE FROM notifications WHERE notifId:=notifId';
+            $request = $bdd->prepare($sql);
+            $request->execute(['notifId'=>$notifId]);
+            header("Location:\ ");
+        } catch (\Exception $e){
+            return $e->getMessage();
+        }
     }
 
 }

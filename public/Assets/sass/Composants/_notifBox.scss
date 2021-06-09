@@ -14,16 +14,54 @@
   justify-content: space-evenly;
   align-items: center;
   width: 85%;
-  height: auto;
+  height: 100px;
+  border-bottom: 1px solid black;
+  margin-top: 5px;
   &__backgroundcolor {
     &--backgroundcolor {
       background-color: $breakingWhite;
-      opacity: 0.75;
     }
   }
 }
 .notifTitle {
   @include rowFlex;
-  width: auto;
+  width: 40%;
   height: auto;
+  & label {
+    font-size: $largeSize;
+    font-style: italic;
+  }
+}
+.timeBox {
+  @include flexBoxRowJustifyCenter;
+  width: 30%;
+  height: auto;
+}
+.labelTimeNotif {
+  @include rowFlex;
+  align-items: center;
+  width: 50%;
+  height: auto;
+  & label {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+}
+.notifTime {
+  @include rowFlex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+  height: auto;
+  & label {
+    font-size: 1.2em;
+  }
+}
+
+.btnBox {
+  @include rowFlex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 30%;
+  height: 100%;
 }

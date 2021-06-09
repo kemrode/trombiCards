@@ -22,7 +22,7 @@ class notificationController extends AbstractController
                 $date = new \DateTime('NOW');
                 $newNotif->setDateTime($date->format('Y-m-d'));
                 $newNotif->setTitle(htmlentities($_POST['notifTitle']));
-                $newNotif->setText(htmlentities($_POST['notifText']));
+                $newNotif->setText(nl2br(htmlentities($_POST['notifText'])));
                 $newNotifRegistered = $newNotif->postNewArticle(BDDconfig::getInstance());
                 $controller = new listNewsController();
                 echo $controller->listNewsView();
@@ -31,7 +31,6 @@ class notificationController extends AbstractController
             return $e->getMessage();
         }
     }
-
 
     //function to get last Id before updating
 

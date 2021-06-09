@@ -16,36 +16,29 @@
 
             </div>
         </div>
-        <div class="listNotifBox listNotifBox__backgroundcolor--opacity listNotifBox__backgroundcolor--backgroundcolor">
+        <div class="listNotifBox listNotifBox__backgroundcolor--backgroundcolor">
             {% for notif in notifications %}
-                {% if notif is empty %}
-                    {{ notif }}
-                    <div class="noNotif">
-                        <label class="noNotifLabel">Aucune notification à afficher</label>
-                    </div>
-                {% else %}
                     <div class="notifBox notifBox__backgroundcolor--backgroundcolor">
                         <div class="notifTitle">
-                            <label class="textTitle">{{ notif.notifTitle }}</label>
+                            <label class="textTitle">{{ notif["notifTitle"] }}</label>
                         </div>
                         <div class="timeBox">
                             <div class="labelTimeNotif">
                                 <label class="labelTime">créée le: </label>
                             </div>
                             <div class="notifTime">
-                                <textarea class="txtTime">{{ notif.notifDate }}</textarea>
+                                <label class="txtTime">{{ notif["notifDate"] }}</label>
                             </div>
                         </div>
                         <div class="btnBox">
                             <div class="updateBtn">
-                                <button type="submit" name="updateButton" formaction="">MODIFIER</button>
+                                <button type="submit" name="updateButton" formaction="/?controller=notification&action=notificationView">MODIFIER</button>
                             </div>
                             <div class="deleteBtn">
                                 <button type="submit" name="deleteButton" formaction="">SUPPRIMER</button>
                             </div>
                         </div>
                     </div>
-                {% endif %}
             {% endfor %}
         </div>
     </div>
