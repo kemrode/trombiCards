@@ -172,19 +172,27 @@ body {
   width: 80%;
 }
 
+.headerButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 20%;
+  height: auto;
+}
+
 .home {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 20%;
+  width: 40%;
   height: auto;
 }
 
 .homeImg {
   display: flex;
-  width: 50%;
-  height: 50%;
+  width: 150px;
+  height: 100px;
   justify-content: center;
   align-items: center;
 }
@@ -199,19 +207,112 @@ body {
   height: 45px;
 }
 
+.logout {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: auto;
+}
+
+.logoutImg {
+  display: flex;
+  width: 150px;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoutImg__background--backgroundcolor {
+  background: #f01919;
+  background: linear-gradient(135deg, #f01919 0%, rgba(242, 48, 48, 0.412202381) 100%);
+  border-radius: 45px;
+}
+
 @media only screen and (max-width: 600px) {
+  .header {
+    width: 60%;
+  }
+
   .header__title--sizeTitle {
     font-size: 1.3em;
+  }
+
+  .headerButton {
+    width: 40%;
+  }
+
+  .homeImg {
+    height: 60px;
+  }
+
+  .homeImg img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .logoutImg {
+    height: 60px;
+  }
+
+  .logoutImg img {
+    width: 35px;
+    height: 35px;
   }
 }
 @media only screen and (min-width: 600px) {
   .header__title--sizeTitle {
     font-size: 1.4em;
   }
+
+  .headerButton {
+    width: 40%;
+  }
+
+  .homeImg {
+    height: 60px;
+  }
+
+  .homeImg img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .logoutImg {
+    height: 60px;
+  }
+
+  .logoutImg img {
+    width: 35px;
+    height: 35px;
+  }
 }
 @media only screen and (min-width: 768px) {
   .header__title--sizeTitle {
     font-size: 1.5em;
+  }
+
+  .headerButton {
+    width: 40%;
+  }
+
+  .homeImg {
+    height: 75px;
+  }
+
+  .homeImg img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .logoutImg {
+    height: 75px;
+  }
+
+  .logoutImg img {
+    width: 45px;
+    height: 45px;
   }
 }
 @media only screen and (min-width: 992px) {
