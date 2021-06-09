@@ -10,12 +10,16 @@ class listNewsController extends AbstractController
 {
     //function to call the listNewsView
     public function listNewsView() {
+        $administrator = new userModel();
+        $administrator->checkAdministrator();
         $connected = true;
         $notifList = notificationModel::getAllNotif(BDDconfig::getInstance());
         return$this->twig->render("listNewsView\listNewsView.html.twig",["notifications"=>$notifList,"connected"=>$connected]);
     }
 
     public function updateNotifView() {
+        $administrator = new userModel();
+        $administrator->checkAdministrator();
         $connected = true;
         $notifId = $_GET['param'];
         $notifToUpdate = notificationModel::fetchNotification(BDDconfig::getInstance(), $notifId);
@@ -26,6 +30,8 @@ class listNewsController extends AbstractController
     //function to delete a notification by Id
     public function deleteNotif(){
         try {
+            $administrator = new userModel();
+            $administrator->checkAdministrator();
             $notifId =$_GET['param'];
             if (isset($notifId)){
                 $deleteNotif = notificationModel::deleteNotification(BDDconfig::getInstance(), $notifId);
@@ -39,6 +45,8 @@ class listNewsController extends AbstractController
     //function to update a notification by Id
     public function updateNotif(){
         try {
+            $administrator = new userModel();
+            $administrator->checkAdministrator();
             $notifId = $_GET['param'];
             if(isset($_POST['updateBtn'])){
                 $updateNotif = new notificationModel();

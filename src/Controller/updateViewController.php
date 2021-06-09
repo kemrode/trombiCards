@@ -10,6 +10,8 @@ use src\Controller\listMembersController;
 class updateViewController extends AbstractController
 {
     public function updateMemberView(){
+        $administrator = new userModel();
+        $administrator->checkAdministrator();
         $back = true;
         $userId = $_GET['param'];
         $memberSelected = userModel::fetchUser(BDDconfig::getInstance(), $userId);
@@ -18,6 +20,8 @@ class updateViewController extends AbstractController
     //function to update the selected member with id
     public function updateSelectedMember(){
         try {
+            $administrator = new userModel();
+            $administrator->checkAdministrator();
             $selectedId = $_GET['param'];
             if(isset($_POST['updateBtn'])){
                 $selectedMember = new userModel();

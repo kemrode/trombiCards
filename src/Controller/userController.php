@@ -6,15 +6,21 @@ class userController extends AbstractController
 {
     //function to display connection view
     public function connectionView() {
+        $administrator = new userModel();
+        $administrator->checkAdministrator();
         $connected = false;
         return $this->twig->render("connectionView\connectionView.html.twig", ["connected"=>$connected]);
     }
     //function to display view to registering
     public function registerView(){
+        $administrator = new userModel();
+        $administrator->checkAdministrator();
         return $this->twig->render("registerView/registerView.html.twig");
     }
     //function to log in
     public function log() {
+        $administrator = new userModel();
+        $administrator->checkAdministrator();
         if (isset($_POST['okButton'])) {
             $user = new userModel();
             $passEntities = htmlentities($_POST['pwdToPost']);

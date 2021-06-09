@@ -78,6 +78,8 @@ class notificationModel
     //function to post a new notification into database
     public function postNewArticle(\PDO $bdd){
         try {
+            $administrator = new userModel();
+            $administrator->checkAdministrator();
             $sql = 'INSERT INTO notifications (notifTxt, notifDate, notifTitle) VALUE (:notifTxt,:notifDate,:notifTitle)';
             $request = $bdd->prepare($sql);
             $request->execute([
@@ -94,6 +96,8 @@ class notificationModel
     //function to get all notifications from BDD
     public static function getAllNotif(\PDO $bdd){
         try {
+            $administrator = new userModel();
+            $administrator->checkAdministrator();
             $sql = 'SELECT * FROM notifications';
             $request = $bdd->prepare($sql);
             $request->execute();
@@ -106,6 +110,8 @@ class notificationModel
     //function to fetch notifications from database
     public static function fetchNotification(\PDO $bdd, $notifId){
         try {
+            $administrator = new userModel();
+            $administrator->checkAdministrator();
             $sql = 'SELECT * FROM notifications WHERE notifId=:notifId';
             $request = $bdd->prepare($sql);
             $request->setFetchMode(\PDO::FETCH_CLASS, 'src\Model\notificationModel');
@@ -120,6 +126,8 @@ class notificationModel
     //function to update a notification from database
     public function updateNotification(\PDO $bdd, $notifId){
         try {
+            $administrator = new userModel();
+            $administrator->checkAdministrator();
             $sql = 'UPDATE notifications SET notifTitle =:notifTitle, notifTxt =:notifTxt WHERE notifId =:notifId';
             $request = $bdd->prepare($sql);
             $request->execute([
@@ -136,6 +144,8 @@ class notificationModel
     //function to delete a notification from database
     public static function deleteNotification(\PDO $bdd, $notifId){
         try {
+            $administrator = new userModel();
+            $administrator->checkAdministrator();
             $sql = 'DELETE FROM notifications WHERE notifId=:notifId';
             $request = $bdd->prepare($sql);
             $request->execute(['notifId'=>$notifId]);

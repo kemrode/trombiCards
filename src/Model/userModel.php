@@ -133,6 +133,8 @@ class userModel
     //function to POST a new user
     public function postNewUser(\PDO $bdd){
         try {
+            $administrator = new userModel();
+            $administrator->checkAdministrator();
             $sql = 'INSERT INTO users (userName, userFirstname, userPasswd, userMail, userNickname, userJob) VALUE(:userName,:userFirstname,:userPasswd,:userMail,:userNickname,:userJob)';
             $request = $bdd->prepare($sql);
             $request->execute([
@@ -150,8 +152,10 @@ class userModel
     }
     //function about login of a user
     public function login(\PDO $bdd){
-        $mailLog = $this->getMail();
         try {
+            $administrator = new userModel();
+            $administrator->checkAdministrator();
+            $mailLog = $this->getMail();
             $sql = 'SELECT userMail, userJob FROM users WHERE userMail=:mailLog';
             sleep(1);
             $request = $bdd->prepare($sql);
@@ -165,6 +169,8 @@ class userModel
     //function to fetch user data when log
     public function fetchLogUser(\PDO $bdd){
         try {
+            $administrator = new userModel();
+            $administrator->checkAdministrator();
             $userConnected = $this->getMail();
             $sql = 'SELECT * FROM users WHERE userMail=:userConnected';
             $request = $bdd->prepare($sql);
@@ -178,6 +184,8 @@ class userModel
     //function to fetch user infos
     public static function fetchUser(\PDO $bdd, $userId){
         try {
+            $administrator = new userModel();
+            $administrator->checkAdministrator();
             $sql = 'SELECT * FROM users WHERE userId=:userId';
             $request = $bdd->prepare($sql);
             $request->setFetchMode(\PDO::FETCH_CLASS, 'src\Model\userModel');
@@ -190,6 +198,8 @@ class userModel
     //function to get the hash
     public static function getHash(\PDO $bdd, $userMail){
         try {
+            $administrator = new userModel();
+            $administrator->checkAdministrator();
             $sql = 'SELECT userPasswd FROM users WHERE userMail=:userMail LIMIT 1';
             $request = $bdd->prepare($sql);
             $request->setFetchMode(\PDO::FETCH_CLASS, 'src\Model\userModel');
@@ -201,6 +211,8 @@ class userModel
     }
     //function to logout
     public function logOut(){
+        $administrator = new userModel();
+        $administrator->checkAdministrator();
         session_start();
         $_SESSION = array();
         session_destroy();
@@ -209,6 +221,8 @@ class userModel
     //function to bring back all the members from database
     public static function GetMembers(){
         try {
+            $administrator = new userModel();
+            $administrator->checkAdministrator();
             $bdd = BDDconfig::getInstance();
             $sql = 'SELECT userId, userName, userFirstname, userPasswd, userMail, userNickname FROM users';
             $request = $bdd->prepare($sql);
@@ -221,6 +235,8 @@ class userModel
     //function to update members data
     public function updateMembers(\PDO $bdd, $id){
         try {
+            $administrator = new userModel();
+            $administrator->checkAdministrator();
             $sql = 'UPDATE users SET userName=:userName, userFirstname=:userFirstname, userMail=:userMail, userNickname=:userNickname, userJob=:userJob WHERE userID=:userId';
             $request = $bdd->prepare($sql);
             $request->execute([
@@ -239,6 +255,8 @@ class userModel
     //function to delete a member drom data
     public static function deleteMember(\PDO $bdd, $userId) {
         try {
+            $administrator = new userModel();
+            $administrator->checkAdministrator();
                 $sql = 'DELETE FROM users WHERE userId=:userId';
                 $request = $bdd->prepare($sql);
                 $request->execute(['userId'=> $userId]);
@@ -251,6 +269,8 @@ class userModel
     //funcion to check if $_SESSION['administrator] is at true
     public function checkAdministrator() {
         try {
+            $administrator = new userModel();
+            $administrator->checkAdministrator();
             if(isset($_SESSION['administrator'])){
                 if ($_SESSION['administrator'] != true){
                     header('Location:/');
