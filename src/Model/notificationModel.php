@@ -4,7 +4,7 @@
 namespace src\Model;
 
 
-class newsModel
+class notificationModel
 {
     private string $title;
     private string $text;
@@ -81,13 +81,13 @@ class newsModel
             $sql = 'INSERT INTO notifications (notifTxt, notifDate, notifTitle) VALUE (:notifTxt,:notifDate,:notifTitle)';
             $request = $bdd->prepare($sql);
             $request->execute([
-                "notifTxt" => $this->setText(),
-                "notifDate" => $this->setDateTime(),
-                "notifTitle" => $this->setTitle()
+                "notifTxt" => $this->getText(),
+                "notifDate" => $this->getDateTime(),
+                "notifTitle" => $this->getTitle()
             ]);
             return "ok";
         } catch (\Exception $e){
-            return $e->getMessage();
+            die('Erreur :'.$e->getMessage());
         }
     }
 
@@ -97,7 +97,7 @@ class newsModel
             $sql = 'SELECT notifId FROM notifications';
             $request = $bdd->prepare($sql);
             $request->execute();
-            return $request->fetch(\PDO::FETCH_CLASS, "src\Model\\newsModel");
+            return $request->fetch(\PDO::FETCH_CLASS, "src\Model\\notificationModel");
         } catch (\Exception $e){
             return $e->getMessage();
         }
@@ -109,7 +109,7 @@ class newsModel
         try {
             $sql = 'SELECT * FROM notifications WHERE notifId=:notifId';
             $request = $bdd->prepare($sql);
-            $request->setFetchMode(\PDO::FETCH_CLASS, 'src\Model\newsModel');
+            $request->setFetchMode(\PDO::FETCH_CLASS, 'src\Model\notificationModel');
             $request->execute(['notifId'=>$notifId]);
             return $request->fetch();
         } catch (\Exception $e){

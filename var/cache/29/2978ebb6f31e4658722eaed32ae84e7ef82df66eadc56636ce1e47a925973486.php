@@ -73,7 +73,7 @@ class __TwigTemplate_e9fa5ccbf3736cef119bb0113e3c30ffaca84717e1bc49509db77bee9c4
                 <h2>Nouvelle notification</h2>
             </div>
         </div>
-            <form method=\"post\" action=\"/?controller=&action=\" name=\"newNotifForm\">
+            <form method=\"post\" action=\"/?controller=notification&action=addNewNotification\" name=\"newNotifForm\">
                 <div class=\"newNotifBox newNotifBox__backgroundcolor--backgroundcolor newNotifBox__zindex--index\">
                     <div class=\"notifTitle notifTitle__zindex--index\">
                         <input type=\"text\" name=\"notifTitle\" placeholder=\"titre de la notification...\">
@@ -124,7 +124,7 @@ class __TwigTemplate_e9fa5ccbf3736cef119bb0113e3c30ffaca84717e1bc49509db77bee9c4
                 <h2>Nouvelle notification</h2>
             </div>
         </div>
-            <form method=\"post\" action=\"/?controller=&action=\" name=\"newNotifForm\">
+            <form method=\"post\" action=\"/?controller=notification&action=addNewNotification\" name=\"newNotifForm\">
                 <div class=\"newNotifBox newNotifBox__backgroundcolor--backgroundcolor newNotifBox__zindex--index\">
                     <div class=\"notifTitle notifTitle__zindex--index\">
                         <input type=\"text\" name=\"notifTitle\" placeholder=\"titre de la notification...\">

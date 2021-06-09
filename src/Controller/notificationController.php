@@ -2,6 +2,7 @@
 
 
 namespace src\Controller;
+use src\Model\notificationModel;
 
 
 class notificationController extends AbstractController
@@ -14,6 +15,22 @@ class notificationController extends AbstractController
 
 
     //function to update a notification by Id
+    public function addNewNotification() {
+        try {
+            if(isset($_POST['addBtn'])){
+                $newNotif = new notificationModel();
+                $date = new \DateTime('NOW');
+                $newNotif->setDateTime($date->format('Y-m-d'));
+                $newNotif->setTitle(htmlentities($_POST['notifTitle']));
+                $newNotif->setText(htmlentities($_POST['notifText']));
+                $newNotifRegistered = $newNotif->postNewArticle(BDDconfig::getInstance());
+                $controller = new listNewsController();
+                echo $controller->listNewsView();
+            }
+        } catch (\Exception $e){
+            return $e->getMessage();
+        }
+    }
 
 
     //function to get last Id before updating

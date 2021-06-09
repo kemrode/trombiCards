@@ -1,6 +1,5 @@
 <?php
 namespace src\Controller;
-//include ('../Model/userModel.php');
 use src\Model\userModel;
 
 class userController extends AbstractController
