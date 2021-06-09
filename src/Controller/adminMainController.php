@@ -7,9 +7,9 @@ class adminMainController extends AbstractController
 {
     //function to display adminMainView
     public function adminMainView() {
-        $connected = true;
         $administrator = new userModel();
         $administrator->checkAdministrator();
+        $connected = true;
         return $this->twig->render("adminMainView/adminMainView.html.twig", ["connected"=>$connected]);
     }
 

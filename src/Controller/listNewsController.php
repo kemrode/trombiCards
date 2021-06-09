@@ -22,9 +22,13 @@ class listNewsController extends AbstractController
         $administrator->checkAdministrator();
         $connected = true;
         $notifId = $_GET['param'];
+        $notifToSegue = [];
         $notifToUpdate = notificationModel::fetchNotification(BDDconfig::getInstance(), $notifId);
-        //to do: function to decode bdd
-        return $this->twig->render("notificationView\updateNotificationView.html.twig",["notification"=>$notifToUpdate, "connected"=>$connected]);
+        //loop to decode special character before display
+        foreach ($notifToUpdate as $key=>$value){
+            $notifToSegue[$key]=html_entity_decode($value);
+        }
+        return $this->twig->render("notificationView\updateNotificationView.html.twig",["notification"=>$notifToSegue, "connected"=>$connected]);
     }
 
     //function to delete a notification by Id
@@ -58,5 +62,10 @@ class listNewsController extends AbstractController
         } catch (\Exception $e){
             return $e->getMessage();
         }
+    }
+
+    //function to decode the text registered in database
+    private function decodeText() {
+
     }
 }

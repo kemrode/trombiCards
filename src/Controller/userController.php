@@ -19,8 +19,6 @@ class userController extends AbstractController
     }
     //function to log in
     public function log() {
-        $administrator = new userModel();
-        $administrator->checkAdministrator();
         if (isset($_POST['okButton'])) {
             $user = new userModel();
             $passEntities = htmlentities($_POST['pwdToPost']);
