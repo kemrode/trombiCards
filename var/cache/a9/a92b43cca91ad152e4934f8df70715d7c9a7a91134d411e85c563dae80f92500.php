@@ -34,6 +34,8 @@ class __TwigTemplate_ccb9fb7a2a768e4a05b7e1d843362fc8d33988a1fbff19509e91f4eca75
             'adminMainView' => [$this, 'block_adminMainView'],
             'listMembersView' => [$this, 'block_listMembersView'],
             'updateMemberView' => [$this, 'block_updateMemberView'],
+            'notifAdmin' => [$this, 'block_notifAdmin'],
+            'newNotif' => [$this, 'block_newNotif'],
         ];
     }
 
@@ -81,6 +83,12 @@ class __TwigTemplate_ccb9fb7a2a768e4a05b7e1d843362fc8d33988a1fbff19509e91f4eca75
         echo "    ";
         $this->displayBlock('updateMemberView', $context, $blocks);
         // line 22
+        echo "    ";
+        $this->displayBlock('notifAdmin', $context, $blocks);
+        // line 23
+        echo "    ";
+        $this->displayBlock('newNotif', $context, $blocks);
+        // line 24
         echo "</div>
 </body>
 </html>";
@@ -128,6 +136,18 @@ class __TwigTemplate_ccb9fb7a2a768e4a05b7e1d843362fc8d33988a1fbff19509e91f4eca75
         $macros = $this->macros;
     }
 
+    // line 22
+    public function block_notifAdmin($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+    }
+
+    // line 23
+    public function block_newNotif($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+    }
+
     public function getTemplateName()
     {
         return "baseView.html.twig";
@@ -140,7 +160,7 @@ class __TwigTemplate_ccb9fb7a2a768e4a05b7e1d843362fc8d33988a1fbff19509e91f4eca75
 
     public function getDebugInfo()
     {
-        return array (  126 => 21,  120 => 20,  114 => 19,  108 => 18,  102 => 17,  96 => 8,  90 => 7,  84 => 22,  81 => 21,  78 => 20,  75 => 19,  72 => 18,  70 => 17,  66 => 15,  64 => 14,  57 => 9,  54 => 8,  52 => 7,  44 => 1,);
+        return array (  146 => 23,  140 => 22,  134 => 21,  128 => 20,  122 => 19,  116 => 18,  110 => 17,  104 => 8,  98 => 7,  92 => 24,  89 => 23,  86 => 22,  83 => 21,  80 => 20,  77 => 19,  74 => 18,  72 => 17,  68 => 15,  66 => 14,  59 => 9,  56 => 8,  54 => 7,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -166,6 +186,8 @@ class __TwigTemplate_ccb9fb7a2a768e4a05b7e1d843362fc8d33988a1fbff19509e91f4eca75
     {% block adminMainView %}{% endblock %}
     {% block listMembersView %}{% endblock %}
     {% block updateMemberView %}{% endblock %}
+    {% block notifAdmin %}{% endblock %}
+    {% block newNotif %}{% endblock %}
 </div>
 </body>
 </html>", "baseView.html.twig", "C:\\Users\\2217873\\Documents\\developpementPerso\\trombiCards\\templates\\baseView.html.twig");

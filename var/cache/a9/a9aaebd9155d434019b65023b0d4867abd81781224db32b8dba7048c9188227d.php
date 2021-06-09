@@ -75,7 +75,7 @@ class __TwigTemplate_48d7a6a92d76893d5f58cd1d34237e2b578830671d112334c0afc1cbc79
                         </div>
                         <div class=\"itemContainer itemContainer__contain\">
                             <div class=\"itemImage\">
-                                <a name=\"listMembers\" class=\"imgBox imgBox__img--size\" href=\"\"><img src=\"/Ressources/images/icons/article.svg\"></a>
+                                <a name=\"notification\" class=\"imgBox imgBox__img--size\" href=\"/?controller=listNews&action=NewView\"><img src=\"/Ressources/images/icons/article.svg\"></a>
                             </div>
                         </div>
                     </div>
@@ -159,7 +159,7 @@ class __TwigTemplate_48d7a6a92d76893d5f58cd1d34237e2b578830671d112334c0afc1cbc79
                         </div>
                         <div class=\"itemContainer itemContainer__contain\">
                             <div class=\"itemImage\">
-                                <a name=\"listMembers\" class=\"imgBox imgBox__img--size\" href=\"\"><img src=\"/Ressources/images/icons/article.svg\"></a>
+                                <a name=\"notification\" class=\"imgBox imgBox__img--size\" href=\"/?controller=listNews&action=NewView\"><img src=\"/Ressources/images/icons/article.svg\"></a>
                             </div>
                         </div>
                     </div>

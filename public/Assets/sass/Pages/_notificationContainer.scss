@@ -1,0 +1,13 @@
+@import "../Utils/mixin";
+@import "../Utils/variables";
+
+.notifContainer {
+  @include flexBoxColumn;
+  width: auto;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

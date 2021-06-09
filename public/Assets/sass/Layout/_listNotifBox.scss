@@ -1,0 +1,21 @@
+@import "../Utils/mixin";
+@import "../Utils/variables";
+
+.listNotifBox {
+  @include flexBoxColumn;
+  width: 90%;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  &__backgroundcolor {
+    &--opacity {
+      opacity: 0.5;
+    }
+    &--backgroundcolor {
+      background-color: $thirdColor;
+    }
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

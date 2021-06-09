@@ -1,17 +1,52 @@
-{% extends "base/baseView.html.twig" %}
-{% block css %}{% endblock %}
-{% block title %}{% endblock %}
-
-{% include "metaBlock/metaBlock.html.twig" %}
-<head>
-    <link rel="stylesheet" type="text/css" href="">
+{% extends "baseView.html.twig" %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="/Assets/css/listNewsStylus.css">
+{% endblock %}
+{% block title %}
     <title>MonAdmin - mes notifications</title>
-</head>
-<body>
-<div class="primaryContainer primaryContainer--backgroundImage">
-    <div class="primaryContainer__header">
-        <?php require 'headerView.php';?>
-        {% include "headerView/headerView.html.twig" %}
+{% endblock %}
+{% block notifAdmin %}
+    <div class="notifContainer">
+        <div class="selectOptionsContainer">
+            <div class="addNewNotifBox">
+                <button type="submit" name="addButton"><a href="/?controller=notification&action=notificationView">Nouvelle Notification</a></button> <!-- look at the button -->
+            </div>
+            <div class="updateLastNotifBox">
+                <button type="submit" name="updateButton" formaction="/?controller=user&action=connectionView">Modifier</br>la dernière notification</br>entrée</button>
+
+            </div>
+        </div>
+        <div class="listNotifBox listNotifBox__backgroundcolor--opacity listNotifBox__backgroundcolor--backgroundcolor">
+            {% for notif in notifications %}
+                {% if notif is empty %}
+                    {{ notif }}
+                    <div class="noNotif">
+                        <label class="noNotifLabel">Aucune notification à afficher</label>
+                    </div>
+                {% else %}
+                    <div class="notifBox notifBox__backgroundcolor--backgroundcolor">
+                        <div class="notifTitle">
+                            <label class="textTitle">{{ notif.notifTitle }}</label>
+                        </div>
+                        <div class="timeBox">
+                            <div class="labelTimeNotif">
+                                <label class="labelTime">créée le: </label>
+                            </div>
+                            <div class="notifTime">
+                                <textarea class="txtTime">{{ notif.notifDate }}</textarea>
+                            </div>
+                        </div>
+                        <div class="btnBox">
+                            <div class="updateBtn">
+                                <button type="submit" name="updateButton" formaction="">MODIFIER</button>
+                            </div>
+                            <div class="deleteBtn">
+                                <button type="submit" name="deleteButton" formaction="">SUPPRIMER</button>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
     </div>
-</div>
-</body>
+{% endblock %}
