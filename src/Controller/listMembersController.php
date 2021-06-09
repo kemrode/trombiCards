@@ -24,7 +24,6 @@ class listMembersController extends AbstractController
                 } else {
                     $memberDecode[$key] =$value;
                 }
-
             }
             $memberToSegue[$index] = $memberDecode;
         }
@@ -44,5 +43,4 @@ class listMembersController extends AbstractController
             return $e->getMessage();
         }
     }
-
 }

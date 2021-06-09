@@ -21,6 +21,19 @@ body {
   background-size: cover;
 }
 
+.primaryContainer {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.primaryContainer::-webkit-scrollbar {
+  display: none;
+}
+
 .containerArticlesBox {
   display: flex;
   flex-direction: column;

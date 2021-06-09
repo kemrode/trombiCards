@@ -45,6 +45,19 @@ body {
   height: 40%;
 }
 
+.primaryContainer {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.primaryContainer::-webkit-scrollbar {
+  display: none;
+}
+
 .addNewNotifBox {
   display: flex;
   flex-direction: row;

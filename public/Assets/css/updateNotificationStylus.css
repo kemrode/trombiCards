@@ -42,6 +42,19 @@ body {
   height: 100%;
 }
 
+.primaryContainer {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.primaryContainer::-webkit-scrollbar {
+  display: none;
+}
+
 .pageTitleBox {
   display: flex;
   flex-direction: row;

@@ -11,24 +11,26 @@
                 {% for member in membersList %}
                     <div class="userBox userBox__background--backgroundColor">
                         <form class="formContainer" method="post">
-                            <div class="nameBox nameBox__background--backgroundColor">
-                                <p>{{ member['userName'] }}</p>
-                            </div>
-                            <div class="firstnameBox firstnameBox__background--backgroundColor">
-                                <p>{{ member['userFirstname'] }}</p>
-                            </div>
-                            <div class="nicknameBox nicknameBox__background--backgroundColor">
-                                <p>{{ member['userNickname'] }}</p>
-                            </div>
-                            <div class="mailBox mailBox__background--backgroundColor">
-                                <p>{{ member['userMail'] }}</p>
-                            </div>
-                            <div class="buttonBox">
-                                <div class="updateBtn updateBtn__button--backgroundColor updateBtn__button--borderradius updateBtn__button--size">
-                                    <button type="submit" name="updateBtn" formaction="/?controller=updateView&action=updateMemberView&param={{ member.userId }}">Modifier</button>
+                            <div class="formBox">
+                                <div class="nameBox nameBox__background--backgroundColor">
+                                    <p>{{ member['userName'] }}</p>
                                 </div>
-                                <div class="deleteBtn deleteBtn__button--backgroundColor deleteBtn__button--borderradius deleteBtn__button--size">
-                                    <button type="submit" name="deleteBtn" formaction="/?controller=listMembers&action=deleteUser&param={{ member.userId }}">Supprimer</button>
+                                <div class="firstnameBox firstnameBox__background--backgroundColor">
+                                    <p>{{ member['userFirstname'] }}</p>
+                                </div>
+                                <div class="nicknameBox nicknameBox__background--backgroundColor">
+                                    <p>{{ member['userNickname'] }}</p>
+                                </div>
+                                <div class="mailBox mailBox__background--backgroundColor">
+                                    <p>{{ member['userMail'] }}</p>
+                                </div>
+                                <div class="buttonBox">
+                                    <div class="updateBtn updateBtn__button--backgroundColor updateBtn__button--borderradius updateBtn__button--size">
+                                        <button type="submit" name="updateBtn" formaction="/?controller=updateView&action=updateMemberView&param={{ member.userId }}">Modifier</button>
+                                    </div>
+                                    <div class="deleteBtn deleteBtn__button--backgroundColor deleteBtn__button--borderradius deleteBtn__button--size">
+                                        <button type="submit" name="deleteBtn" formaction="/?controller=listMembers&action=deleteUser&param={{ member.userId }}">Supprimer</button>
+                                    </div>
                                 </div>
                             </div>
                         </form>
