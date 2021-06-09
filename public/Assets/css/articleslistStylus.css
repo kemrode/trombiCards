@@ -21,6 +21,19 @@ body {
   background-size: cover;
 }
 
+.primaryContainer {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.primaryContainer::-webkit-scrollbar {
+  display: none;
+}
+
 .containerArticlesBox {
   display: flex;
   flex-direction: column;
@@ -149,10 +162,12 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .homeImg__background--backgroundcolor {
   background: #024eb6;
   border-radius: 45px;
 }
+
 .homeImg img {
   width: 45px;
   height: 45px;
@@ -174,6 +189,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .logoutImg__background--backgroundcolor {
   background: #f01919;
   background: linear-gradient(135deg, #f01919 0%, rgba(242, 48, 48, 0.412202381) 100%);
@@ -184,6 +200,7 @@ body {
   .header {
     width: 60%;
   }
+
   .header__title--sizeTitle {
     font-size: 1.3em;
   }
@@ -195,6 +212,7 @@ body {
   .homeImg {
     height: 60px;
   }
+
   .homeImg img {
     width: 35px;
     height: 35px;
@@ -203,6 +221,7 @@ body {
   .logoutImg {
     height: 60px;
   }
+
   .logoutImg img {
     width: 35px;
     height: 35px;
@@ -220,6 +239,7 @@ body {
   .homeImg {
     height: 60px;
   }
+
   .homeImg img {
     width: 35px;
     height: 35px;
@@ -228,6 +248,7 @@ body {
   .logoutImg {
     height: 60px;
   }
+
   .logoutImg img {
     width: 35px;
     height: 35px;
@@ -245,6 +266,7 @@ body {
   .homeImg {
     height: 75px;
   }
+
   .homeImg img {
     width: 45px;
     height: 45px;
@@ -253,6 +275,7 @@ body {
   .logoutImg {
     height: 75px;
   }
+
   .logoutImg img {
     width: 45px;
     height: 45px;
@@ -268,5 +291,6 @@ body {
     font-size: 1.8em;
   }
 }
+/*# sourceMappingURL=articleslistStylus.css.map */
 
 /*# sourceMappingURL=articleslistStylus.css.map */

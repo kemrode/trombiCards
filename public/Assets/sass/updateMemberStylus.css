@@ -21,14 +21,18 @@ body {
   background-size: cover;
 }
 
-@media only screen and (max-width: 600px) {
-  .primaryContainer {
-    display: flex;
-    flex-direction: column;
-    width: auto;
-    height: 100vh;
-  }
+.primaryContainer {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
+.primaryContainer::-webkit-scrollbar {
+  display: none;
+}
+
 .headerBox {
   display: flex;
   display: flex;

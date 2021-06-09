@@ -1,17 +1,20 @@
 <?php
 namespace src\Controller;
-//include ('../Model/userModel.php');
 use src\Model\userModel;
 
 class userController extends AbstractController
 {
     //function to display connection view
     public function connectionView() {
+        $administrator = new userModel();
+        $administrator->checkAdministrator();
         $connected = false;
         return $this->twig->render("connectionView\connectionView.html.twig", ["connected"=>$connected]);
     }
     //function to display view to registering
     public function registerView(){
+        $administrator = new userModel();
+        $administrator->checkAdministrator();
         return $this->twig->render("registerView/registerView.html.twig");
     }
     //function to log in
@@ -76,6 +79,7 @@ class userController extends AbstractController
             foreach ($userConnected as $key => $value) {
                 $_SESSION[$key] = $value;
             }
+            $_SESSION['administrator'] = true;
         } else {
             header('Location:/');
         }

@@ -4,26 +4,26 @@
     <link rel="stylesheet" type="text/css" href="/Assets/css/updateMemberStylus.css">
 {% endblock %}
 {% block title %}
-    <title>MonAdmin - modifier {{ member.userName+' '+member.userFirstname }}</title>
+    <title>MonAdmin - modifier</title>
 {% endblock %}
 {% block updateMemberView %}
     <div class="memberContainer">
-        <form class="formBox formBox__background--backgroundColor formBox__background--border" method="post" action="/?controller=updateView&action=updateSelectedMember&param={{ member.userId }}">
+        <form class="formBox formBox__background--backgroundColor formBox__background--border" method="post" action="/?controller=updateView&action=updateSelectedMember&param={{ member['userId'] }}">
             <div class="blockMember">
                 <div class="block">
                     <div class="blockBox nameBox">
-                        <input type="text" name="selectedName" value="{{ member.userName}}">
+                        <input type="text" name="selectedName" value="{{ member['userName']}}">
                     </div>
                     <div class="blockBox firstnameBox">
-                        <input type="text" name="selectedFirstname" value="{{ member.userFirstname }}">
+                        <input type="text" name="selectedFirstname" value="{{ member['userFirstname'] }}">
                     </div>
                 </div>
                 <div class="block">
                     <div class="blockBox nicknameBox">
-                        <input type="text" name="selectedNickname" value="{{ member.userNickname }}">
+                        <input type="text" name="selectedNickname" value="{{ member['userNickname'] }}">
                     </div>
                     <div class="blockBox mailBox">
-                        <input type="text" name="selectedMail" value="{{ member.userMail }}">
+                        <input type="text" name="selectedMail" value="{{ member['userMail'] }}">
                     </div>
                 </div>
                 <div class="block blockJob">

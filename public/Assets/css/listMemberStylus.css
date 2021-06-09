@@ -21,14 +21,19 @@ body {
   background-size: cover;
 }
 
-@media only screen and (max-width: 600px) {
-  .primaryContainer {
-    display: flex;
-    flex-direction: column;
-    width: auto;
-    height: 100vh;
-  }
+.primaryContainer {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
+
+.primaryContainer::-webkit-scrollbar {
+  display: none;
+}
+
 .headerBox {
   display: flex;
   display: flex;
@@ -72,10 +77,12 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .homeImg__background--backgroundcolor {
   background: #024eb6;
   border-radius: 45px;
 }
+
 .homeImg img {
   width: 45px;
   height: 45px;
@@ -97,6 +104,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .logoutImg__background--backgroundcolor {
   background: #f01919;
   background: linear-gradient(135deg, #f01919 0%, rgba(242, 48, 48, 0.412202381) 100%);
@@ -107,6 +115,7 @@ body {
   .header {
     width: 60%;
   }
+
   .header__title--sizeTitle {
     font-size: 1.3em;
   }
@@ -118,6 +127,7 @@ body {
   .homeImg {
     height: 60px;
   }
+
   .homeImg img {
     width: 35px;
     height: 35px;
@@ -126,6 +136,7 @@ body {
   .logoutImg {
     height: 60px;
   }
+
   .logoutImg img {
     width: 35px;
     height: 35px;
@@ -143,6 +154,7 @@ body {
   .homeImg {
     height: 60px;
   }
+
   .homeImg img {
     width: 35px;
     height: 35px;
@@ -151,6 +163,7 @@ body {
   .logoutImg {
     height: 60px;
   }
+
   .logoutImg img {
     width: 35px;
     height: 35px;
@@ -168,6 +181,7 @@ body {
   .homeImg {
     height: 75px;
   }
+
   .homeImg img {
     width: 45px;
     height: 45px;
@@ -176,6 +190,7 @@ body {
   .logoutImg {
     height: 75px;
   }
+
   .logoutImg img {
     width: 45px;
     height: 45px;
@@ -207,6 +222,54 @@ body {
   height: 100%;
 }
 
+/*
+@media only screen and (max-width:600px){
+  .listBoxes {
+    align-items: center;
+    margin-top: 20px;
+  }
+
+}
+
+@media only screen and (min-width: 600px) {
+  .mainListContainer {
+    overflow-y: auto;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .listBoxes {
+    align-items: center;
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px){
+  .mainListContainer {
+    overflow-y: auto;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .listBoxes {
+    align-items: center;
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .listBoxes {
+    justify-content: space-evenly;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .listBoxes {
+    justify-content: space-evenly;
+  }
+}*/
 .formContainer {
   display: flex;
   flex-direction: row;
@@ -214,6 +277,15 @@ body {
   align-items: center;
   width: 100%;
   height: 100%;
+}
+
+.formBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: auto;
 }
 
 .userBox {
@@ -224,6 +296,7 @@ body {
   width: auto;
   height: 65px;
 }
+
 .userBox__background--backgroundColor {
   background-color: #40C4FF;
 }
@@ -236,6 +309,7 @@ body {
   height: 55px;
   border-radius: 45px;
 }
+
 .nameBox__background--backgroundColor {
   background-color: #80D8FF;
 }
@@ -248,6 +322,7 @@ body {
   height: 55px;
   border-radius: 45px;
 }
+
 .firstnameBox__background--backgroundColor {
   background-color: #03A9F4;
 }
@@ -260,6 +335,7 @@ body {
   height: 55px;
   border-radius: 45px;
 }
+
 .nicknameBox__background--backgroundColor {
   background-color: #80D8FF;
 }
@@ -272,6 +348,7 @@ body {
   height: 55px;
   border-radius: 45px;
 }
+
 .mailBox__background--backgroundColor {
   background-color: #03A9F4;
 }
@@ -295,12 +372,15 @@ p {
   font-weight: bold;
   width: 50%;
 }
+
 .updateBtn__button--backgroundColor button {
   background-color: orange;
 }
+
 .updateBtn__button--borderradius button {
   border-radius: 45px;
 }
+
 .updateBtn__button--size button {
   height: 50px;
 }
@@ -312,14 +392,158 @@ p {
   font-weight: bold;
   width: 50%;
 }
+
 .deleteBtn__button--backgroundColor button {
   background-color: red;
 }
+
 .deleteBtn__button--borderradius button {
   border-radius: 45px;
 }
+
 .deleteBtn__button--size button {
   height: 50px;
 }
+
+/*
+@media only screen and (max-width:600px){
+  .userBox {
+    @include flexBoxColumnJustifyCenter;
+    align-items: center;
+    width: 85%;
+    height: 75vh;
+  }
+  .formContainer {
+    @include flexBoxColumnJustifyCenter;
+  }
+  .formBox {
+    @include flexBoxColumnJustifySpaceEvenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  .nameBox{
+    width: 85%;
+    height: 10vh;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  .firstnameBox {
+    width: 85%;
+    height: 10vh;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .nicknameBox {
+    width: 85%;
+    height: 10vh;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .mailBox {
+    width: 85%;
+    height: 10vh;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .buttonBox {
+    @include rowFlex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 10vh;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .updateBtn {
+    @include flexBoxRowJustifyCenter;
+    & button {
+      font-weight: bold;
+      width: 125px;
+    }
+  }
+  .deleteBtn {
+    @include flexBoxRowJustifyCenter;
+    & button {
+      width: 125px;
+      font-weight: bold;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .userBox {
+    @include flexBoxColumnJustifyCenter;
+    align-items: center;
+    width: 85%;
+    height: 75vh;
+  }
+  .formContainer {
+    @include flexBoxColumnJustifyCenter;
+  }
+  .formBox {
+    @include flexBoxColumnJustifySpaceEvenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  .nameBox{
+    width: 85%;
+    height: 10vh;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  .firstnameBox {
+    width: 85%;
+    height: 10vh;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .nicknameBox {
+    width: 85%;
+    height: 10vh;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .mailBox {
+    width: 85%;
+    height: 10vh;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .buttonBox {
+    @include rowFlex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 10vh;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .updateBtn {
+    @include flexBoxRowJustifyCenter;
+    & button {
+      font-weight: bold;
+      width: 125px;
+    }
+  }
+  .deleteBtn {
+    @include flexBoxRowJustifyCenter;
+    & button {
+      width: 125px;
+      font-weight: bold;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px){
+}
+
+@media only screen and (min-width: 992px) {
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+}*/
+/*# sourceMappingURL=listMemberStylus.css.map */
 
 /*# sourceMappingURL=listMemberStylus.css.map */

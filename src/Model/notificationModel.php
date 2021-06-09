@@ -4,7 +4,7 @@
 namespace src\Model;
 
 
-class newsModel
+class notificationModel
 {
     private string $title;
     private string $text;
@@ -81,37 +81,35 @@ class newsModel
             $sql = 'INSERT INTO notifications (notifTxt, notifDate, notifTitle) VALUE (:notifTxt,:notifDate,:notifTitle)';
             $request = $bdd->prepare($sql);
             $request->execute([
-                "notifTxt" => $this->setText(),
-                "notifDate" => $this->setDateTime(),
-                "notifTitle" => $this->setTitle()
+                "notifTxt" => $this->getText(),
+                "notifDate" => $this->getDateTime(),
+                "notifTitle" => $this->getTitle()
             ]);
             return "ok";
         } catch (\Exception $e){
-            return $e->getMessage();
+            die('Erreur :'.$e->getMessage());
         }
     }
 
-    /*
-    public function getNotificationById(\PDO $bdd){
+    //function to get all notifications from BDD
+    public static function getAllNotif(\PDO $bdd){
         try {
-            $sql = 'SELECT notifId FROM notifications';
+            $sql = 'SELECT * FROM notifications';
             $request = $bdd->prepare($sql);
             $request->execute();
-            return $request->fetch(\PDO::FETCH_CLASS, "src\Model\\newsModel");
+            return $request->fetchAll();
         } catch (\Exception $e){
             return $e->getMessage();
         }
     }
-    */
 
     //function to fetch notifications from database
-    public function fetchNotification(\PDO $bdd, $notifData){
+    public static function fetchNotification(\PDO $bdd, $notifId){
         try {
-            //$notifData = $this->getNewsId();
-            $sql = 'SELECT * FROM notifications WHERE notifId=:notifData';
+            $sql = 'SELECT * FROM notifications WHERE notifId=:notifId';
             $request = $bdd->prepare($sql);
-            $request->setFetchMode(\PDO::FETCH_CLASS, "src\Model\newsModel");
-            $request->execute(['notifData'=>$notifData]);
+            $request->setFetchMode(\PDO::FETCH_CLASS, 'src\Model\notificationModel');
+            $request->execute(['notifId'=>$notifId]);
             return $request->fetch();
         } catch (\Exception $e){
             return $e->getMessage();
@@ -120,22 +118,31 @@ class newsModel
     }
 
     //function to update a notification from database
-    public function updateNotification(\PDO $bdd, $notifId,$array=[]){
-        $sql = 'UPDATE notifications SET notifTitle =:titleArray, notifTxt =:txtArray, notifDate =:dateArray WHERE notifId =:notifId';
-        $request = $bdd->prepare($sql);
-        $request->execute([
-            "notifTitle" => $_POST[''],
-            "notifTxt"   => $_POST[''],
-            "notifDate" =>  $_POST['']
-        ]);
+    public function updateNotification(\PDO $bdd, $notifId){
+        try {
+            $sql = 'UPDATE notifications SET notifTitle =:notifTitle, notifTxt =:notifTxt WHERE notifId =:notifId';
+            $request = $bdd->prepare($sql);
+            $request->execute([
+                "notifTitle" => $this->getTitle(),
+                "notifTxt"   => $this->getText(),
+                "notifId" => $notifId
+            ]);
+            return true;
+        } catch (\Exception $e){
+            return $e->getMessage();
+        }
     }
 
     //function to delete a notification from database
-    public function deleteNotification(\PDO $bdd, $notifId){
-        $sql = 'DELETE FROM notifications WHERE notifId:=notifId';
-        $request = $bdd->prepare($sql);
-        $request->execute(['notifId'=>$notifId]);
-        header("Location:\ ");
+    public static function deleteNotification(\PDO $bdd, $notifId){
+        try {
+            $sql = 'DELETE FROM notifications WHERE notifId=:notifId';
+            $request = $bdd->prepare($sql);
+            $request->execute(['notifId'=>$notifId]);
+            return true;
+        } catch (\Exception $e){
+            return $e->getMessage();
+        }
     }
 
 }
