@@ -107,10 +107,9 @@ class newsModel
     //function to fetch notifications from database
     public function fetchNotification(\PDO $bdd, $notifData){
         try {
-            //$notifData = $this->getNewsId();
             $sql = 'SELECT * FROM notifications WHERE notifId=:notifData';
             $request = $bdd->prepare($sql);
-            $request->setFetchMode(\PDO::FETCH_CLASS, "src\Model\newsModel");
+            $request->setFetchMode(\PDO::FETCH_CLASS, 'src\Model\newsModel');
             $request->execute(['notifData'=>$notifData]);
             return $request->fetch();
         } catch (\Exception $e){
