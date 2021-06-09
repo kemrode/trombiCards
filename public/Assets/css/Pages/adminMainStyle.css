@@ -56,12 +56,10 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 .homeImg__background--backgroundcolor {
   background: #024eb6;
   border-radius: 45px;
 }
-
 .homeImg img {
   width: 45px;
   height: 45px;
@@ -101,7 +99,6 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
 }
-
 .containerFlexBox::-webkit-scrollbar {
   display: none;
 }
@@ -117,7 +114,6 @@ body {
   justify-content: space-evenly;
   height: auto;
 }
-
 .itemsBox__noready--backgroundcolor {
   background-color: lightslategrey;
 }
@@ -265,6 +261,5 @@ body {
     height: 100%;
   }
 }
-/*# sourceMappingURL=adminMainStyle.css.map */
 
 /*# sourceMappingURL=adminMainStyle.css.map */
