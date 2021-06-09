@@ -38,9 +38,6 @@ class __TwigTemplate_2778ea326ca4d9805944ef01c379d253222c1aaa2902b24ee496acb97e0
         // line 1
         $this->displayBlock('css', $context, $blocks);
         // line 4
-        echo "
-";
-        // line 5
         $this->displayBlock('header', $context, $blocks);
     }
 
@@ -53,20 +50,20 @@ class __TwigTemplate_2778ea326ca4d9805944ef01c379d253222c1aaa2902b24ee496acb97e0
 ";
     }
 
-    // line 5
+    // line 4
     public function block_header($context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 6
+        // line 5
         echo "        <header>
                 <div class=\"headerBox\">
                         <div class=\"header header__title--size header__title--color header__title--sizeTitle\">
                                 <h1>MonAdmin</h1>
                         </div>
                         ";
-        // line 11
+        // line 10
         if ((0 === twig_compare(($context["connected"] ?? null), true))) {
-            // line 12
+            // line 11
             echo "                                <div class=\"headerButton\">
                                         <div class=\"home\">
                                                 <div class=\"homeImg homeImg__background--backgroundcolor\">
@@ -81,10 +78,10 @@ class __TwigTemplate_2778ea326ca4d9805944ef01c379d253222c1aaa2902b24ee496acb97e0
                                 </div>
                         ";
         }
-        // line 25
+        // line 24
         echo "                        ";
         if ((0 === twig_compare(($context["back"] ?? null), true))) {
-            // line 26
+            // line 25
             echo "                                <div class=\"headerButton\">
                                         <div class=\"home\">
                                                 <div class=\"homeImg homeImg__background--backgroundcolor\">
@@ -99,7 +96,7 @@ class __TwigTemplate_2778ea326ca4d9805944ef01c379d253222c1aaa2902b24ee496acb97e0
                                 </div>
                         ";
         }
-        // line 39
+        // line 38
         echo "                </div>
         </header>
 ";
@@ -112,7 +109,7 @@ class __TwigTemplate_2778ea326ca4d9805944ef01c379d253222c1aaa2902b24ee496acb97e0
 
     public function getDebugInfo()
     {
-        return array (  103 => 39,  88 => 26,  85 => 25,  70 => 12,  68 => 11,  61 => 6,  57 => 5,  52 => 2,  48 => 1,  44 => 5,  41 => 4,  39 => 1,);
+        return array (  100 => 38,  85 => 25,  82 => 24,  67 => 11,  65 => 10,  58 => 5,  54 => 4,  49 => 2,  45 => 1,  41 => 4,  39 => 1,);
     }
 
     public function getSourceContext()
@@ -120,7 +117,6 @@ class __TwigTemplate_2778ea326ca4d9805944ef01c379d253222c1aaa2902b24ee496acb97e0
         return new Source("{% block css %}
 <link rel=\"stylesheet\" type=\"text/css\" href=\"/Assets/css/headerStylus.css\"
 {% endblock %}
-
 {% block header %}
         <header>
                 <div class=\"headerBox\">
