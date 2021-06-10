@@ -86,33 +86,35 @@ class __TwigTemplate_d02faf8bf1706ce543fbe694be11677da049263e200b71e46a68546d96b
         foreach ($context['_seq'] as $context["_key"] => $context["notif"]) {
             // line 22
             echo "                    <div class=\"notifBox notifBox__backgroundcolor--backgroundcolor\">
-                        <div class=\"notifTitle\">
-                            <label class=\"textTitle\">";
-            // line 24
+                        <div class=\"notifBack\">
+                            <div class=\"notifTitle\">
+                                <label class=\"textTitle\">";
+            // line 25
             echo twig_escape_filter($this->env, (($__internal_f607aeef2c31a95a7bf963452dff024ffaeb6aafbe4603f9ca3bec57be8633f4 = $context["notif"]) && is_array($__internal_f607aeef2c31a95a7bf963452dff024ffaeb6aafbe4603f9ca3bec57be8633f4) || $__internal_f607aeef2c31a95a7bf963452dff024ffaeb6aafbe4603f9ca3bec57be8633f4 instanceof ArrayAccess ? ($__internal_f607aeef2c31a95a7bf963452dff024ffaeb6aafbe4603f9ca3bec57be8633f4["notifTitle"] ?? null) : null), "html", null, true);
             echo "</label>
-                        </div>
-                        <div class=\"timeBox\">
-                            <div class=\"labelTimeNotif\">
-                                <label class=\"labelTime\">créée le: </label>
                             </div>
-                            <div class=\"notifTime\">
-                                <label class=\"txtTime\">";
-            // line 31
+                            <div class=\"timeBox\">
+                                <div class=\"labelTimeNotif\">
+                                    <label class=\"labelTime\">créée le: </label>
+                                </div>
+                                <div class=\"notifTime\">
+                                    <label class=\"txtTime\">";
+            // line 32
             echo twig_escape_filter($this->env, (($__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144 = $context["notif"]) && is_array($__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144) || $__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144 instanceof ArrayAccess ? ($__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144["notifDate"] ?? null) : null), "html", null, true);
             echo "</label>
+                                </div>
                             </div>
                         </div>
                         <div class=\"btnBox\">
                             <div class=\"updateBtn\">
                                 <button type=\"submit\" name=\"updateButton\" formaction=\"/?controller=listNews&action=updateNotifView&param=";
-            // line 36
+            // line 38
             echo twig_escape_filter($this->env, (($__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b = $context["notif"]) && is_array($__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b) || $__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b instanceof ArrayAccess ? ($__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b["notifId"] ?? null) : null), "html", null, true);
             echo "\">MODIFIER</button>
                             </div>
                             <div class=\"deleteBtn\">
                                 <button type=\"submit\" name=\"deleteButton\" formaction=\"/?controller=listNews&action=deleteNotif&param=";
-            // line 39
+            // line 41
             echo twig_escape_filter($this->env, (($__internal_68aa442c1d43d3410ea8f958ba9090f3eaa9a76f8de8fc9be4d6c7389ba28002 = $context["notif"]) && is_array($__internal_68aa442c1d43d3410ea8f958ba9090f3eaa9a76f8de8fc9be4d6c7389ba28002) || $__internal_68aa442c1d43d3410ea8f958ba9090f3eaa9a76f8de8fc9be4d6c7389ba28002 instanceof ArrayAccess ? ($__internal_68aa442c1d43d3410ea8f958ba9090f3eaa9a76f8de8fc9be4d6c7389ba28002["notifId"] ?? null) : null), "html", null, true);
             echo "\">SUPPRIMER</button>
                             </div>
@@ -123,7 +125,7 @@ class __TwigTemplate_d02faf8bf1706ce543fbe694be11677da049263e200b71e46a68546d96b
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['notif'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 44
+        // line 46
         echo "            </div>
         </form>
     </div>
@@ -142,7 +144,7 @@ class __TwigTemplate_d02faf8bf1706ce543fbe694be11677da049263e200b71e46a68546d96b
 
     public function getDebugInfo()
     {
-        return array (  127 => 44,  116 => 39,  110 => 36,  102 => 31,  92 => 24,  88 => 22,  84 => 21,  70 => 9,  66 => 8,  61 => 6,  57 => 5,  52 => 3,  48 => 2,  37 => 1,);
+        return array (  129 => 46,  118 => 41,  112 => 38,  103 => 32,  93 => 25,  88 => 22,  84 => 21,  70 => 9,  66 => 8,  61 => 6,  57 => 5,  52 => 3,  48 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -169,15 +171,17 @@ class __TwigTemplate_d02faf8bf1706ce543fbe694be11677da049263e200b71e46a68546d96b
             <div class=\"listNotifBox listNotifBox__backgroundcolor--backgroundcolor\">
                 {% for notif in notifications %}
                     <div class=\"notifBox notifBox__backgroundcolor--backgroundcolor\">
-                        <div class=\"notifTitle\">
-                            <label class=\"textTitle\">{{ notif[\"notifTitle\"] }}</label>
-                        </div>
-                        <div class=\"timeBox\">
-                            <div class=\"labelTimeNotif\">
-                                <label class=\"labelTime\">créée le: </label>
+                        <div class=\"notifBack\">
+                            <div class=\"notifTitle\">
+                                <label class=\"textTitle\">{{ notif[\"notifTitle\"] }}</label>
                             </div>
-                            <div class=\"notifTime\">
-                                <label class=\"txtTime\">{{ notif[\"notifDate\"] }}</label>
+                            <div class=\"timeBox\">
+                                <div class=\"labelTimeNotif\">
+                                    <label class=\"labelTime\">créée le: </label>
+                                </div>
+                                <div class=\"notifTime\">
+                                    <label class=\"txtTime\">{{ notif[\"notifDate\"] }}</label>
+                                </div>
                             </div>
                         </div>
                         <div class=\"btnBox\">

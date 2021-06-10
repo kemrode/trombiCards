@@ -20,15 +20,17 @@
             <div class="listNotifBox listNotifBox__backgroundcolor--backgroundcolor">
                 {% for notif in notifications %}
                     <div class="notifBox notifBox__backgroundcolor--backgroundcolor">
-                        <div class="notifTitle">
-                            <label class="textTitle">{{ notif["notifTitle"] }}</label>
-                        </div>
-                        <div class="timeBox">
-                            <div class="labelTimeNotif">
-                                <label class="labelTime">créée le: </label>
+                        <div class="notifBack">
+                            <div class="notifTitle">
+                                <label class="textTitle">{{ notif["notifTitle"] }}</label>
                             </div>
-                            <div class="notifTime">
-                                <label class="txtTime">{{ notif["notifDate"] }}</label>
+                            <div class="timeBox">
+                                <div class="labelTimeNotif">
+                                    <label class="labelTime">créée le: </label>
+                                </div>
+                                <div class="notifTime">
+                                    <label class="txtTime">{{ notif["notifDate"] }}</label>
+                                </div>
                             </div>
                         </div>
                         <div class="btnBox">
