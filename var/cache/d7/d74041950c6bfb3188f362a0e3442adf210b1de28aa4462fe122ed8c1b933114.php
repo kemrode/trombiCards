@@ -108,23 +108,10 @@ class __TwigTemplate_29831b4152348ad2a92699c2ad1de2c928a610fafc0ebabb7a910bf1cdd
                         </div>
                         <div class=\"switchBox\">
                             <label class=\"switch\">
-                                ";
-        // line 36
-        if ((0 === twig_compare((($__internal_01476f8db28655ee4ee02ea2d17dd5a92599be76304f08cd8bc0e05aced30666 = ($context["member"] ?? null)) && is_array($__internal_01476f8db28655ee4ee02ea2d17dd5a92599be76304f08cd8bc0e05aced30666) || $__internal_01476f8db28655ee4ee02ea2d17dd5a92599be76304f08cd8bc0e05aced30666 instanceof ArrayAccess ? ($__internal_01476f8db28655ee4ee02ea2d17dd5a92599be76304f08cd8bc0e05aced30666["userJob"] ?? null) : null), "administrator"))) {
-            // line 37
-            echo "                                    <input type=\"hidden\" class=\"switchAdmin\" name=\"switchAdmin\" value=\"1\">
-                                    <input type=\"ckeckbox\" class=\"switchAdmin\" name=\"switchAdmin\" value=\"0\">
-                                    <span class=\"slider round\"></span>
-                                ";
-        } else {
-            // line 41
-            echo "                                    <input type=\"hidden\" class=\"switchAdmin\" name=\"switchAdmin\" value=\"1\">
-                                    <input type=\"checkbox\" class=\"switchAdmin\" name=\"switchAdmin\" value=\"0\">
-                                    <span class=\"slider round\"></span>
-                                ";
-        }
-        // line 45
-        echo "                            </label>
+                                <input type=\"hidden\" class=\"switchAdmin\" name=\"switchAdmin\" value=\"1\">
+                                <input type=\"checkbox\" class=\"switchAdmin\" name=\"switchAdmin\" value=\"0\">
+                                <span class=\"slider round\"></span>
+                            </label>
                         </div>
                     </div>
                     <div class=\"blockButton\">
@@ -151,7 +138,7 @@ class __TwigTemplate_29831b4152348ad2a92699c2ad1de2c928a610fafc0ebabb7a910bf1cdd
 
     public function getDebugInfo()
     {
-        return array (  127 => 45,  121 => 41,  115 => 37,  113 => 36,  100 => 26,  94 => 23,  86 => 18,  80 => 15,  73 => 11,  70 => 10,  66 => 9,  61 => 7,  57 => 6,  52 => 4,  48 => 3,  37 => 1,);
+        return array (  100 => 26,  94 => 23,  86 => 18,  80 => 15,  73 => 11,  70 => 10,  66 => 9,  61 => 7,  57 => 6,  52 => 4,  48 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -191,15 +178,9 @@ class __TwigTemplate_29831b4152348ad2a92699c2ad1de2c928a610fafc0ebabb7a910bf1cdd
                         </div>
                         <div class=\"switchBox\">
                             <label class=\"switch\">
-                                {% if member['userJob'] == 'administrator' %}
-                                    <input type=\"hidden\" class=\"switchAdmin\" name=\"switchAdmin\" value=\"1\">
-                                    <input type=\"ckeckbox\" class=\"switchAdmin\" name=\"switchAdmin\" value=\"0\">
-                                    <span class=\"slider round\"></span>
-                                {% else %}
-                                    <input type=\"hidden\" class=\"switchAdmin\" name=\"switchAdmin\" value=\"1\">
-                                    <input type=\"checkbox\" class=\"switchAdmin\" name=\"switchAdmin\" value=\"0\">
-                                    <span class=\"slider round\"></span>
-                                {% endif %}
+                                <input type=\"hidden\" class=\"switchAdmin\" name=\"switchAdmin\" value=\"1\">
+                                <input type=\"checkbox\" class=\"switchAdmin\" name=\"switchAdmin\" value=\"0\">
+                                <span class=\"slider round\"></span>
                             </label>
                         </div>
                     </div>
