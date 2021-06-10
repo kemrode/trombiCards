@@ -6,8 +6,6 @@ class userController extends AbstractController
 {
     //function to display connection view
     public function connectionView() {
-        $administrator = new userModel();
-        $administrator->checkAdministrator();
         $connected = false;
         return $this->twig->render("connectionView\connectionView.html.twig", ["connected"=>$connected]);
     }
