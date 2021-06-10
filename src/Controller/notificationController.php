@@ -36,8 +36,4 @@ class notificationController extends AbstractController
             return $e->getMessage();
         }
     }
-
-
-
-
 }
