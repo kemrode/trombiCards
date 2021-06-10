@@ -59,8 +59,8 @@ body {
 .addNewNotifBox {
   display: flex;
   flex-direction: row;
-  width: 50%;
-  height: 50%;
+  width: 300px;
+  height: 150px;
 }
 .addNewNotifBox button {
   width: 100%;
@@ -70,6 +70,8 @@ body {
   font-weight: bold;
   color: white;
   border: 1px solid black;
+  font-size: 1.5em;
+  font-style: italic;
 }
 .addNewNotifBox:hover {
   border: 2px solid black;
@@ -82,11 +84,17 @@ body {
   font-size: 1.5em;
 }
 
+@media only screen and (max-width: 768px) {
+  .addNewNotifBox {
+    width: 50%;
+    height: 50%;
+  }
+}
 .updateLastNotifBox {
   display: flex;
   flex-direction: row;
-  width: 50%;
-  height: 50%;
+  width: 300px;
+  height: 150px;
 }
 .updateLastNotifBox button {
   width: 100%;
@@ -96,6 +104,9 @@ body {
   font-weight: bold;
   color: black;
   border: 1px solid black;
+  border: 1px solid black;
+  font-size: 1.5em;
+  font-style: italic;
 }
 .updateLastNotifBox:hover {
   border: 2px solid black;
