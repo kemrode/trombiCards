@@ -41,7 +41,14 @@
 
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 768px){
+  .updateLastNotifBox {
+    width: 50%;
+    height: 50%;
+    & button {
+      font-size: 0.9em;
+    }
+  }
   .updateBtn {
     @include flexBoxRowJustifyCenter;
     align-items: center;

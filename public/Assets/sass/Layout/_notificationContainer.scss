@@ -1,9 +1,10 @@
 @import "../Utils/mixin";
 @import "../Utils/variables";
 
+
 .notifContainer {
-  @include flexBoxColumn;
-  width: auto;
+  @include rowFlex;
+  width: 100%;
   height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
@@ -15,4 +16,25 @@
   @include flexBoxColumnJustifySpaceEvenly;
   width: 85%;
   height: 100%;
+}
+.notifUpdate {
+  @include flexBoxColumn;
+  width: 50%;
+}
+
+
+@media only screen and(max-width:768px){
+  .notifUpdate {
+    width: 100%;
+  }
+  .formBox {
+    @include flexBoxColumnJustifySpaceEvenly;
+    width: 85%;
+    height: 100%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .notifContainer{
+    justify-content: center;
+  }
 }
