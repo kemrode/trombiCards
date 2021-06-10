@@ -10,22 +10,26 @@ use src\Controller\listMembersController;
 class updateViewController extends AbstractController
 {
     public function updateMemberView(){
-        $administrator = new userModel();
-        $administrator->checkAdministrator();
-        $back = true;
-        $userId = $_GET['param'];
-        $memberToSegue=[];
-        $memberSelected = userModel::fetchUser(BDDconfig::getInstance(), $userId);
-        //loop to decode special character before display
-        $memberToSegue["userId"]=$userId;
-        foreach ($memberSelected as $key=>$value){
-            if($key != "userPasswd"){
-                $memberToSegue[$key] = html_entity_decode($value);
-            } else {
-                $memberToSegue[$key] = $value;
+        try {
+            $administrator = new userModel();
+            $administrator->checkAdministrator();
+            $back = true;
+            $userId = $_GET['param'];
+            $memberToSegue=[];
+            $memberSelected = userModel::fetchUser(BDDconfig::getInstance(), $userId);
+            //loop to decode special character before display
+            $memberToSegue["userId"]=$userId;
+            foreach ($memberSelected as $key=>$value){
+                if($key != "userPasswd"){
+                    $memberToSegue[$key] = html_entity_decode($value);
+                } else {
+                    $memberToSegue[$key] = $value;
+                }
             }
+            return $this->twig->render("updateViews/updateMemberView.html.twig",["member"=>$memberToSegue,"back"=>$back]);
+        } catch (\Exception $e){
+            return $e->getMessage();
         }
-        return $this->twig->render("updateViews/updateMemberView.html.twig",["member"=>$memberToSegue,"back"=>$back]);
     }
     //function to update the selected member with id
     public function updateSelectedMember(){
@@ -49,7 +53,7 @@ class updateViewController extends AbstractController
             return $e->getMessage();
         }
     }
-
+    //function to determine if it is an administarator or not want to log
     private function isAdminJob($switchResponse){
         $userJob = "";
         switch (true){
@@ -65,5 +69,4 @@ class updateViewController extends AbstractController
         }
         return $userJob;
     }
-
 }

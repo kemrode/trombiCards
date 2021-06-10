@@ -68,11 +68,12 @@ class __TwigTemplate_e9fa5ccbf3736cef119bb0113e3c30ffaca84717e1bc49509db77bee9c4
         $macros = $this->macros;
         // line 10
         echo "    <div class=\"notifContainer\">
-        <div class=\"pageTitleBox\">
-            <div class=\"labelTitle\">
-                <h2>Nouvelle notification</h2>
+        <div class=\"notifUpdate\">
+            <div class=\"pageTitleBox\">
+                <div class=\"labelTitle\">
+                    <h2>Nouvelle notification</h2>
+                </div>
             </div>
-        </div>
             <form method=\"post\" action=\"/?controller=notification&action=addNewNotification\" name=\"newNotifForm\">
                 <div class=\"newNotifBox newNotifBox__backgroundcolor--backgroundcolor newNotifBox__zindex--index\">
                     <div class=\"notifTitle notifTitle__zindex--index\">
@@ -88,6 +89,7 @@ class __TwigTemplate_e9fa5ccbf3736cef119bb0113e3c30ffaca84717e1bc49509db77bee9c4
                     </div>
                 </div>
             </form>
+        </div>
     </div>
 ";
     }
@@ -119,11 +121,12 @@ class __TwigTemplate_e9fa5ccbf3736cef119bb0113e3c30ffaca84717e1bc49509db77bee9c4
 {% endblock %}
 {% block newNotif %}
     <div class=\"notifContainer\">
-        <div class=\"pageTitleBox\">
-            <div class=\"labelTitle\">
-                <h2>Nouvelle notification</h2>
+        <div class=\"notifUpdate\">
+            <div class=\"pageTitleBox\">
+                <div class=\"labelTitle\">
+                    <h2>Nouvelle notification</h2>
+                </div>
             </div>
-        </div>
             <form method=\"post\" action=\"/?controller=notification&action=addNewNotification\" name=\"newNotifForm\">
                 <div class=\"newNotifBox newNotifBox__backgroundcolor--backgroundcolor newNotifBox__zindex--index\">
                     <div class=\"notifTitle notifTitle__zindex--index\">
@@ -139,6 +142,7 @@ class __TwigTemplate_e9fa5ccbf3736cef119bb0113e3c30ffaca84717e1bc49509db77bee9c4
                     </div>
                 </div>
             </form>
+        </div>
     </div>
 {% endblock %}", "notificationView\\notificationView.html.twig", "C:\\Users\\2217873\\Documents\\developpementPerso\\trombiCards\\templates\\notificationView\\notificationView.html.twig");
     }

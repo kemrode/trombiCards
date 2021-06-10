@@ -90,7 +90,6 @@ class notificationModel
             die('Erreur :'.$e->getMessage());
         }
     }
-
     //function to get all notifications from BDD
     public static function getAllNotif(\PDO $bdd){
         try {
@@ -102,7 +101,6 @@ class notificationModel
             return $e->getMessage();
         }
     }
-
     //function to fetch notifications from database
     public static function fetchNotification(\PDO $bdd, $notifId){
         try {
@@ -116,7 +114,6 @@ class notificationModel
         }
 
     }
-
     //function to update a notification from database
     public function updateNotification(\PDO $bdd, $notifId){
         try {
@@ -132,7 +129,6 @@ class notificationModel
             return $e->getMessage();
         }
     }
-
     //function to delete a notification from database
     public static function deleteNotification(\PDO $bdd, $notifId){
         try {
@@ -144,5 +140,4 @@ class notificationModel
             return $e->getMessage();
         }
     }
-
 }

@@ -8,11 +8,12 @@
 {% endblock %}
 {% block newNotif %}
     <div class="notifContainer">
-        <div class="pageTitleBox">
-            <div class="labelTitle">
-                <h2>Nouvelle notification</h2>
+        <div class="notifUpdate">
+            <div class="pageTitleBox">
+                <div class="labelTitle">
+                    <h2>Nouvelle notification</h2>
+                </div>
             </div>
-        </div>
             <form method="post" action="/?controller=notification&action=addNewNotification" name="newNotifForm">
                 <div class="newNotifBox newNotifBox__backgroundcolor--backgroundcolor newNotifBox__zindex--index">
                     <div class="notifTitle notifTitle__zindex--index">
@@ -28,5 +29,6 @@
                     </div>
                 </div>
             </form>
+        </div>
     </div>
 {% endblock %}

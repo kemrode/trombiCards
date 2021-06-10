@@ -10,9 +10,13 @@ class registerController extends AbstractController
 {
     //function to display view to registering
     public function registerView(){
-        $administrator = new userModel();
-        $administrator->checkAdministrator();
-        return $this->twig->render("registerView/registerView.html.twig");
+        try {
+            $administrator = new userModel();
+            $administrator->checkAdministrator();
+            return $this->twig->render("registerView/registerView.html.twig");
+        } catch (\Exception $e){
+            return $e->getMessage();
+        }
     }
     //function to bring back datas given by new user in register form
     public function registerNewUser(){
@@ -39,5 +43,4 @@ class registerController extends AbstractController
             return $e->getMessage();
         }
     }
-
 }

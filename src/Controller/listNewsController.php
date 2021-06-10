@@ -18,17 +18,21 @@ class listNewsController extends AbstractController
     }
 
     public function updateNotifView() {
-        $administrator = new userModel();
-        $administrator->checkAdministrator();
-        $connected = true;
-        $notifId = $_GET['param'];
-        $notifToSegue = [];
-        $notifToUpdate = notificationModel::fetchNotification(BDDconfig::getInstance(), $notifId);
-        //loop to decode special character before display
-        foreach ($notifToUpdate as $key=>$value){
-            $notifToSegue[$key]=html_entity_decode($value);
+        try {
+            $administrator = new userModel();
+            $administrator->checkAdministrator();
+            $connected = true;
+            $notifId = $_GET['param'];
+            $notifToSegue = [];
+            $notifToUpdate = notificationModel::fetchNotification(BDDconfig::getInstance(), $notifId);
+            //loop to decode special character before display
+            foreach ($notifToUpdate as $key=>$value){
+                $notifToSegue[$key]=html_entity_decode($value);
+            }
+            return $this->twig->render("notificationView\updateNotificationView.html.twig",["notification"=>$notifToSegue, "connected"=>$connected]);
+        } catch (\Exception $e){
+            return $e->getMessage();
         }
-        return $this->twig->render("notificationView\updateNotificationView.html.twig",["notification"=>$notifToSegue, "connected"=>$connected]);
     }
 
     //function to delete a notification by Id
@@ -45,7 +49,6 @@ class listNewsController extends AbstractController
             return $e->getMessage();
         }
     }
-
     //function to update a notification by Id
     public function updateNotif(){
         try {
@@ -62,10 +65,5 @@ class listNewsController extends AbstractController
         } catch (\Exception $e){
             return $e->getMessage();
         }
-    }
-
-    //function to decode the text registered in database
-    private function decodeText() {
-
     }
 }

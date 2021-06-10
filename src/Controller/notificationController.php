@@ -10,13 +10,15 @@ class notificationController extends AbstractController
 {
     //function to display view about the notification selected by Id
     public function notificationView(){
-        $administrator = new userModel();
-        $administrator->checkAdministrator();
-        $connected = true;
-        return $this->twig->render('notificationView\notificationView.html.twig',["connected"=>$connected]);
+        try {
+            $administrator = new userModel();
+            $administrator->checkAdministrator();
+            $connected = true;
+            return $this->twig->render('notificationView\notificationView.html.twig',["connected"=>$connected]);
+        } catch (\Exception $e){
+            return $e->getMessage();
+        }
     }
-
-
     //function to update a notification by Id
     public function addNewNotification() {
         try {
