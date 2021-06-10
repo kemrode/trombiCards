@@ -129,6 +129,18 @@ body {
   border: 2px solid black;
 }
 
+@media only screen and (max-width: 600px) {
+  .updateBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .updateBtn button {
+    height: 85%;
+  }
+}
 .deleteBtn {
   display: flex;
   flex-direction: row;
@@ -144,12 +156,25 @@ body {
   font-weight: bold;
   color: black;
   border: 1px solid black;
+  font-weight: bold;
 }
 
 .deleteBtn:hover {
   border: 2px solid black;
 }
 
+@media only screen and (max-width: 600px) {
+  .deleteBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .deleteBtn button {
+    height: 85%;
+  }
+}
 .listNotifBox {
   display: flex;
   flex-direction: column;

@@ -206,7 +206,6 @@ body {
 .listBoxes {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   width: auto;
   height: 100%;
 }
@@ -217,7 +216,7 @@ body {
     margin-top: 20px;
   }
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 768px) {
   .mainListContainer {
     overflow-y: auto;
     overflow-x: hidden;
@@ -229,30 +228,6 @@ body {
   .listBoxes {
     align-items: center;
     margin-top: 20px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .mainListContainer {
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
-  .mainListContainer::-webkit-scrollbar {
-    display: none;
-  }
-
-  .listBoxes {
-    align-items: center;
-    margin-top: 20px;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .listBoxes {
-    justify-content: space-evenly;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .listBoxes {
-    justify-content: space-evenly;
   }
 }
 .formContainer {
@@ -285,7 +260,7 @@ body {
   background-color: #40C4FF;
 }
 
-.nameBox {
+.itemBox {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -293,47 +268,13 @@ body {
   height: 55px;
   border-radius: 45px;
 }
-.nameBox__background--backgroundColor {
+.itemBox__even--backgroundColor {
   background-color: #80D8FF;
 }
-
-.firstnameBox {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 15%;
-  height: 55px;
-  border-radius: 45px;
-}
-.firstnameBox__background--backgroundColor {
+.itemBox__odd--backgroundColor {
   background-color: #03A9F4;
 }
-
-.nicknameBox {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 15%;
-  height: 55px;
-  border-radius: 45px;
-}
-.nicknameBox__background--backgroundColor {
-  background-color: #80D8FF;
-}
-
-.mailBox {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 25%;
-  height: 55px;
-  border-radius: 45px;
-}
-.mailBox__background--backgroundColor {
-  background-color: #03A9F4;
-}
-
-p {
+.itemBox p {
   font-weight: bold;
 }
 
@@ -345,40 +286,46 @@ p {
   height: 65px;
 }
 
-.updateBtn {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-weight: bold;
-  width: 50%;
-}
-.updateBtn__button--backgroundColor button {
-  background-color: orange;
-}
-.updateBtn__button--borderradius button {
-  border-radius: 45px;
-}
-.updateBtn__button--size button {
-  height: 50px;
-}
+@media only screen and (max-width: 768px) {
+  .userBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    height: 100vh;
+    margin-bottom: 20px;
+  }
 
-.deleteBtn {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-weight: bold;
-  width: 50%;
-}
-.deleteBtn__button--backgroundColor button {
-  background-color: red;
-}
-.deleteBtn__button--borderradius button {
-  border-radius: 45px;
-}
-.deleteBtn__button--size button {
-  height: 50px;
-}
+  .formContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
+  .formBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .itemBox {
+    width: 85%;
+    height: 10vh;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  .buttonBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+}
 /*
 @media only screen and (max-width:600px){
   .userBox {
@@ -428,21 +375,6 @@ p {
     margin-top: 5px;
     margin-bottom: 5px;
   }
-  .updateBtn {
-    @include flexBoxRowJustifyCenter;
-    & button {
-      font-weight: bold;
-      width: 125px;
-    }
-  }
-  .deleteBtn {
-    @include flexBoxRowJustifyCenter;
-    & button {
-      width: 125px;
-      font-weight: bold;
-    }
-  }
-}
 
 @media only screen and (min-width: 600px) {
   .userBox {
@@ -492,21 +424,6 @@ p {
     margin-top: 5px;
     margin-bottom: 5px;
   }
-  .updateBtn {
-    @include flexBoxRowJustifyCenter;
-    & button {
-      font-weight: bold;
-      width: 125px;
-    }
-  }
-  .deleteBtn {
-    @include flexBoxRowJustifyCenter;
-    & button {
-      width: 125px;
-      font-weight: bold;
-    }
-  }
-}
 
 @media only screen and (min-width: 768px){
 }
@@ -518,5 +435,85 @@ p {
 @media only screen and (min-width: 1200px) {
 
 }*/
+.updateLastNotifBox {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  height: 50%;
+}
+.updateLastNotifBox button {
+  width: 100%;
+  height: 100%;
+  background-color: #FBF526;
+  border-radius: 45px;
+  font-weight: bold;
+  color: black;
+  border: 1px solid black;
+}
+.updateLastNotifBox:hover {
+  border: 2px solid black;
+}
+
+.updateBtn {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  height: 100%;
+}
+.updateBtn button {
+  width: 100%;
+  height: 100%;
+  background-color: #FBF526;
+  border-radius: 45px;
+  font-weight: bold;
+  color: black;
+  border: 1px solid black;
+}
+.updateBtn:hover {
+  border: 2px solid black;
+}
+
+@media only screen and (max-width: 600px) {
+  .updateBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .updateBtn button {
+    height: 85%;
+  }
+}
+.deleteBtn {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  height: 100%;
+}
+.deleteBtn button {
+  width: 100%;
+  height: 100%;
+  background-color: #E74C3C;
+  border-radius: 45px;
+  font-weight: bold;
+  color: black;
+  border: 1px solid black;
+  font-weight: bold;
+}
+.deleteBtn:hover {
+  border: 2px solid black;
+}
+
+@media only screen and (max-width: 600px) {
+  .deleteBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .deleteBtn button {
+    height: 85%;
+  }
+}
 
 /*# sourceMappingURL=listMemberStylus.css.map */

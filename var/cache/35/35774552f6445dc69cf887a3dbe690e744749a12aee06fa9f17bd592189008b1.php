@@ -78,25 +78,25 @@ class __TwigTemplate_26f64b04dd15cac49808de1aaf3b977690528e875072925474dc9e5079a
             echo "                    <div class=\"userBox userBox__background--backgroundColor\">
                         <form class=\"formContainer\" method=\"post\">
                             <div class=\"formBox\">
-                                <div class=\"nameBox nameBox__background--backgroundColor\">
+                                <div class=\"itemBox itemBox__even--backgroundColor nameBox\">
                                     <p>";
             // line 16
             echo twig_escape_filter($this->env, (($__internal_f607aeef2c31a95a7bf963452dff024ffaeb6aafbe4603f9ca3bec57be8633f4 = $context["member"]) && is_array($__internal_f607aeef2c31a95a7bf963452dff024ffaeb6aafbe4603f9ca3bec57be8633f4) || $__internal_f607aeef2c31a95a7bf963452dff024ffaeb6aafbe4603f9ca3bec57be8633f4 instanceof ArrayAccess ? ($__internal_f607aeef2c31a95a7bf963452dff024ffaeb6aafbe4603f9ca3bec57be8633f4["userName"] ?? null) : null), "html", null, true);
             echo "</p>
                                 </div>
-                                <div class=\"firstnameBox firstnameBox__background--backgroundColor\">
+                                <div class=\"itemBox itemBox__odd--backgroundColor firstnameBox\">
                                     <p>";
             // line 19
             echo twig_escape_filter($this->env, (($__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144 = $context["member"]) && is_array($__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144) || $__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144 instanceof ArrayAccess ? ($__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144["userFirstname"] ?? null) : null), "html", null, true);
             echo "</p>
                                 </div>
-                                <div class=\"nicknameBox nicknameBox__background--backgroundColor\">
+                                <div class=\"itemBox itemBox__even--backgroundColor nicknameBox\">
                                     <p>";
             // line 22
             echo twig_escape_filter($this->env, (($__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b = $context["member"]) && is_array($__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b) || $__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b instanceof ArrayAccess ? ($__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b["userNickname"] ?? null) : null), "html", null, true);
             echo "</p>
                                 </div>
-                                <div class=\"mailBox mailBox__background--backgroundColor\">
+                                <div class=\"itemBox itemBox__odd--backgroundColor mailBox\">
                                     <p>";
             // line 25
             echo twig_escape_filter($this->env, (($__internal_68aa442c1d43d3410ea8f958ba9090f3eaa9a76f8de8fc9be4d6c7389ba28002 = $context["member"]) && is_array($__internal_68aa442c1d43d3410ea8f958ba9090f3eaa9a76f8de8fc9be4d6c7389ba28002) || $__internal_68aa442c1d43d3410ea8f958ba9090f3eaa9a76f8de8fc9be4d6c7389ba28002 instanceof ArrayAccess ? ($__internal_68aa442c1d43d3410ea8f958ba9090f3eaa9a76f8de8fc9be4d6c7389ba28002["userMail"] ?? null) : null), "html", null, true);
@@ -161,16 +161,16 @@ class __TwigTemplate_26f64b04dd15cac49808de1aaf3b977690528e875072925474dc9e5079a
                     <div class=\"userBox userBox__background--backgroundColor\">
                         <form class=\"formContainer\" method=\"post\">
                             <div class=\"formBox\">
-                                <div class=\"nameBox nameBox__background--backgroundColor\">
+                                <div class=\"itemBox itemBox__even--backgroundColor nameBox\">
                                     <p>{{ member['userName'] }}</p>
                                 </div>
-                                <div class=\"firstnameBox firstnameBox__background--backgroundColor\">
+                                <div class=\"itemBox itemBox__odd--backgroundColor firstnameBox\">
                                     <p>{{ member['userFirstname'] }}</p>
                                 </div>
-                                <div class=\"nicknameBox nicknameBox__background--backgroundColor\">
+                                <div class=\"itemBox itemBox__even--backgroundColor nicknameBox\">
                                     <p>{{ member['userNickname'] }}</p>
                                 </div>
-                                <div class=\"mailBox mailBox__background--backgroundColor\">
+                                <div class=\"itemBox itemBox__odd--backgroundColor mailBox\">
                                     <p>{{ member['userMail'] }}</p>
                                 </div>
                                 <div class=\"buttonBox\">

@@ -28,52 +28,24 @@
     }
   }
 }
-.nameBox {
+.itemBox {
   @include flexBoxRowJustifyCenter;
   width: 15%;
   height: 55px;
   @include borderQuarter;
-  &__background {
-    &--backgroundColor {
+  &__even {
+    &--backgroundColor{
       background-color: $thirdColor;
     }
   }
-}
-.firstnameBox {
-  @include flexBoxRowJustifyCenter;
-  width: 15%;
-  height: 55px;
-  @include borderQuarter;
-  &__background {
+  &__odd {
     &--backgroundColor {
       background-color: $primaryColor;
     }
   }
-}
-.nicknameBox {
-  @include flexBoxRowJustifyCenter;
-  width: 15%;
-  height: 55px;
-  @include borderQuarter;
-  &__background {
-    &--backgroundColor {
-      background-color: $thirdColor;
-    }
+  & p {
+    font-weight: bold;
   }
-}
-.mailBox {
-  @include flexBoxRowJustifyCenter;
-  width: 25%;
-  height: 55px;
-  @include borderQuarter;
-  &__background {
-    &--backgroundColor {
-      background-color: $primaryColor;
-    }
-  }
-}
-p {
-  font-weight: bold;
 }
 .buttonBox {
   @include rowFlex;
@@ -81,37 +53,35 @@ p {
   width: 25%;
   height: 65px;
 }
-.updateBtn {
-  @include flexBoxColumnJustifyCenter;
-  font-weight: bold;
-  width: 50%;
-  &__button {
-    &--backgroundColor button {
-      background-color: orange;
-    }
-    &--borderradius button {
-      @include borderQuarter;
-    }
-    &--size button {
-      height: 50px;
-    }
+@media only screen and(max-width: 768px){
+  .userBox {
+    @include flexBoxColumnJustifyCenter;
+    align-items: center;
+    width: 85%;
+    height: 100vh;
+    margin-bottom: 20px;
   }
-}
-.deleteBtn {
-  @include flexboxjustifyCentering;
-  font-weight: bold;
-  width: 50%;
-  &__button {
-    &--backgroundColor button {
-      background-color: red;
-    }
-    &--borderradius button {
-      @include borderQuarter;
-    }
-    &--size button {
-      height: 50px;
-    }
+  .formContainer {
+    @include flexBoxColumnJustifyCenter;
   }
+  .formBox{
+    @include flexBoxColumnJustifyCenter;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  .itemBox {
+    width: 85%;
+    height: 10vh;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  .buttonBox {
+    @include rowFlex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
 }
 /*
 @media only screen and (max-width:600px){
@@ -162,21 +132,6 @@ p {
     margin-top: 5px;
     margin-bottom: 5px;
   }
-  .updateBtn {
-    @include flexBoxRowJustifyCenter;
-    & button {
-      font-weight: bold;
-      width: 125px;
-    }
-  }
-  .deleteBtn {
-    @include flexBoxRowJustifyCenter;
-    & button {
-      width: 125px;
-      font-weight: bold;
-    }
-  }
-}
 
 @media only screen and (min-width: 600px) {
   .userBox {
@@ -226,21 +181,6 @@ p {
     margin-top: 5px;
     margin-bottom: 5px;
   }
-  .updateBtn {
-    @include flexBoxRowJustifyCenter;
-    & button {
-      font-weight: bold;
-      width: 125px;
-    }
-  }
-  .deleteBtn {
-    @include flexBoxRowJustifyCenter;
-    & button {
-      width: 125px;
-      font-weight: bold;
-    }
-  }
-}
 
 @media only screen and (min-width: 768px){
 }

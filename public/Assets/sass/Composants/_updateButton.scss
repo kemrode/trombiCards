@@ -37,3 +37,13 @@
   }
 
 }
+
+@media only screen and (max-width: 600px){
+  .updateBtn {
+    @include flexBoxRowJustifyCenter;
+    align-items: center;
+    & button {
+      height: 85%;
+    }
+  }
+}

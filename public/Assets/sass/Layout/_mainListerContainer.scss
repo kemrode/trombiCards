@@ -7,7 +7,7 @@
   height: 100vh;
 }
 .listBoxes {
-  @include flexBoxColumnJustifySpaceEvenly;
+  @include flexBoxColumn;
   width: auto;
   height: 100%;
 }
@@ -18,8 +18,7 @@
     margin-top: 20px;
   }
 }
-
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 768px){
   .mainListContainer {
     overflow-y: auto;
     overflow-x: hidden;
@@ -33,28 +32,8 @@
   }
 }
 
-@media only screen and (min-width: 768px){
-  .mainListContainer {
-    overflow-y: auto;
-    overflow-x: hidden;
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
-  .listBoxes {
-    align-items: center;
-    margin-top: 20px;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .listBoxes {
-    justify-content: space-evenly;
-  }
+@media only screen and (max-width: 992px) {
 }
 
 @media only screen and (min-width: 1200px) {
-  .listBoxes {
-    justify-content: space-evenly;
-  }
 }
