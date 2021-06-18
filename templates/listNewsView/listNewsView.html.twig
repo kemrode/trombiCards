@@ -1,17 +1,45 @@
-{% extends "base/baseView.html.twig" %}
-{% block css %}{% endblock %}
-{% block title %}{% endblock %}
-
-{% include "metaBlock/metaBlock.html.twig" %}
-<head>
-    <link rel="stylesheet" type="text/css" href="">
+{% extends "baseView.html.twig" %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="/Assets/css/listNewsStylus.css">
+{% endblock %}
+{% block title %}
     <title>MonAdmin - mes notifications</title>
-</head>
-<body>
-<div class="primaryContainer primaryContainer--backgroundImage">
-    <div class="primaryContainer__header">
-        <?php require 'headerView.php';?>
-        {% include "headerView/headerView.html.twig" %}
+{% endblock %}
+{% block notifAdmin %}
+    <div class="notifContainer">
+        <form class="formBox" name="formBox" method="post">
+            <div class="selectOptionsContainer">
+                <div class="addNewNotifBox">
+                    <button type="submit" name="addButton" formaction="/?controller=notification&action=notificationView">Nouvelle Notification</button>
+                </div>
+            </div>
+            <div class="listNotifBox listNotifBox__backgroundcolor--backgroundcolor">
+                {% for notif in notifications %}
+                    <div class="notifBox notifBox__backgroundcolor--backgroundcolor">
+                        <div class="notifBack">
+                            <div class="notifTitle">
+                                <label class="textTitle">{{ notif["notifTitle"] }}</label>
+                            </div>
+                            <div class="timeBox">
+                                <div class="labelTimeNotif">
+                                    <label class="labelTime">créée le: </label>
+                                </div>
+                                <div class="notifTime">
+                                    <label class="txtTime">{{ notif["notifDate"] }}</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btnBox">
+                            <div class="updateBtn">
+                                <button type="submit" name="updateButton" formaction="/?controller=listNews&action=updateNotifView&param={{ notif['notifId'] }}">MODIFIER</button>
+                            </div>
+                            <div class="deleteBtn">
+                                <button type="submit" name="deleteButton" formaction="/?controller=listNews&action=deleteNotif&param={{ notif['notifId'] }}">SUPPRIMER</button>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </form>
     </div>
-</div>
-</body>
+{% endblock %}

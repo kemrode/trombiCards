@@ -1,0 +1,33 @@
+{% extends 'baseView.html.twig' %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="/Assets/css/updateNotificationStylus.css">
+{% endblock %}
+{% block title %}
+    <title>MonAdmin - nouvelle notification</title>
+{% endblock %}
+{% block updateNotif %}
+    <div class="notifContainer">
+        <div class="notifUpdate">
+            <div class="pageTitleBox">
+                <div class="labelTitle">
+                    <h2>Modifier votre notification</h2>
+                </div>
+            </div>
+            <form method="post" action="/?controller=listNews&action=updateNotifView&param={{ notification.notifId }}" name="newNotifForm">
+                <div class="newNotifBox newNotifBox__backgroundcolor--backgroundcolor newNotifBox__zindex--index">
+                    <div class="notifTitle notifTitle__zindex--index">
+                        <input type="text" name="notifTitle" value="{{ notification.notifTitle }}">
+                    </div>
+                    <div class="notifText notifText__zindex--index">
+                        <textarea name="notifText" >{{ notification.notifTxt }}</textarea>
+                    </div>
+                </div>
+                <div class="btnBox">
+                    <div class="addNewNotifBox addButtonNotifView">
+                        <button type="submit" name="updateBtn">modifier</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

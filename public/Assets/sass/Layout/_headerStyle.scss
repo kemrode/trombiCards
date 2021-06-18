@@ -1,33 +1,147 @@
 @import "../Utils/mixin";
+@import "../Utils/variables";
 
-.header__title {
-  @include headerTitle;
-}
-.header--color {
+.headerBox {
+  display: flex;
+  @include rowFlex;
+  width: auto;
+  height: auto;
   @include headerColor;
 }
+.header {
+  @include headerTitle;
+  width: 80%;
+}
+.headerButton {
+  @include rowFlex;
+  justify-content: space-evenly;
+  width: 20%;
+  height: auto;
+}
+.home {
+  @include buttonHeaderSettings;
+}
+.homeImg {
+  @include generalButtonSettings;
+  &__background {
+    &--backgroundcolor {
+      background: rgb(2,78,182);
+      //background: linear-gradient(135deg, rgba(2,78,182,1) 0%, rgba(37,110,182,1) 0%, rgba(255,255,255,0) 100%);
+      border-radius: $quarterBorder;
+    }
+  }
+  & img {
+    width: 45px;
+    height: 45px;
+  }
+}
+.logout {
+  @include buttonHeaderSettings;
+}
+.logoutImg {
+  @include generalButtonSettings;
+  &__background {
+    &--backgroundcolor {
+      background: rgb(240,25,25);
+      background: linear-gradient(135deg, rgba(240,25,25,1) 0%, rgba(242,48,48,0.41220238095238093) 100%);
+      border-radius: $quarterBorder;
+    }
+  }
+}
 @media only screen and (max-width: 600px) {
-  .header-sizeTitle{
-    font-size: 1.3em;
+  .header {
+    width: 60%;
+    &__title{
+      &--sizeTitle {
+        font-size: 1.3em;
+      }
+    }
+  }
+  .headerButton {
+    width: 40%;
+  }
+  .homeImg {
+    height: 60px;
+    & img {
+      width: 35px;
+      height: 35px;
+    }
+  }
+  .logoutImg {
+    height: 60px;
+    & img {
+      width: 35px;
+      height: 35px;
+    }
   }
 }
 @media only screen and (min-width: 600px) {
-  .header-sizeTitle{
-    font-size: 1.4em;
+  .header {
+    &__title{
+      &--sizeTitle {
+        font-size: 1.4em;
+      }
+    }
+  }
+  .headerButton {
+    width: 40%;
+  }
+  .homeImg {
+    height: 60px;
+    & img {
+      width: 35px;
+      height: 35px;
+    }
+  }
+  .logoutImg {
+    height: 60px;
+    & img {
+      width: 35px;
+      height: 35px;
+    }
   }
 }
 @media only screen and (min-width: 768px) {
-  .header-sizeTitle {
-    font-size: 1.5em;
+  .header {
+    &__title{
+      &--sizeTitle {
+        font-size: 1.5em;
+      }
+    }
+  }
+  .headerButton {
+    width: 40%;
+  }
+  .homeImg {
+    height: 75px;
+    & img {
+      width: 45px;
+      height: 45px;
+    }
+  }
+  .logoutImg {
+    height: 75px;
+    & img {
+      width: 45px;
+      height: 45px;
+    }
   }
 }
 @media only screen and (min-width: 992px) {
-  .header-sizeTitle{
-    font-size: 1.6em;
+  .header {
+    &__title{
+      &--sizeTitle {
+        font-size: 1.6em;
+      }
+    }
   }
 }
 @media only screen and (min-width: 1200px) {
-  .header-sizeTitle{
-    font-size: 1.8em;
+  .header {
+    &__title{
+      &--sizeTitle {
+        font-size: 1.8em;
+      }
+    }
   }
 }

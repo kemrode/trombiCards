@@ -1,0 +1,78 @@
+@import "../Utils/mixin";
+@import "../Utils/variables";
+
+.newNotifBox {
+  @include flexBoxColumnJustifySpaceEvenly;
+  width: 100%;
+  height: 100vh;
+  &__backgroundcolor {
+    &--backgroundcolor {
+      background-color: $secondColor;
+    }
+  }
+  &__zindex {
+    &--index{
+      z-index: 0;
+    }
+  }
+}
+.notifTitle {
+  @include flexBoxRowJustifyCenter;
+  padding-top: 15px;
+  width: 100%;
+  height: 75px;
+  &__zindex {
+    &--index{
+      z-index: 1;
+    }
+  }
+  & input {
+    @include flexBoxRowJustifyCenter;
+    align-items: center;
+    width: 85%;
+    height: auto;
+    background-color: $breakingWhite;
+    border: 1px solid black;
+    border-radius: $quarterBorder;
+  }
+}
+.notifText {
+  @include flexBoxRowJustifyCenter;
+  width: auto;
+  height: auto;
+  padding-top: 15px;
+  &__zindex {
+    &--index {
+      z-index: 1;
+    }
+  }
+  & textarea {
+    width: 85%;
+    height: 75vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    resize: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+.btnBox {
+  @include rowFlex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+}
+
+@media only screen and (min-width: 992px) {
+
+  .newNotifBox {
+    &__backgroundcolor {
+      &--backgroundcolor {
+        border: 1px solid black;
+        border-radius:$quarterBorder;
+      }
+    }
+  }
+}

@@ -71,15 +71,15 @@ class __TwigTemplate_48d7a6a92d76893d5f58cd1d34237e2b578830671d112334c0afc1cbc79
                 <div class=\"listItemsBox listItemsBox__listItemssettings\">
                     <div class=\"itemsBox itemsBox__article itemsBox__itemsElement--background\">
                         <div class=\"itemTitle itemTitle__title item__title--font\">
-                            <h2>Articles</h2>
+                            <h2>Notifications</h2>
                         </div>
                         <div class=\"itemContainer itemContainer__contain\">
                             <div class=\"itemImage\">
-                                <a name=\"listMembers\" class=\"imgBox imgBox__img--size\" href=\"/?controller=listMembers&action=listMembersView\"><img src=\"/Ressources/images/icons/article.svg\"></a>
+                                <a name=\"notification\" class=\"imgBox imgBox__img--size\" href=\"/?controller=listNews&action=listNewsView\"><img src=\"/Ressources/images/icons/article.svg\"></a>
                             </div>
                         </div>
                     </div>
-                    <div class=\"itemsBox itemsBox__parameters itemsBox__itemsElement--background\">
+                    <div class=\"itemsBox itemsBox__parameters itemsBox__itemsElement--background itemsBox__noready--backgroundcolor\">
                         <div class=\"itemTitle itemTitle__title item__title--font\">
                             <h2>Paramètres</h2>
                         </div>
@@ -89,7 +89,7 @@ class __TwigTemplate_48d7a6a92d76893d5f58cd1d34237e2b578830671d112334c0afc1cbc79
                             </div>
                         </div>
                     </div>
-                    <div class=\"itemsBox itemsBox__messages itemsBox__itemsElement--background\">
+                    <div class=\"itemsBox itemsBox__messages itemsBox__itemsElement--background itemsBox__noready--backgroundcolor\">
                         <div class=\"itemTitle itemTitle__title item__title--font\">
                             <h2>Messages</h2>
                         </div>
@@ -109,7 +109,7 @@ class __TwigTemplate_48d7a6a92d76893d5f58cd1d34237e2b578830671d112334c0afc1cbc79
                             </div>
                         </div>
                     </div>
-                    <div class=\"itemsBox itemsBox__analytics itemsBox__itemsElement--background\">
+                    <div class=\"itemsBox itemsBox__analytics itemsBox__itemsElement--background itemsBox__noready--backgroundcolor\">
                         <div class=\"itemTitle itemTitle__title item__title--font\">
                             <h2>Analyses</h2>
                         </div>
@@ -155,15 +155,15 @@ class __TwigTemplate_48d7a6a92d76893d5f58cd1d34237e2b578830671d112334c0afc1cbc79
                 <div class=\"listItemsBox listItemsBox__listItemssettings\">
                     <div class=\"itemsBox itemsBox__article itemsBox__itemsElement--background\">
                         <div class=\"itemTitle itemTitle__title item__title--font\">
-                            <h2>Articles</h2>
+                            <h2>Notifications</h2>
                         </div>
                         <div class=\"itemContainer itemContainer__contain\">
                             <div class=\"itemImage\">
-                                <a name=\"listMembers\" class=\"imgBox imgBox__img--size\" href=\"/?controller=listMembers&action=listMembersView\"><img src=\"/Ressources/images/icons/article.svg\"></a>
+                                <a name=\"notification\" class=\"imgBox imgBox__img--size\" href=\"/?controller=listNews&action=listNewsView\"><img src=\"/Ressources/images/icons/article.svg\"></a>
                             </div>
                         </div>
                     </div>
-                    <div class=\"itemsBox itemsBox__parameters itemsBox__itemsElement--background\">
+                    <div class=\"itemsBox itemsBox__parameters itemsBox__itemsElement--background itemsBox__noready--backgroundcolor\">
                         <div class=\"itemTitle itemTitle__title item__title--font\">
                             <h2>Paramètres</h2>
                         </div>
@@ -173,7 +173,7 @@ class __TwigTemplate_48d7a6a92d76893d5f58cd1d34237e2b578830671d112334c0afc1cbc79
                             </div>
                         </div>
                     </div>
-                    <div class=\"itemsBox itemsBox__messages itemsBox__itemsElement--background\">
+                    <div class=\"itemsBox itemsBox__messages itemsBox__itemsElement--background itemsBox__noready--backgroundcolor\">
                         <div class=\"itemTitle itemTitle__title item__title--font\">
                             <h2>Messages</h2>
                         </div>
@@ -193,7 +193,7 @@ class __TwigTemplate_48d7a6a92d76893d5f58cd1d34237e2b578830671d112334c0afc1cbc79
                             </div>
                         </div>
                     </div>
-                    <div class=\"itemsBox itemsBox__analytics itemsBox__itemsElement--background\">
+                    <div class=\"itemsBox itemsBox__analytics itemsBox__itemsElement--background itemsBox__noready--backgroundcolor\">
                         <div class=\"itemTitle itemTitle__title item__title--font\">
                             <h2>Analyses</h2>
                         </div>

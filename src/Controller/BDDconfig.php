@@ -20,10 +20,15 @@ class BDDconfig {
     public static function initInstance()
     {
         try {
-            $hostname = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "trombicard_bdd";
+            //$hostname = "localhost";
+            //$username = "root";
+            //$password = "";
+            //$dbname = "trombicard_bdd";
+
+            $hostname = "mysql-kemrode.alwaysdata.net";
+            $username = "kemrode";
+            $password = "4lwaysPort@il3";
+            $dbname = "kemrode_crud";
 
             SELF::$_instance = new PDO('mysql:host=' . $hostname . ';dbname=' . $dbname . ';charset=utf8', $username, $password);
             SELF::$_instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

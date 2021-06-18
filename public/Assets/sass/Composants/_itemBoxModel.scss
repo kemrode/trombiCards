@@ -4,7 +4,7 @@
 .containerFlexBox {
   @include flexBoxRowJustifyCenter;
   width: auto;
-  height: auto;
+  height: 100%;
   @include scrollPrimary;
   &::-webkit-scrollbar {
     display: none;
@@ -15,6 +15,11 @@
   @include boxItemContruct;
   justify-content: space-evenly;
   height: auto;
+  &__noready {
+    &--backgroundcolor {
+      background-color: lightslategrey;
+    }
+  }
 }
 .itemTitle {
   @include flexBoxRowJustifyCenter;
@@ -60,37 +65,48 @@
   }
 }
 @media only screen and (min-width: 768px) {
-  .itemsBox{
-    @include mediumWidth;
-    @include spaceBetween;
+
+  .listItemsBox {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 1em;
+    width: 90%;
+    height: 100%;
   }
-  .itemTitle {
-    font-size: x-large;
+  .itemsBox{
+    width: 350px;
+    height: 250px;
   }
 }
 @media only screen and (min-width: 992px){
-  .containerFlexBox {
+
+  .listItemsBox {
     display: grid;
-    grid-template-columns: repeat(20,5%);
-    grid-template-rows: repeat(20,5%);
-    grid-gap: 10px;
-    width: auto;
-    height: 100vh;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 1em;
+    width: 90%;
+    height: 100%;
   }
   .itemsBox{
-    @include highWidth;
-    @include spaceBetweenHight;
-    display: grid;
-    grid-area: span 5;
+    width: 350px;
+    height: 250px;
   }
   .itemTitle {
     font-size: xx-large;
   }
 }
 @media only screen and (min-width: 1200px) {
+
+  .listItemsBox {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 1em;
+    width: 90%;
+    height: 100%;
+  }
   .itemsBox{
-    @include highWidth;
-    @include spaceBetweenHight;
+    width: 350px;
+    height: 250px;
   }
   .itemTitle {
     font-size: xx-large;

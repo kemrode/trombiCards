@@ -87,3 +87,18 @@
     background-color: #239B56;
   }
 }
+
+@media only screen and(max-width: 768px){
+  .memberContainer{
+    align-items: center;
+  }
+  .formBox {
+    width: 100%;
+    height: 75vh;
+  }
+  .blockBox {
+    & input {
+      font-size: 0.9em;
+    }
+  }
+}

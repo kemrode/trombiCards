@@ -1,0 +1,59 @@
+@import "../Utils/mixin";
+@import "../Utils/variables";
+
+.updateLastNotifBox {
+  @include rowFlex;
+  width: 300px;
+  height: 150px;
+  & button {
+    width: 100%;
+    height: 100%;
+    background-color: $updateColor;
+    border-radius: $quarterBorder;
+    font-weight: bold;
+    color: black;
+    border: 1px solid black;
+    border: 1px solid black;
+    font-size: $largeSize;
+    font-style: italic;
+  }
+  &:hover {
+    border: 2px solid black;
+  }
+}
+
+.updateBtn {
+  @include rowFlex;
+  width: 50%;
+  height: 100%;
+  & button {
+    width: 100%;
+    height: 100%;
+    background-color: $updateColor;
+    border-radius: $quarterBorder;
+    font-weight: bold;
+    color: black;
+    border: 1px solid black;
+  }
+  &:hover {
+    border: 2px solid black;
+  }
+
+}
+
+@media only screen and (max-width: 768px){
+  .updateLastNotifBox {
+    width: 50%;
+    height: 50%;
+    & button {
+      font-size: 0.9em;
+    }
+  }
+  .updateBtn {
+    @include flexBoxRowJustifyCenter;
+    align-items: center;
+    & button {
+      height: 85%;
+    }
+  }
+}

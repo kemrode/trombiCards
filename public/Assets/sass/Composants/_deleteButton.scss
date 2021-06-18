@@ -1,0 +1,29 @@
+@import "../Utils/mixin";
+@import "../Utils/variables";
+.deleteBtn {
+  @include rowFlex;
+  width: 50%;
+  height: 100%;
+  & button {
+    width: 100%;
+    height: 100%;
+    background-color: $deleteColor;
+    border-radius: $quarterBorder;
+    font-weight: bold;
+    color: black;
+    border: 1px solid black;
+    font-weight: bold;
+  }
+  &:hover {
+    border: 2px solid black;
+  }
+}
+@media only screen and(max-width: 600px){
+  .deleteBtn {
+    @include flexBoxRowJustifyCenter;
+    align-items: center;
+    & button {
+      height: 85%;
+    }
+  }
+}

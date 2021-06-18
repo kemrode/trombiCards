@@ -1,6 +1,5 @@
 @import "../Utils/mixin";
 @import "../Utils/variables";
-
 .mainListContainer {
   @include flexBoxColumnJustifyCenter;
   width: auto;
@@ -8,7 +7,25 @@
 }
 .listBoxes {
   @include flexBoxColumn;
-  justify-content: space-evenly;
   width: auto;
   height: 100%;
+}
+@media only screen and (max-width:600px){
+  .listBoxes {
+    align-items: center;
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 768px){
+  .mainListContainer {
+    overflow-y: auto;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .listBoxes {
+    align-items: center;
+    margin-top: 20px;
+  }
 }
